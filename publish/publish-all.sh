@@ -48,6 +48,13 @@ for dir in "$TARGETS"/fork-*/; do
 
   echo "----- $name@$version -----"
   ( cd "$dir"
+    # Install each fork's deps so its test gate can load them. node_modules is not
+    # committed, so on a fresh checkout (CI) this is required before `npm test`.
+    echo "  • npm install"
+    # --omit=dev: only runtime deps (skips forks' fragile/conflicting devDeps).
+    # --ignore-scripts: never run build/prepare scripts (protects patched dist/ files
+    # from being regenerated from unpatched source, and avoids arbitrary install code).
+    npm install --omit=dev --ignore-scripts --legacy-peer-deps --no-audit --no-fund >/dev/null 2>&1 || { echo "  ✗ install failed"; exit 1; }
     echo "  • npm test"
     npm test >/dev/null 2>&1 || { echo "  ✗ tests failed — NOT publishing"; exit 1; }
     echo "  ✓ tests pass"

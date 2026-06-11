@@ -25,7 +25,7 @@
     "node": ">=8"
   },
   "scripts": {
-    "test": "mocha test/test.js test/security.js"
+    "test": "node --test test/security.test.js"
   },
   "dependencies": {
     "git-config-path": "^2.0.0",
