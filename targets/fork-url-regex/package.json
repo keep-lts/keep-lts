@@ -1,0 +1,55 @@
+{
+  "name": "@keep-lts/url-regex",
+  "version": "5.0.1",
+  "description": "Security-maintained drop-in fork of url-regex. Patches CVE-2020-7661 (ReDoS) by rewriting the host/domain sub-patterns to run in linear time — pure JS, no native dependency. Original API unchanged.",
+  "license": "MIT",
+  "repository": "keep-lts/url-regex",
+  "author": {
+    "name": "Kevin Mårtensson",
+    "email": "kevinmartensson@gmail.com",
+    "url": "https://github.com/kevva"
+  },
+  "engines": {
+    "node": ">=8"
+  },
+  "scripts": {
+    "test": "node --test test/security.test.js"
+  },
+  "files": [
+    "index.js",
+    "index.d.ts",
+    "CHANGELOG.md",
+    "SECURITY.md"
+  ],
+  "keywords": [
+    "regex",
+    "string",
+    "url",
+    "cve-2020-7661",
+    "security",
+    "patch",
+    "lts",
+    "fork",
+    "cwe-1333-inefficient-regular-expression-complexity-(redos)"
+  ],
+  "dependencies": {
+    "ip-regex": "^4.1.0",
+    "tlds": "^1.203.0"
+  },
+  "devDependencies": {
+    "ava": "^1.4.1",
+    "tsd": "^0.7.2",
+    "xo": "^0.24.0"
+  },
+  "contributors": [
+    "Keep LTS (security maintenance fork)"
+  ],
+  "bugs": {
+    "url": "https://github.com/keep-lts/url-regex/issues"
+  },
+  "homepage": "https://github.com/keep-lts/url-regex",
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  }
+}

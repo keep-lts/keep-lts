@@ -1,0 +1,52 @@
+{
+  "name": "@keep-lts/101",
+  "version": "1.6.4",
+  "description": "Security-maintained drop-in fork of 101. Patches CVE-2021-25943 (prototype pollution). Original API unchanged.",
+  "main": "index.js",
+  "scripts": {
+    "test": "node --test test/security.test.js",
+    "test-watch": "nodemon --exec lab -c"
+  },
+  "repository": "keep-lts/101",
+  "keywords": [
+    "utils",
+    "js",
+    "helpers",
+    "functional",
+    "pick",
+    "pluck",
+    "map",
+    "array",
+    "object",
+    "string",
+    "cve-2021-25943",
+    "security",
+    "patch",
+    "lts",
+    "fork",
+    "cwe-1321-prototype-pollution"
+  ],
+  "author": "Tejesh Mehta",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/keep-lts/101/issues"
+  },
+  "homepage": "https://github.com/keep-lts/101",
+  "devDependencies": {
+    "code": "^1.5.0",
+    "lab": "^5.9.0",
+    "sinon": "^1.17.3"
+  },
+  "dependencies": {
+    "clone": "^1.0.2",
+    "deep-eql": "^0.1.3",
+    "keypather": "^1.10.2"
+  },
+  "contributors": [
+    "Keep LTS (security maintenance fork)"
+  ],
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  }
+}

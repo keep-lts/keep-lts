@@ -1,0 +1,17 @@
+{
+  "cves": ["CVE-2025-13158", "CVE-2025-57317"],
+  "ghsas": ["GHSA-6vj3-p34w-xxjp", "GHSA-5q53-78f2-6gf8"],
+  "severity": "Critical",
+  "cwe": "CWE-1321 Prototype Pollution",
+  "title": "Prototype Pollution in apidoc-core via doc-block path building",
+  "affectedVersion": "0.15.0",
+  "affectedRange": "<= 0.15.0 (all published versions)",
+  "date": "2026-06-11",
+  "testScript": "node --test test/security.test.js",
+  "testFile": "test/security.test.js",
+  "shortFix": "Patches CVE-2025-13158 and CVE-2025-57317 (prototype pollution).",
+  "longFix": "The parser builds nested result objects from dotted paths derived from doc-block annotations (including user-controlled group names) via `_createObjectPath`/`_pathToObject`, with no guard on reserved segments; a `__proto__` or `constructor.prototype` segment caused Object.prototype to be extended. Both functions now refuse to traverse or build through a prototype slot.",
+  "summary": "When apidoc-core parses API documentation comments, group/element names flow into dotted object paths that `_createObjectPath` builds and `_pathToObject` resolves, after which the parsed values are merged in with `_.extend`. A crafted annotation whose path contains `__proto__` (or `constructor.prototype`) causes the merge to target `Object.prototype`, polluting every object in the process. This is reachable by anyone who can get the tool to parse an untrusted source file.",
+  "poc": "// path segments derived from doc annotations reach the prototype:\nconst Parser = require('apidoc-core/lib/parser');\nconst root = {};\nParser.prototype._createObjectPath(root, 'group.__proto__.polluted', 'insert');\nObject.assign(Parser.prototype._pathToObject('group.__proto__.polluted', root), { polluted: 'yes' });\nconsole.log(({}).polluted); // => 'yes' on the unpatched version",
+  "fixExplanation": "`_createObjectPath` and `_pathToObject` now detect any path segment equal to `__proto__`, `constructor`, or `prototype` and return a fresh throwaway object instead of building into or resolving through the prototype chain. Legitimate nested paths (e.g. `local.parameter.fields`) and the `push`/`insert` attach methods are unaffected."
+}

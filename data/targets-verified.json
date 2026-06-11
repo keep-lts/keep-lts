@@ -1,0 +1,2667 @@
+[
+ {
+  "name": "babel-traverse",
+  "weeklyDownloads": 3036620,
+  "latestVersion": "6.26.0",
+  "lastPublish": "2017-08-16",
+  "yearsSincePublish": 8.817686937927757,
+  "deprecated": false,
+  "license": "MIT",
+  "repository": "https://github.com/babel/babel/tree/master/packages/babel-traverse",
+  "maintainers": 3,
+  "vulns": [
+   {
+    "id": "GHSA-67hx-6x53-jw92",
+    "cves": [
+     "CVE-2023-45133"
+    ],
+    "severity": "CRITICAL",
+    "cwes": [
+     "CWE-184",
+     "CWE-697"
+    ],
+    "summary": "Babel vulnerable to arbitrary code execution when compiling specifically crafted malicious code",
+    "published": "2023-10-16",
+    "introduced": "0",
+    "verify": "in unfixed range"
+   }
+  ],
+  "maxSeverity": "CRITICAL",
+  "permissiveLicense": true,
+  "likelySmallPatch": false,
+  "abandoned": true,
+  "score": 155.6,
+  "droppedVulns": 0
+ },
+ {
+  "name": "xmldom",
+  "weeklyDownloads": 1528153,
+  "latestVersion": "0.6.0",
+  "lastPublish": "2021-04-17",
+  "yearsSincePublish": 5.149155307858048,
+  "deprecated": false,
+  "license": "MIT",
+  "repository": "git://github.com/xmldom/xmldom.git",
+  "maintainers": 2,
+  "vulns": [
+   {
+    "id": "GHSA-2v35-w6hq-6mfw",
+    "cves": [
+     "CVE-2026-41673"
+    ],
+    "severity": "HIGH",
+    "cwes": [
+     "CWE-674"
+    ],
+    "summary": "xmldom: Uncontrolled recursion in XML serialization leads to DoS",
+    "published": "2026-04-22",
+    "introduced": "0",
+    "verify": "in unfixed range"
+   },
+   {
+    "id": "GHSA-5fg8-2547-mr8q",
+    "cves": [
+     "CVE-2021-32796"
+    ],
+    "severity": "MODERATE",
+    "cwes": [
+     "CWE-116"
+    ],
+    "summary": "Misinterpretation of malicious XML input",
+    "published": "2021-08-03",
+    "introduced": "0",
+    "verify": "in unfixed range"
+   },
+   {
+    "id": "GHSA-crh6-fp67-6883",
+    "cves": [
+     "CVE-2022-39353"
+    ],
+    "severity": "CRITICAL",
+    "cwes": [
+     "CWE-1288",
+     "CWE-20"
+    ],
+    "summary": "xmldom allows multiple root nodes in a DOM",
+    "published": "2022-11-01",
+    "introduced": "0",
+    "verify": "in unfixed range"
+   },
+   {
+    "id": "GHSA-f6ww-3ggp-fr8h",
+    "cves": [
+     "CVE-2026-41674"
+    ],
+    "severity": "HIGH",
+    "cwes": [
+     "CWE-91"
+    ],
+    "summary": "xmldom has XML injection through unvalidated DocumentType serialization",
+    "published": "2026-04-22",
+    "introduced": "0",
+    "verify": "in unfixed range"
+   },
+   {
+    "id": "GHSA-j759-j44w-7fr8",
+    "cves": [
+     "CVE-2026-41672"
+    ],
+    "severity": "HIGH",
+    "cwes": [
+     "CWE-91"
+    ],
+    "summary": "xmldom has XML node injection through unvalidated comment serialization",
+    "published": "2026-04-22",
+    "introduced": "0",
+    "verify": "in unfixed range"
+   },
+   {
+    "id": "GHSA-wh4c-j3r5-mjhp",
+    "cves": [
+     "CVE-2026-34601"
+    ],
+    "severity": "HIGH",
+    "cwes": [
+     "CWE-91"
+    ],
+    "summary": "xmldom: XML injection via unsafe CDATA serialization allows attacker-controlled markup insertion",
+    "published": "2026-04-01",
+    "introduced": "0",
+    "verify": "in unfixed range"
+   },
+   {
+    "id": "GHSA-x6wf-f3px-wcqx",
+    "cves": [
+     "CVE-2026-41675"
+    ],
+    "severity": "HIGH",
+    "cwes": [
+     "CWE-91"
+    ],
+    "summary": "xmldom has XML node injection through unvalidated processing instruction serialization",
+    "published": "2026-04-22",
+    "introduced": "0",
+    "verify": "in unfixed range"
+   }
+  ],
+  "maxSeverity": "CRITICAL",
+  "permissiveLicense": true,
+  "likelySmallPatch": false,
+  "abandoned": true,
+  "score": 127.4,
+  "droppedVulns": 0
+ },
+ {
+  "name": "mockery",
+  "weeklyDownloads": 105511,
+  "latestVersion": "2.1.0",
+  "lastPublish": "2017-06-26",
+  "yearsSincePublish": 8.957704355988593,
+  "deprecated": false,
+  "license": "UNKNOWN",
+  "repository": "git://github.com/mfncooper/mockery.git",
+  "maintainers": 1,
+  "vulns": [
+   {
+    "id": "GHSA-gmwp-3pwc-3j3g",
+    "cves": [
+     "CVE-2022-37614"
+    ],
+    "severity": "CRITICAL",
+    "cwes": [
+     "CWE-1321"
+    ],
+    "summary": "mockery is vulnerable to prototype pollution",
+    "published": "2022-10-12",
+    "introduced": "0",
+    "verify": "in unfixed range"
+   }
+  ],
+  "maxSeverity": "CRITICAL",
+  "permissiveLicense": false,
+  "likelySmallPatch": true,
+  "abandoned": true,
+  "score": 120.6,
+  "droppedVulns": 0
+ },
+ {
+  "name": "html-minifier",
+  "weeklyDownloads": 3322664,
+  "latestVersion": "4.0.0",
+  "lastPublish": "2019-04-01",
+  "yearsSincePublish": 7.193932167680608,
+  "deprecated": false,
+  "license": "MIT",
+  "repository": "git+https://github.com/kangax/html-minifier.git",
+  "maintainers": 3,
+  "vulns": [
+   {
+    "id": "GHSA-pfq8-rq6v-vf5m",
+    "cves": [
+     "CVE-2022-37620"
+    ],
+    "severity": "HIGH",
+    "cwes": [
+     "CWE-1333",
+     "CWE-400"
+    ],
+    "summary": "kangax html-minifier REDoS vulnerability",
+    "published": "2022-10-31",
+    "introduced": "0",
+    "verify": "in unfixed range"
+   }
+  ],
+  "maxSeverity": "HIGH",
+  "permissiveLicense": true,
+  "likelySmallPatch": true,
+  "abandoned": true,
+  "score": 117.4,
+  "droppedVulns": 0
+ },
+ {
+  "name": "utils-extend",
+  "weeklyDownloads": 72170,
+  "latestVersion": "1.0.8",
+  "lastPublish": "2015-04-12",
+  "yearsSincePublish": 11.165128594106465,
+  "deprecated": false,
+  "license": "ISC",
+  "repository": "https://github.com/douzi8/utils-extend",
+  "maintainers": 1,
+  "vulns": [
+   {
+    "id": "GHSA-6pq3-928q-x6w6",
+    "cves": [
+     "CVE-2020-8147"
+    ],
+    "severity": "HIGH",
+    "cwes": [
+     "CWE-471"
+    ],
+    "summary": "Prototype Pollution",
+    "published": "2020-09-03",
+    "introduced": "0.0.0",
+    "verify": "in unfixed range"
+   },
+   {
+    "id": "GHSA-7qgg-vw88-cc99",
+    "cves": [
+     "CVE-2024-57077"
+    ],
+    "severity": "CRITICAL",
+    "cwes": [
+     "CWE-1321"
+    ],
+    "summary": "utils-extend Prototype Pollution",
+    "published": "2025-02-06",
+    "introduced": "0",
+    "verify": "in unfixed range"
+   }
+  ],
+  "maxSeverity": "CRITICAL",
+  "permissiveLicense": true,
+  "likelySmallPatch": true,
+  "abandoned": true,
+  "score": 116.6,
+  "droppedVulns": 0
+ },
+ {
+  "name": "hoek",
+  "weeklyDownloads": 2868298,
+  "latestVersion": "6.1.3",
+  "lastPublish": "2019-03-27",
+  "yearsSincePublish": 7.209705993155893,
+  "deprecated": true,
+  "license": "BSD-3-Clause",
+  "repository": "git://github.com/hapijs/hoek.git",
+  "maintainers": 5,
+  "vulns": [
+   {
+    "id": "GHSA-c429-5p7v-vgjp",
+    "cves": [
+     "CVE-2020-36604"
+    ],
+    "severity": "HIGH",
+    "cwes": [
+     "CWE-1321"
+    ],
+    "summary": "hoek subject to prototype pollution via the clone function.",
+    "published": "2022-09-25",
+    "introduced": "0",
+    "verify": "in unfixed range"
+   }
+  ],
+  "maxSeverity": "HIGH",
+  "permissiveLicense": true,
+  "likelySmallPatch": true,
+  "abandoned": true,
+  "score": 116.2,
+  "droppedVulns": 0
+ },
+ {
+  "name": "lodash.pick",
+  "weeklyDownloads": 2206127,
+  "latestVersion": "4.4.0",
+  "lastPublish": "2016-08-13",
+  "yearsSincePublish": 9.824932138941698,
+  "deprecated": true,
+  "license": "MIT",
+  "repository": "git+https://github.com/lodash/lodash.git",
+  "maintainers": 2,
+  "vulns": [
+   {
+    "id": "GHSA-p6mc-m468-83gw",
+    "cves": [
+     "CVE-2020-8203"
+    ],
+    "severity": "HIGH",
+    "cwes": [
+     "CWE-1321",
+     "CWE-770"
+    ],
+    "summary": "Prototype Pollution in lodash",
+    "published": "2020-07-15",
+    "introduced": "4.0.0",
+    "verify": "in unfixed range"
+   }
+  ],
+  "maxSeverity": "HIGH",
+  "permissiveLicense": true,
+  "likelySmallPatch": true,
+  "abandoned": true,
+  "score": 114.2,
+  "droppedVulns": 0
+ },
+ {
+  "name": "lodash.set",
+  "weeklyDownloads": 2022178,
+  "latestVersion": "4.3.2",
+  "lastPublish": "2016-08-13",
+  "yearsSincePublish": 9.824930358998733,
+  "deprecated": false,
+  "license": "MIT",
+  "repository": "git+https://github.com/lodash/lodash.git",
+  "maintainers": 2,
+  "vulns": [
+   {
+    "id": "GHSA-p6mc-m468-83gw",
+    "cves": [
+     "CVE-2020-8203"
+    ],
+    "severity": "HIGH",
+    "cwes": [
+     "CWE-1321",
+     "CWE-770"
+    ],
+    "summary": "Prototype Pollution in lodash",
+    "published": "2020-07-15",
+    "introduced": "3.7.0",
+    "verify": "in unfixed range"
+   }
+  ],
+  "maxSeverity": "HIGH",
+  "permissiveLicense": true,
+  "likelySmallPatch": true,
+  "abandoned": true,
+  "score": 113.5,
+  "droppedVulns": 0
+ },
+ {
+  "name": "defaults-deep",
+  "weeklyDownloads": 36061,
+  "latestVersion": "0.2.4",
+  "lastPublish": "2018-02-07",
+  "yearsSincePublish": 8.338487621641319,
+  "deprecated": false,
+  "license": "MIT",
+  "repository": "git+https://github.com/jonschlinkert/defaults-deep.git",
+  "maintainers": 2,
+  "vulns": [
+   {
+    "id": "GHSA-pjxw-22xf-6pwc",
+    "cves": [
+     "CVE-2018-16486"
+    ],
+    "severity": "CRITICAL",
+    "cwes": [
+     "CWE-345",
+     "CWE-400"
+    ],
+    "summary": "Prototype Pollution in defaults-deep",
+    "published": "2019-02-07",
+    "introduced": "0",
+    "verify": "in unfixed range"
+   }
+  ],
+  "maxSeverity": "CRITICAL",
+  "permissiveLicense": true,
+  "likelySmallPatch": true,
+  "abandoned": true,
+  "score": 109.4,
+  "droppedVulns": 0
+ },
+ {
+  "name": "101",
+  "weeklyDownloads": 34804,
+  "latestVersion": "1.6.3",
+  "lastPublish": "2018-04-15",
+  "yearsSincePublish": 8.154813407192648,
+  "deprecated": false,
+  "license": "MIT",
+  "repository": "git+https://github.com/tjmehta/101.git",
+  "maintainers": 1,
+  "vulns": [
+   {
+    "id": "GHSA-cwcx-rxgc-cmw3",
+    "cves": [
+     "CVE-2021-25943"
+    ],
+    "severity": "CRITICAL",
+    "cwes": [
+     "CWE-1321"
+    ],
+    "summary": "Prototype pollution in 101",
+    "published": "2021-05-17",
+    "introduced": "1.0.0",
+    "verify": "in unfixed range"
+   }
+  ],
+  "maxSeverity": "CRITICAL",
+  "permissiveLicense": true,
+  "likelySmallPatch": true,
+  "abandoned": true,
+  "score": 109,
+  "droppedVulns": 0
+ },
+ {
+  "name": "parse-git-config",
+  "weeklyDownloads": 1053903,
+  "latestVersion": "3.0.0",
+  "lastPublish": "2018-11-20",
+  "yearsSincePublish": 7.5566005537072245,
+  "deprecated": false,
+  "license": "MIT",
+  "repository": "git+https://github.com/jonschlinkert/parse-git-config.git",
+  "maintainers": 2,
+  "vulns": [
+   {
+    "id": "GHSA-8g77-54rh-46hx",
+    "cves": [
+     "CVE-2025-25975"
+    ],
+    "severity": "HIGH",
+    "cwes": [
+     "CWE-1321",
+     "CWE-200"
+    ],
+    "summary": "Prototype Pollution Vulnerability in parse-git-config",
+    "published": "2025-03-12",
+    "introduced": "0",
+    "verify": "in unfixed range"
+   }
+  ],
+  "maxSeverity": "HIGH",
+  "permissiveLicense": true,
+  "likelySmallPatch": true,
+  "abandoned": true,
+  "score": 108.4,
+  "droppedVulns": 0
+ },
+ {
+  "name": "safe-eval",
+  "weeklyDownloads": 29842,
+  "latestVersion": "0.4.1",
+  "lastPublish": "2018-07-27",
+  "yearsSincePublish": 7.874146874493029,
+  "deprecated": false,
+  "license": "MIT",
+  "repository": "git+https://github.com/hacksparrow/safe-eval.git",
+  "maintainers": 1,
+  "vulns": [
+   {
+    "id": "GHSA-33vh-7x8q-mg35",
+    "cves": [
+     "CVE-2022-25904"
+    ],
+    "severity": "CRITICAL",
+    "cwes": [
+     "CWE-1321"
+    ],
+    "summary": "safe-eval vulnerable to Prototype Pollution",
+    "published": "2022-12-20",
+    "introduced": "0",
+    "verify": "in unfixed range"
+   },
+   {
+    "id": "GHSA-79xf-67r4-q2jj",
+    "cves": [
+     "CVE-2023-26122"
+    ],
+    "severity": "CRITICAL",
+    "cwes": [
+     "CWE-1321"
+    ],
+    "summary": "safe-eval vulnerable to Sandbox Bypass due to improper input sanitization",
+    "published": "2023-04-11",
+    "introduced": "0",
+    "verify": "in unfixed range"
+   },
+   {
+    "id": "GHSA-9pcf-h8q9-63f6",
+    "cves": [],
+    "severity": "HIGH",
+    "cwes": [],
+    "summary": "Sandbox Breakout / Arbitrary Code Execution in safe-eval",
+    "published": "2020-09-03",
+    "introduced": "0.0.0",
+    "verify": "in unfixed range"
+   },
+   {
+    "id": "GHSA-hcg3-56jf-x4vh",
+    "cves": [
+     "CVE-2023-26121"
+    ],
+    "severity": "CRITICAL",
+    "cwes": [
+     "CWE-1321"
+    ],
+    "summary": "safe-eval vulnerable to Prototype Pollution via the safeEval function",
+    "published": "2023-04-11",
+    "introduced": "0",
+    "verify": "in unfixed range"
+   },
+   {
+    "id": "GHSA-hrpq-r399-whgw",
+    "cves": [
+     "CVE-2020-7710"
+    ],
+    "severity": "CRITICAL",
+    "cwes": [
+     "CWE-94"
+    ],
+    "summary": "Sandbox Breakout / Arbitrary Code Execution in safe-eval",
+    "published": "2020-08-25",
+    "introduced": "0",
+    "verify": "in unfixed range"
+   }
+  ],
+  "maxSeverity": "CRITICAL",
+  "permissiveLicense": true,
+  "likelySmallPatch": true,
+  "abandoned": true,
+  "score": 107.4,
+  "droppedVulns": 1
+ },
+ {
+  "name": "bigint-buffer",
+  "weeklyDownloads": 829914,
+  "latestVersion": "1.1.5",
+  "lastPublish": "2019-10-17",
+  "yearsSincePublish": 6.651188869803549,
+  "deprecated": false,
+  "license": "Apache-2.0",
+  "repository": "git+https://github.com/no2chem/bigint-buffer.git",
+  "maintainers": 1,
+  "vulns": [
+   {
+    "id": "GHSA-3gc7-fjrx-p6mg",
+    "cves": [
+     "CVE-2025-3194"
+    ],
+    "severity": "HIGH",
+    "cwes": [
+     "CWE-120"
+    ],
+    "summary": "bigint-buffer Vulnerable to Buffer Overflow via toBigIntLE() Function",
+    "published": "2025-04-04",
+    "introduced": "0",
+    "verify": "in unfixed range"
+   }
+  ],
+  "maxSeverity": "HIGH",
+  "permissiveLicense": true,
+  "likelySmallPatch": false,
+  "abandoned": true,
+  "score": 106.5,
+  "droppedVulns": 0
+ },
+ {
+  "name": "taffydb",
+  "weeklyDownloads": 527560,
+  "latestVersion": "2.7.3",
+  "lastPublish": "2016-09-18",
+  "yearsSincePublish": 9.7263676873891,
+  "deprecated": false,
+  "license": "BSD-2-Clause",
+  "repository": "git://github.com/typicaljoe/taffydb.git",
+  "maintainers": 4,
+  "vulns": [
+   {
+    "id": "GHSA-mxhp-79qh-mcx6",
+    "cves": [
+     "CVE-2019-10790"
+    ],
+    "severity": "HIGH",
+    "cwes": [
+     "CWE-20",
+     "CWE-668"
+    ],
+    "summary": "TaffyDB can allow access to any data items in the DB",
+    "published": "2020-02-19",
+    "introduced": "0",
+    "verify": "in unfixed range"
+   }
+  ],
+  "maxSeverity": "HIGH",
+  "permissiveLicense": true,
+  "likelySmallPatch": false,
+  "abandoned": true,
+  "score": 103,
+  "droppedVulns": 0
+ },
+ {
+  "name": "expr-eval",
+  "weeklyDownloads": 505077,
+  "latestVersion": "2.0.2",
+  "lastPublish": "2019-09-28",
+  "yearsSincePublish": 6.700857980735107,
+  "deprecated": false,
+  "license": "MIT",
+  "repository": "git+https://github.com/silentmatt/expr-eval.git",
+  "maintainers": 1,
+  "vulns": [
+   {
+    "id": "GHSA-8gw3-rxh4-v6jx",
+    "cves": [
+     "CVE-2025-13204"
+    ],
+    "severity": "HIGH",
+    "cwes": [
+     "CWE-1321"
+    ],
+    "summary": "expr-eval vulnerable to Prototype Pollution",
+    "published": "2025-11-14",
+    "introduced": "0",
+    "verify": "in unfixed range"
+   },
+   {
+    "id": "GHSA-jc85-fpwf-qm7x",
+    "cves": [
+     "CVE-2025-12735"
+    ],
+    "severity": "HIGH",
+    "cwes": [
+     "CWE-94"
+    ],
+    "summary": "expr-eval does not restrict functions passed to the evaluate function",
+    "published": "2025-11-05",
+    "introduced": "0",
+    "verify": "in unfixed range"
+   }
+  ],
+  "maxSeverity": "HIGH",
+  "permissiveLicense": true,
+  "likelySmallPatch": true,
+  "abandoned": true,
+  "score": 102.7,
+  "droppedVulns": 0
+ },
+ {
+  "name": "textract",
+  "weeklyDownloads": 17396,
+  "latestVersion": "2.5.0",
+  "lastPublish": "2019-06-03",
+  "yearsSincePublish": 7.022079416888467,
+  "deprecated": false,
+  "license": "MIT",
+  "repository": "git+https://github.com/dbashford/textract.git",
+  "maintainers": 1,
+  "vulns": [
+   {
+    "id": "GHSA-9pcj-m5rr-p28g",
+    "cves": [
+     "CVE-2026-26831"
+    ],
+    "severity": "CRITICAL",
+    "cwes": [
+     "CWE-78",
+     "CWE-94"
+    ],
+    "summary": "textract is vulnerable to OS Command Injection",
+    "published": "2026-03-25",
+    "introduced": "0",
+    "verify": "in unfixed range"
+   }
+  ],
+  "maxSeverity": "CRITICAL",
+  "permissiveLicense": true,
+  "likelySmallPatch": false,
+  "abandoned": true,
+  "score": 101.8,
+  "droppedVulns": 0
+ },
+ {
+  "name": "safer-eval",
+  "weeklyDownloads": 17079,
+  "latestVersion": "1.3.6",
+  "lastPublish": "2019-12-06",
+  "yearsSincePublish": 6.512511222718631,
+  "deprecated": true,
+  "license": "MIT",
+  "repository": "git+https://github.com/commenthol/safer-eval.git",
+  "maintainers": 1,
+  "vulns": [
+   {
+    "id": "GHSA-876r-hj45-fw7g",
+    "cves": [],
+    "severity": "CRITICAL",
+    "cwes": [],
+    "summary": "Sandbox Breakout / Arbitrary Code Execution in safer-eval",
+    "published": "2020-09-03",
+    "introduced": "0.0.0",
+    "verify": "in unfixed range"
+   },
+   {
+    "id": "GHSA-v63x-xc9j-hhvq",
+    "cves": [
+     "CVE-2019-10769"
+    ],
+    "severity": "CRITICAL",
+    "cwes": [
+     "CWE-20",
+     "CWE-94"
+    ],
+    "summary": "Sandbox Breakout / Arbitrary Code Execution in safer-eval",
+    "published": "2019-12-11",
+    "introduced": "0",
+    "verify": "in unfixed range"
+   }
+  ],
+  "maxSeverity": "CRITICAL",
+  "permissiveLicense": true,
+  "likelySmallPatch": false,
+  "abandoned": true,
+  "score": 101.6,
+  "droppedVulns": 0
+ },
+ {
+  "name": "gnuplot",
+  "weeklyDownloads": 17175,
+  "latestVersion": "0.3.1",
+  "lastPublish": "2016-02-03",
+  "yearsSincePublish": 10.351583429974651,
+  "deprecated": false,
+  "license": "ISC",
+  "repository": "git://github.com/davvo/node-gnuplot.git",
+  "maintainers": 1,
+  "vulns": [
+   {
+    "id": "GHSA-cfwc-xjfp-44jg",
+    "cves": [],
+    "severity": "CRITICAL",
+    "cwes": [
+     "CWE-77"
+    ],
+    "summary": "Command Injection in gnuplot",
+    "published": "2020-09-04",
+    "introduced": "0.0.0",
+    "verify": "in unfixed range"
+   }
+  ],
+  "maxSeverity": "CRITICAL",
+  "permissiveLicense": true,
+  "likelySmallPatch": false,
+  "abandoned": true,
+  "score": 101.6,
+  "droppedVulns": 0
+ },
+ {
+  "name": "url-regex",
+  "weeklyDownloads": 415842,
+  "latestVersion": "5.0.0",
+  "lastPublish": "2019-04-21",
+  "yearsSincePublish": 7.139767298922687,
+  "deprecated": false,
+  "license": "MIT",
+  "repository": "git+https://github.com/kevva/url-regex.git",
+  "maintainers": 3,
+  "vulns": [
+   {
+    "id": "GHSA-v4rh-8p82-6h5w",
+    "cves": [
+     "CVE-2020-7661"
+    ],
+    "severity": "HIGH",
+    "cwes": [
+     "CWE-400"
+    ],
+    "summary": "Regular expression denial of service in url-regex",
+    "published": "2020-06-22",
+    "introduced": "0",
+    "verify": "in unfixed range"
+   }
+  ],
+  "maxSeverity": "HIGH",
+  "permissiveLicense": true,
+  "likelySmallPatch": true,
+  "abandoned": true,
+  "score": 101.1,
+  "droppedVulns": 0
+ },
+ {
+  "name": "pdf-image",
+  "weeklyDownloads": 14797,
+  "latestVersion": "2.0.0",
+  "lastPublish": "2018-05-07",
+  "yearsSincePublish": 8.095146002059568,
+  "deprecated": false,
+  "license": "UNKNOWN",
+  "repository": "git+https://github.com/mooz/node-pdf-image.git",
+  "maintainers": 1,
+  "vulns": [
+   {
+    "id": "GHSA-q5mh-72xg-628w",
+    "cves": [
+     "CVE-2026-26830"
+    ],
+    "severity": "CRITICAL",
+    "cwes": [
+     "CWE-78",
+     "CWE-94"
+    ],
+    "summary": "pdf-image has an OS Command Injection Vulnerability through its pdfFilePath parameter",
+    "published": "2026-03-25",
+    "introduced": "0",
+    "verify": "in unfixed range"
+   },
+   {
+    "id": "GHSA-rv7p-mmwq-x674",
+    "cves": [
+     "CVE-2020-8132"
+    ],
+    "severity": "HIGH",
+    "cwes": [
+     "CWE-20",
+     "CWE-94"
+    ],
+    "summary": "Improper Input Validation and Code Injection in pdf-image",
+    "published": "2021-05-10",
+    "introduced": "0",
+    "verify": "in unfixed range"
+   }
+  ],
+  "maxSeverity": "CRITICAL",
+  "permissiveLicense": false,
+  "likelySmallPatch": false,
+  "abandoned": true,
+  "score": 100.1,
+  "droppedVulns": 0
+ },
+ {
+  "name": "is_js",
+  "weeklyDownloads": 359684,
+  "latestVersion": "0.9.0",
+  "lastPublish": "2016-09-13",
+  "yearsSincePublish": 9.739682717617237,
+  "deprecated": false,
+  "license": "MIT",
+  "repository": "git+https://github.com/arasatasaygin/is.js.git",
+  "maintainers": 2,
+  "vulns": [
+   {
+    "id": "GHSA-pvrw-g6fx-mcx2",
+    "cves": [
+     "CVE-2020-26302"
+    ],
+    "severity": "HIGH",
+    "cwes": [
+     "CWE-1333",
+     "CWE-400"
+    ],
+    "summary": "is_js vulnerable to Regular Expression Denial of Service",
+    "published": "2023-07-06",
+    "introduced": "0",
+    "verify": "in unfixed range"
+   }
+  ],
+  "maxSeverity": "HIGH",
+  "permissiveLicense": true,
+  "likelySmallPatch": true,
+  "abandoned": true,
+  "score": 100,
+  "droppedVulns": 0
+ },
+ {
+  "name": "deep-defaults",
+  "weeklyDownloads": 14302,
+  "latestVersion": "1.0.5",
+  "lastPublish": "2018-09-15",
+  "yearsSincePublish": 7.736075904847909,
+  "deprecated": true,
+  "license": "MIT",
+  "repository": "git+https://github.com/d5/deep-defaults.git",
+  "maintainers": 1,
+  "vulns": [
+   {
+    "id": "GHSA-h6xg-rg33-9mf4",
+    "cves": [
+     "CVE-2021-25944"
+    ],
+    "severity": "CRITICAL",
+    "cwes": [
+     "CWE-1321"
+    ],
+    "summary": "deep-defaults vulnerable to prototype pollution",
+    "published": "2022-05-24",
+    "introduced": "1.0.0",
+    "verify": "in unfixed range"
+   }
+  ],
+  "maxSeverity": "CRITICAL",
+  "permissiveLicense": true,
+  "likelySmallPatch": true,
+  "abandoned": true,
+  "score": 99.7,
+  "droppedVulns": 0
+ },
+ {
+  "name": "marsdb",
+  "weeklyDownloads": 13646,
+  "latestVersion": "0.6.11",
+  "lastPublish": "2016-09-07",
+  "yearsSincePublish": 9.756700342141952,
+  "deprecated": false,
+  "license": "MIT",
+  "repository": "git+ssh://git@github.com/c58/marsdb.git",
+  "maintainers": 1,
+  "vulns": [
+   {
+    "id": "GHSA-5mrr-rgp6-x4gr",
+    "cves": [],
+    "severity": "CRITICAL",
+    "cwes": [
+     "CWE-77"
+    ],
+    "summary": "Command Injection in marsdb",
+    "published": "2020-09-03",
+    "introduced": "0.0.0",
+    "verify": "in unfixed range"
+   }
+  ],
+  "maxSeverity": "CRITICAL",
+  "permissiveLicense": true,
+  "likelySmallPatch": false,
+  "abandoned": true,
+  "score": 99.2,
+  "droppedVulns": 0
+ },
+ {
+  "name": "apidoc-core",
+  "weeklyDownloads": 49899,
+  "latestVersion": "0.15.0",
+  "lastPublish": "2021-03-17",
+  "yearsSincePublish": 5.234849624746515,
+  "deprecated": false,
+  "license": "MIT",
+  "repository": "git+https://github.com/apidoc/apidoc-core.git",
+  "maintainers": 1,
+  "vulns": [
+   {
+    "id": "GHSA-5q53-78f2-6gf8",
+    "cves": [
+     "CVE-2025-57317"
+    ],
+    "severity": "HIGH",
+    "cwes": [
+     "CWE-400"
+    ],
+    "summary": "apidoc-core is vulnerable to prototype pollution",
+    "published": "2025-09-25",
+    "introduced": "0",
+    "verify": "in unfixed range"
+   },
+   {
+    "id": "GHSA-6vj3-p34w-xxjp",
+    "cves": [
+     "CVE-2025-13158"
+    ],
+    "severity": "CRITICAL",
+    "cwes": [
+     "CWE-1321"
+    ],
+    "summary": "apidoc-core has a prototype pollution vulnerability",
+    "published": "2025-12-26",
+    "introduced": "0.2.0",
+    "verify": "in unfixed range"
+   }
+  ],
+  "maxSeverity": "CRITICAL",
+  "permissiveLicense": true,
+  "likelySmallPatch": true,
+  "abandoned": true,
+  "score": 98.4,
+  "droppedVulns": 0
+ },
+ {
+  "name": "parsejson",
+  "weeklyDownloads": 254610,
+  "latestVersion": "0.0.3",
+  "lastPublish": "2016-10-27",
+  "yearsSincePublish": 9.61985320681242,
+  "deprecated": false,
+  "license": "MIT",
+  "repository": "git+https://github.com/get/parsejson.git",
+  "maintainers": 1,
+  "vulns": [
+   {
+    "id": "GHSA-q75g-2496-mxpp",
+    "cves": [
+     "CVE-2017-16113"
+    ],
+    "severity": "HIGH",
+    "cwes": [
+     "CWE-400"
+    ],
+    "summary": "Regular Expression Denial of Service in parsejson",
+    "published": "2018-07-24",
+    "introduced": "0",
+    "verify": "in unfixed range"
+   }
+  ],
+  "maxSeverity": "HIGH",
+  "permissiveLicense": true,
+  "likelySmallPatch": true,
+  "abandoned": true,
+  "score": 97.3,
+  "droppedVulns": 0
+ },
+ {
+  "name": "cors-anywhere",
+  "weeklyDownloads": 42692,
+  "latestVersion": "0.4.4",
+  "lastPublish": "2021-03-17",
+  "yearsSincePublish": 5.233584141539924,
+  "deprecated": false,
+  "license": "MIT",
+  "repository": "git+https://github.com/Rob--W/cors-anywhere.git",
+  "maintainers": 1,
+  "vulns": [
+   {
+    "id": "GHSA-r3jv-xfgx-gj24",
+    "cves": [
+     "CVE-2020-36851"
+    ],
+    "severity": "CRITICAL",
+    "cwes": [
+     "CWE-918"
+    ],
+    "summary": "cors-anywhere vulnerable to server-side request forgery",
+    "published": "2025-09-25",
+    "introduced": "0",
+    "verify": "in unfixed range"
+   }
+  ],
+  "maxSeverity": "CRITICAL",
+  "permissiveLicense": true,
+  "likelySmallPatch": false,
+  "abandoned": true,
+  "score": 96.9,
+  "droppedVulns": 0
+ },
+ {
+  "name": "oauth2-server",
+  "weeklyDownloads": 158547,
+  "latestVersion": "3.1.1",
+  "lastPublish": "2020-07-14",
+  "yearsSincePublish": 5.907282062198986,
+  "deprecated": false,
+  "license": "MIT",
+  "repository": "git+https://github.com/oauthjs/node-oauth2-server.git",
+  "maintainers": 4,
+  "vulns": [
+   {
+    "id": "GHSA-2fw4-mgq9-39cx",
+    "cves": [
+     "CVE-2017-18924"
+    ],
+    "severity": "HIGH",
+    "cwes": [
+     "CWE-94"
+    ],
+    "summary": "Code Injection in oauth2-server",
+    "published": "2021-04-22",
+    "introduced": "0",
+    "verify": "in unfixed range"
+   },
+   {
+    "id": "GHSA-4rg6-fm25-gc34",
+    "cves": [
+     "CVE-2020-26938"
+    ],
+    "severity": "HIGH",
+    "cwes": [
+     "CWE-601"
+    ],
+    "summary": "oauth2-server through 3.1.1 vulnerable to Open Redirect",
+    "published": "2022-08-30",
+    "introduced": "0",
+    "verify": "in unfixed range"
+   }
+  ],
+  "maxSeverity": "HIGH",
+  "permissiveLicense": true,
+  "likelySmallPatch": false,
+  "abandoned": true,
+  "score": 92.2,
+  "droppedVulns": 0
+ },
+ {
+  "name": "mockjs",
+  "weeklyDownloads": 127483,
+  "latestVersion": "1.1.0",
+  "lastPublish": "2019-10-25",
+  "yearsSincePublish": 6.629112739100127,
+  "deprecated": false,
+  "license": "UNKNOWN",
+  "repository": "git://github.com/nuysoft/Mock.git",
+  "maintainers": 2,
+  "vulns": [
+   {
+    "id": "GHSA-mh8j-9jvh-gjf6",
+    "cves": [
+     "CVE-2023-26158"
+    ],
+    "severity": "HIGH",
+    "cwes": [
+     "CWE-1321"
+    ],
+    "summary": "mockjs vulnerable to Prototype Pollution via the Util.extend function",
+    "published": "2023-12-08",
+    "introduced": "0",
+    "verify": "in unfixed range"
+   }
+  ],
+  "maxSeverity": "HIGH",
+  "permissiveLicense": false,
+  "likelySmallPatch": true,
+  "abandoned": true,
+  "score": 91.9,
+  "droppedVulns": 0
+ },
+ {
+  "name": "node-tesseract-ocr",
+  "weeklyDownloads": 31611,
+  "latestVersion": "2.2.1",
+  "lastPublish": "2021-05-11",
+  "yearsSincePublish": 5.084314465684411,
+  "deprecated": false,
+  "license": "MIT",
+  "repository": "git://github.com/zapolnoch/node-tesseract-ocr.git",
+  "maintainers": 1,
+  "vulns": [
+   {
+    "id": "GHSA-8j44-735h-w4w2",
+    "cves": [
+     "CVE-2026-26832"
+    ],
+    "severity": "CRITICAL",
+    "cwes": [
+     "CWE-78"
+    ],
+    "summary": "node-tesseract-ocr is vulnerable to OS Command Injection through unsanitized recognize() function parameter",
+    "published": "2026-03-25",
+    "introduced": "0",
+    "verify": "in unfixed range"
+   }
+  ],
+  "maxSeverity": "CRITICAL",
+  "permissiveLicense": true,
+  "likelySmallPatch": false,
+  "abandoned": true,
+  "score": 91.5,
+  "droppedVulns": 0
+ },
+ {
+  "name": "ammo",
+  "weeklyDownloads": 105066,
+  "latestVersion": "3.0.3",
+  "lastPublish": "2018-11-03",
+  "yearsSincePublish": 7.603960191856781,
+  "deprecated": true,
+  "license": "BSD-3-Clause",
+  "repository": "git://github.com/hapijs/ammo.git",
+  "maintainers": 4,
+  "vulns": [
+   {
+    "id": "GHSA-mg85-8mv5-ffjr",
+    "cves": [],
+    "severity": "HIGH",
+    "cwes": [],
+    "summary": "Denial of Service in ammo",
+    "published": "2020-09-03",
+    "introduced": "0.0.0",
+    "verify": "in unfixed range"
+   }
+  ],
+  "maxSeverity": "HIGH",
+  "permissiveLicense": true,
+  "likelySmallPatch": false,
+  "abandoned": true,
+  "score": 90.4,
+  "droppedVulns": 0
+ },
+ {
+  "name": "timespan",
+  "weeklyDownloads": 98579,
+  "latestVersion": "2.3.0",
+  "lastPublish": "2013-10-08",
+  "yearsSincePublish": 12.672017070659063,
+  "deprecated": false,
+  "license": "UNKNOWN",
+  "repository": "https://github.com/indexzero/TimeSpan.js.git",
+  "maintainers": 1,
+  "vulns": [
+   {
+    "id": "GHSA-f523-2f5j-gfcg",
+    "cves": [
+     "CVE-2017-16115"
+    ],
+    "severity": "HIGH",
+    "cwes": [
+     "CWE-400"
+    ],
+    "summary": "Regular Expression Denial of Service in timespan",
+    "published": "2018-08-29",
+    "introduced": "0",
+    "verify": "in unfixed range"
+   }
+  ],
+  "maxSeverity": "HIGH",
+  "permissiveLicense": false,
+  "likelySmallPatch": true,
+  "abandoned": true,
+  "score": 89.9,
+  "droppedVulns": 0
+ },
+ {
+  "name": "hapi",
+  "weeklyDownloads": 90097,
+  "latestVersion": "18.1.0",
+  "lastPublish": "2019-02-04",
+  "yearsSincePublish": 7.3468913245880865,
+  "deprecated": true,
+  "license": "BSD-3-Clause",
+  "repository": "git://github.com/hapijs/hapi.git",
+  "maintainers": 4,
+  "vulns": [
+   {
+    "id": "GHSA-7hx8-2rxv-66xv",
+    "cves": [],
+    "severity": "HIGH",
+    "cwes": [],
+    "summary": "Denial of Service in hapi",
+    "published": "2020-09-03",
+    "introduced": "0.0.0",
+    "verify": "in unfixed range"
+   }
+  ],
+  "maxSeverity": "HIGH",
+  "permissiveLicense": true,
+  "likelySmallPatch": false,
+  "abandoned": true,
+  "score": 89.2,
+  "droppedVulns": 0
+ },
+ {
+  "name": "xlsx",
+  "weeklyDownloads": 10557539,
+  "latestVersion": "0.18.5",
+  "lastPublish": "2022-03-24",
+  "yearsSincePublish": 4.215882881844107,
+  "deprecated": false,
+  "license": "Apache-2.0",
+  "repository": "git://github.com/SheetJS/sheetjs.git",
+  "maintainers": 1,
+  "vulns": [
+   {
+    "id": "GHSA-4r6h-8v6p-xvw6",
+    "cves": [
+     "CVE-2023-30533"
+    ],
+    "severity": "HIGH",
+    "cwes": [
+     "CWE-1321"
+    ],
+    "summary": "Prototype Pollution in sheetJS",
+    "published": "2023-04-24",
+    "introduced": "0",
+    "verify": "in unfixed range"
+   },
+   {
+    "id": "GHSA-5pgg-2g8v-p4x9",
+    "cves": [
+     "CVE-2024-22363"
+    ],
+    "severity": "HIGH",
+    "cwes": [
+     "CWE-1333"
+    ],
+    "summary": "SheetJS Regular Expression Denial of Service (ReDoS)",
+    "published": "2024-04-05",
+    "introduced": "0",
+    "verify": "in unfixed range"
+   }
+  ],
+  "maxSeverity": "HIGH",
+  "permissiveLicense": true,
+  "likelySmallPatch": true,
+  "abandoned": true,
+  "score": 88.8,
+  "droppedVulns": 0
+ },
+ {
+  "name": "subtext",
+  "weeklyDownloads": 85283,
+  "latestVersion": "6.0.12",
+  "lastPublish": "2019-01-31",
+  "yearsSincePublish": 7.358099998510773,
+  "deprecated": true,
+  "license": "BSD-3-Clause",
+  "repository": "git://github.com/hapijs/subtext.git",
+  "maintainers": 4,
+  "vulns": [
+   {
+    "id": "GHSA-2mvq-xp48-4c77",
+    "cves": [],
+    "severity": "HIGH",
+    "cwes": [
+     "CWE-400"
+    ],
+    "summary": "Denial of Service in subtext",
+    "published": "2020-09-03",
+    "introduced": "0.0.0",
+    "verify": "in unfixed range"
+   }
+  ],
+  "maxSeverity": "HIGH",
+  "permissiveLicense": true,
+  "likelySmallPatch": true,
+  "abandoned": true,
+  "score": 88.8,
+  "droppedVulns": 0
+ },
+ {
+  "name": "string",
+  "weeklyDownloads": 80534,
+  "latestVersion": "3.3.3",
+  "lastPublish": "2016-10-11",
+  "yearsSincePublish": 9.664725095278834,
+  "deprecated": false,
+  "license": "MIT",
+  "repository": "git+https://github.com/jprichardson/string.js.git",
+  "maintainers": 2,
+  "vulns": [
+   {
+    "id": "GHSA-g36h-6r4f-3mqp",
+    "cves": [
+     "CVE-2017-16116"
+    ],
+    "severity": "HIGH",
+    "cwes": [
+     "CWE-400"
+    ],
+    "summary": "Regular Expression Denial of Service in string package",
+    "published": "2018-07-24",
+    "introduced": "0",
+    "verify": "in unfixed range"
+   }
+  ],
+  "maxSeverity": "HIGH",
+  "permissiveLicense": true,
+  "likelySmallPatch": true,
+  "abandoned": true,
+  "score": 88.3,
+  "droppedVulns": 0
+ },
+ {
+  "name": "content",
+  "weeklyDownloads": 79327,
+  "latestVersion": "4.0.6",
+  "lastPublish": "2018-11-03",
+  "yearsSincePublish": 7.603941658523447,
+  "deprecated": true,
+  "license": "BSD-3-Clause",
+  "repository": "git://github.com/hapijs/content.git",
+  "maintainers": 4,
+  "vulns": [
+   {
+    "id": "GHSA-5854-jvxx-2cg9",
+    "cves": [],
+    "severity": "HIGH",
+    "cwes": [],
+    "summary": "Denial of Service in content",
+    "published": "2020-09-03",
+    "introduced": "0",
+    "verify": "in unfixed range"
+   }
+  ],
+  "maxSeverity": "HIGH",
+  "permissiveLicense": true,
+  "likelySmallPatch": false,
+  "abandoned": true,
+  "score": 88.2,
+  "droppedVulns": 0
+ },
+ {
+  "name": "pez",
+  "weeklyDownloads": 78327,
+  "latestVersion": "4.0.5",
+  "lastPublish": "2018-11-03",
+  "yearsSincePublish": 7.603922056622307,
+  "deprecated": true,
+  "license": "BSD-3-Clause",
+  "repository": "git://github.com/hapijs/pez.git",
+  "maintainers": 4,
+  "vulns": [
+   {
+    "id": "GHSA-g64q-3vg8-8f93",
+    "cves": [],
+    "severity": "HIGH",
+    "cwes": [
+     "CWE-1321"
+    ],
+    "summary": "Prototype Pollution in pez",
+    "published": "2020-09-03",
+    "introduced": "0.0.0",
+    "verify": "in unfixed range"
+   }
+  ],
+  "maxSeverity": "HIGH",
+  "permissiveLicense": true,
+  "likelySmallPatch": true,
+  "abandoned": true,
+  "score": 88.1,
+  "droppedVulns": 0
+ },
+ {
+  "name": "node-static",
+  "weeklyDownloads": 62135,
+  "latestVersion": "0.7.11",
+  "lastPublish": "2018-09-23",
+  "yearsSincePublish": 7.714938370152091,
+  "deprecated": false,
+  "license": "MIT",
+  "repository": "git+ssh://git@github.com/cloudhead/node-static.git",
+  "maintainers": 3,
+  "vulns": [
+   {
+    "id": "GHSA-5g97-whc9-8g7j",
+    "cves": [
+     "CVE-2023-26111"
+    ],
+    "severity": "HIGH",
+    "cwes": [
+     "CWE-22"
+    ],
+    "summary": "node-static and @nubosoftware/node-static vulnerable to Directory Traversal",
+    "published": "2023-03-06",
+    "introduced": "0",
+    "verify": "in unfixed range"
+   },
+   {
+    "id": "GHSA-8r4g-cg4m-x23c",
+    "cves": [],
+    "severity": "MODERATE",
+    "cwes": [
+     "CWE-248",
+     "CWE-400"
+    ],
+    "summary": "Denial of Service in node-static",
+    "published": "2021-09-22",
+    "introduced": "0",
+    "verify": "in unfixed range"
+   }
+  ],
+  "maxSeverity": "HIGH",
+  "permissiveLicense": true,
+  "likelySmallPatch": true,
+  "abandoned": true,
+  "score": 86.3,
+  "droppedVulns": 0
+ },
+ {
+  "name": "faker",
+  "weeklyDownloads": 2689645,
+  "latestVersion": "6.6.6",
+  "lastPublish": "2022-01-05",
+  "yearsSincePublish": 4.430872607699619,
+  "deprecated": false,
+  "license": "MIT",
+  "repository": "git+ssh://git@github.com/Marak/Faker.js.git",
+  "maintainers": 1,
+  "vulns": [
+   {
+    "id": "GHSA-5w9c-rv96-fr7g",
+    "cves": [],
+    "severity": "HIGH",
+    "cwes": [],
+    "summary": "Removal of functional code in faker.js",
+    "published": "2022-03-22",
+    "verify": "in versions list"
+   }
+  ],
+  "maxSeverity": "HIGH",
+  "permissiveLicense": true,
+  "likelySmallPatch": false,
+  "abandoned": true,
+  "score": 85.5,
+  "droppedVulns": 0
+ },
+ {
+  "name": "csvjson",
+  "weeklyDownloads": 50050,
+  "latestVersion": "5.1.0",
+  "lastPublish": "2018-08-05",
+  "yearsSincePublish": 7.848976155925222,
+  "deprecated": false,
+  "license": "MIT",
+  "repository": "git://github.com/pradeep-mishra/csvjson.git",
+  "maintainers": 1,
+  "vulns": [
+   {
+    "id": "GHSA-xq4f-3jxp-qv6m",
+    "cves": [
+     "CVE-2025-57318"
+    ],
+    "severity": "HIGH",
+    "cwes": [
+     "CWE-1321"
+    ],
+    "summary": "csvjson vulnerable to prototype injection",
+    "published": "2025-09-24",
+    "introduced": "0",
+    "verify": "in unfixed range"
+   }
+  ],
+  "maxSeverity": "HIGH",
+  "permissiveLicense": true,
+  "likelySmallPatch": true,
+  "abandoned": true,
+  "score": 84.6,
+  "droppedVulns": 0
+ },
+ {
+  "name": "dicer",
+  "weeklyDownloads": 1926782,
+  "latestVersion": "0.3.1",
+  "lastPublish": "2021-12-19",
+  "yearsSincePublish": 4.475404494771863,
+  "deprecated": false,
+  "license": "UNKNOWN",
+  "repository": "git+ssh://git@github.com/mscdex/dicer.git",
+  "maintainers": 1,
+  "vulns": [
+   {
+    "id": "GHSA-wm7h-9275-46v2",
+    "cves": [
+     "CVE-2022-24434"
+    ],
+    "severity": "HIGH",
+    "cwes": [
+     "CWE-248"
+    ],
+    "summary": "Crash in HeaderParser in dicer",
+    "published": "2022-05-21",
+    "introduced": "0",
+    "verify": "in unfixed range"
+   }
+  ],
+  "maxSeverity": "HIGH",
+  "permissiveLicense": false,
+  "likelySmallPatch": false,
+  "abandoned": true,
+  "score": 84.4,
+  "droppedVulns": 0
+ },
+ {
+  "name": "connect-multiparty",
+  "weeklyDownloads": 46419,
+  "latestVersion": "2.2.0",
+  "lastPublish": "2018-09-15",
+  "yearsSincePublish": 7.737750743092522,
+  "deprecated": true,
+  "license": "MIT",
+  "repository": "git+https://github.com/expressjs/connect-multiparty.git",
+  "maintainers": 3,
+  "vulns": [
+   {
+    "id": "GHSA-w2xw-44r3-4v9g",
+    "cves": [
+     "CVE-2022-29623"
+    ],
+    "severity": "HIGH",
+    "cwes": [
+     "CWE-434"
+    ],
+    "summary": "Connect-Multiparty allows arbitrary file upload",
+    "published": "2022-05-17",
+    "introduced": "0",
+    "verify": "in unfixed range"
+   }
+  ],
+  "maxSeverity": "HIGH",
+  "permissiveLicense": true,
+  "likelySmallPatch": false,
+  "abandoned": true,
+  "score": 84,
+  "droppedVulns": 0
+ },
+ {
+  "name": "nedb",
+  "weeklyDownloads": 42456,
+  "latestVersion": "1.8.0",
+  "lastPublish": "2016-02-15",
+  "yearsSincePublish": 10.319446736945501,
+  "deprecated": false,
+  "license": "SEE LICENSE IN LICENSE",
+  "repository": "git+ssh://git@github.com/louischatriot/nedb.git",
+  "maintainers": 1,
+  "vulns": [
+   {
+    "id": "GHSA-339j-hqgx-qrrx",
+    "cves": [
+     "CVE-2021-23395"
+    ],
+    "severity": "HIGH",
+    "cwes": [
+     "CWE-1321"
+    ],
+    "summary": "Prototype Pollution in nedb",
+    "published": "2021-06-21",
+    "introduced": "0",
+    "verify": "in unfixed range"
+   }
+  ],
+  "maxSeverity": "HIGH",
+  "permissiveLicense": false,
+  "likelySmallPatch": true,
+  "abandoned": true,
+  "score": 83.3,
+  "droppedVulns": 0
+ },
+ {
+  "name": "markdown-it-katex",
+  "weeklyDownloads": 41197,
+  "latestVersion": "2.0.3",
+  "lastPublish": "2016-10-10",
+  "yearsSincePublish": 9.666690005671736,
+  "deprecated": false,
+  "license": "MIT",
+  "repository": "git+ssh://git@github.com/waylonflinn/markdown-it-katex.git",
+  "maintainers": 1,
+  "vulns": [
+   {
+    "id": "GHSA-5ff8-jcf9-fw62",
+    "cves": [],
+    "severity": "HIGH",
+    "cwes": [
+     "CWE-79"
+    ],
+    "summary": "Cross-Site Scripting in markdown-it-katex",
+    "published": "2020-09-04",
+    "introduced": "0.0.0",
+    "verify": "in unfixed range"
+   }
+  ],
+  "maxSeverity": "HIGH",
+  "permissiveLicense": true,
+  "likelySmallPatch": true,
+  "abandoned": true,
+  "score": 83.1,
+  "droppedVulns": 0
+ },
+ {
+  "name": "swig",
+  "weeklyDownloads": 40466,
+  "latestVersion": "1.4.2",
+  "lastPublish": "2014-08-04",
+  "yearsSincePublish": 11.850633175918885,
+  "deprecated": true,
+  "license": "MIT",
+  "repository": "http://github.com/paularmstrong/swig.git",
+  "maintainers": 1,
+  "vulns": [
+   {
+    "id": "GHSA-2rq5-699j-x7p6",
+    "cves": [
+     "CVE-2023-25345"
+    ],
+    "severity": "HIGH",
+    "cwes": [
+     "CWE-22"
+    ],
+    "summary": "Arbitrary local file read vulnerability during template rendering ",
+    "published": "2023-03-15",
+    "introduced": "0",
+    "verify": "in unfixed range"
+   }
+  ],
+  "maxSeverity": "HIGH",
+  "permissiveLicense": true,
+  "likelySmallPatch": true,
+  "abandoned": true,
+  "score": 82.9,
+  "droppedVulns": 0
+ },
+ {
+  "name": "static-server",
+  "weeklyDownloads": 39551,
+  "latestVersion": "2.2.1",
+  "lastPublish": "2018-04-03",
+  "yearsSincePublish": 8.188201409252217,
+  "deprecated": false,
+  "license": "MIT",
+  "repository": "git+https://github.com/nbluis/static-server.git",
+  "maintainers": 1,
+  "vulns": [
+   {
+    "id": "GHSA-v834-rhv4-65m3",
+    "cves": [
+     "CVE-2023-26152"
+    ],
+    "severity": "HIGH",
+    "cwes": [
+     "CWE-22"
+    ],
+    "summary": "static-server Path Traversal vulnerability",
+    "published": "2023-10-03",
+    "introduced": "0",
+    "verify": "in unfixed range"
+   }
+  ],
+  "maxSeverity": "HIGH",
+  "permissiveLicense": true,
+  "likelySmallPatch": true,
+  "abandoned": true,
+  "score": 82.7,
+  "droppedVulns": 0
+ },
+ {
+  "name": "node-qpdf",
+  "weeklyDownloads": 30727,
+  "latestVersion": "1.0.3",
+  "lastPublish": "2018-01-23",
+  "yearsSincePublish": 8.380180636089987,
+  "deprecated": false,
+  "license": "MIT",
+  "repository": "git+https://github.com/nrhirani/node-qpdf.git",
+  "maintainers": 1,
+  "vulns": [
+   {
+    "id": "GHSA-fpr8-4wvx-j9q3",
+    "cves": [
+     "CVE-2023-26155"
+    ],
+    "severity": "HIGH",
+    "cwes": [
+     "CWE-77",
+     "CWE-94"
+    ],
+    "summary": "node-qpdf vulnerable to command injection ",
+    "published": "2023-10-14",
+    "introduced": "0",
+    "verify": "in unfixed range"
+   }
+  ],
+  "maxSeverity": "HIGH",
+  "permissiveLicense": true,
+  "likelySmallPatch": false,
+  "abandoned": true,
+  "score": 80.8,
+  "droppedVulns": 0
+ },
+ {
+  "name": "lodash.setwith",
+  "weeklyDownloads": 26299,
+  "latestVersion": "4.3.2",
+  "lastPublish": "2016-08-13",
+  "yearsSincePublish": 9.824930244201521,
+  "deprecated": true,
+  "license": "MIT",
+  "repository": "git+https://github.com/lodash/lodash.git",
+  "maintainers": 2,
+  "vulns": [
+   {
+    "id": "GHSA-p6mc-m468-83gw",
+    "cves": [
+     "CVE-2020-8203"
+    ],
+    "severity": "HIGH",
+    "cwes": [
+     "CWE-1321",
+     "CWE-770"
+    ],
+    "summary": "Prototype Pollution in lodash",
+    "published": "2020-07-15",
+    "introduced": "0",
+    "verify": "in unfixed range"
+   }
+  ],
+  "maxSeverity": "HIGH",
+  "permissiveLicense": true,
+  "likelySmallPatch": true,
+  "abandoned": true,
+  "score": 79.6,
+  "droppedVulns": 0
+ },
+ {
+  "name": "bootstrap-tagsinput",
+  "weeklyDownloads": 24433,
+  "latestVersion": "0.7.1",
+  "lastPublish": "2015-11-11",
+  "yearsSincePublish": 10.582043594391635,
+  "deprecated": false,
+  "license": "MIT",
+  "repository": "git://github.com/timschlechter/bootstrap-tagsinput.git",
+  "maintainers": 1,
+  "vulns": [
+   {
+    "id": "GHSA-v2jq-9475-r5g8",
+    "cves": [
+     "CVE-2016-1000227"
+    ],
+    "severity": "HIGH",
+    "cwes": [
+     "CWE-79"
+    ],
+    "summary": "Cross-Site Scripting in bootstrap-tagsinput",
+    "published": "2020-09-01",
+    "introduced": "0",
+    "verify": "in unfixed range"
+   }
+  ],
+  "maxSeverity": "HIGH",
+  "permissiveLicense": true,
+  "likelySmallPatch": true,
+  "abandoned": true,
+  "score": 79,
+  "droppedVulns": 0
+ },
+ {
+  "name": "underscore-keypath",
+  "weeklyDownloads": 19182,
+  "latestVersion": "0.9.3",
+  "lastPublish": "2016-02-12",
+  "yearsSincePublish": 10.327204138086184,
+  "deprecated": false,
+  "license": "EPL-1.0",
+  "repository": "git+https://github.com/jeeeyul/underscore-keypath.git",
+  "maintainers": 1,
+  "vulns": [
+   {
+    "id": "GHSA-gpvc-mx6g-cchv",
+    "cves": [
+     "CVE-2023-26139"
+    ],
+    "severity": "HIGH",
+    "cwes": [
+     "CWE-1321"
+    ],
+    "summary": "underscore-keypath vulnerable to Prototype Pollution",
+    "published": "2023-08-01",
+    "introduced": "0.0.11",
+    "verify": "in unfixed range"
+   }
+  ],
+  "maxSeverity": "HIGH",
+  "permissiveLicense": false,
+  "likelySmallPatch": true,
+  "abandoned": true,
+  "score": 77.1,
+  "droppedVulns": 0
+ },
+ {
+  "name": "passport-saml",
+  "weeklyDownloads": 180168,
+  "latestVersion": "3.2.4",
+  "lastPublish": "2022-10-22",
+  "yearsSincePublish": 3.6371371621356148,
+  "deprecated": true,
+  "license": "MIT",
+  "repository": "git+https://github.com/node-saml/passport-saml.git",
+  "maintainers": 2,
+  "vulns": [
+   {
+    "id": "GHSA-4mxg-3p6v-xgq3",
+    "cves": [
+     "CVE-2025-54419"
+    ],
+    "severity": "CRITICAL",
+    "cwes": [
+     "CWE-287",
+     "CWE-347"
+    ],
+    "summary": "Node-SAML SAML Signature Verification Vulnerability",
+    "published": "2025-07-28",
+    "introduced": "0",
+    "verify": "in unfixed range"
+   }
+  ],
+  "maxSeverity": "CRITICAL",
+  "permissiveLicense": true,
+  "likelySmallPatch": false,
+  "abandoned": true,
+  "score": 76.5,
+  "droppedVulns": 0
+ },
+ {
+  "name": "jsen",
+  "weeklyDownloads": 15566,
+  "latestVersion": "0.6.6",
+  "lastPublish": "2017-07-16",
+  "yearsSincePublish": 8.90186855028517,
+  "deprecated": false,
+  "license": "MIT",
+  "repository": "git+https://github.com/bugventure/jsen.git",
+  "maintainers": 1,
+  "vulns": [
+   {
+    "id": "GHSA-vm64-cfqx-3698",
+    "cves": [
+     "CVE-2020-7777"
+    ],
+    "severity": "HIGH",
+    "cwes": [
+     "CWE-94"
+    ],
+    "summary": "Code Injection in jsen",
+    "published": "2022-02-10",
+    "introduced": "0",
+    "verify": "in unfixed range"
+   }
+  ],
+  "maxSeverity": "HIGH",
+  "permissiveLicense": true,
+  "likelySmallPatch": false,
+  "abandoned": true,
+  "score": 75.5,
+  "droppedVulns": 0
+ },
+ {
+  "name": "haml-coffee",
+  "weeklyDownloads": 15093,
+  "latestVersion": "1.14.1",
+  "lastPublish": "2014-02-05",
+  "yearsSincePublish": 12.344224413276299,
+  "deprecated": false,
+  "license": "UNKNOWN",
+  "repository": "git://github.com/netzpirat/haml-coffee.git",
+  "maintainers": 1,
+  "vulns": [
+   {
+    "id": "GHSA-m7mf-vm62-7x3q",
+    "cves": [
+     "CVE-2021-32818"
+    ],
+    "severity": "HIGH",
+    "cwes": [
+     "CWE-79"
+    ],
+    "summary": "Insecure template handling in haml-coffee",
+    "published": "2021-05-17",
+    "introduced": "0",
+    "verify": "in unfixed range"
+   }
+  ],
+  "maxSeverity": "HIGH",
+  "permissiveLicense": false,
+  "likelySmallPatch": true,
+  "abandoned": true,
+  "score": 75.2,
+  "droppedVulns": 0
+ },
+ {
+  "name": "git-promise",
+  "weeklyDownloads": 14894,
+  "latestVersion": "1.0.0",
+  "lastPublish": "2020-02-29",
+  "yearsSincePublish": 6.281393986945501,
+  "deprecated": false,
+  "license": "UNKNOWN",
+  "repository": "git://github.com/piuccio/git-promise.git",
+  "maintainers": 1,
+  "vulns": [
+   {
+    "id": "GHSA-chj3-f7xw-367m",
+    "cves": [
+     "CVE-2022-24376"
+    ],
+    "severity": "HIGH",
+    "cwes": [
+     "CWE-77",
+     "CWE-88"
+    ],
+    "summary": "OS Command Injection in git-promise",
+    "published": "2022-06-11",
+    "introduced": "0",
+    "verify": "in unfixed range"
+   }
+  ],
+  "maxSeverity": "HIGH",
+  "permissiveLicense": false,
+  "likelySmallPatch": false,
+  "abandoned": true,
+  "score": 75.1,
+  "droppedVulns": 0
+ },
+ {
+  "name": "bignum",
+  "weeklyDownloads": 13333,
+  "latestVersion": "0.13.1",
+  "lastPublish": "2019-12-20",
+  "yearsSincePublish": 6.47539207873891,
+  "deprecated": false,
+  "license": "MIT",
+  "repository": "git+ssh://git@github.com/justmoon/node-bignum.git",
+  "maintainers": 3,
+  "vulns": [
+   {
+    "id": "GHSA-6429-3g3w-6mw5",
+    "cves": [
+     "CVE-2022-25324"
+    ],
+    "severity": "HIGH",
+    "cwes": [
+     "CWE-248"
+    ],
+    "summary": "Uncaught Exception in bignum",
+    "published": "2022-05-07",
+    "introduced": "0",
+    "verify": "in unfixed range"
+   }
+  ],
+  "maxSeverity": "HIGH",
+  "permissiveLicense": true,
+  "likelySmallPatch": false,
+  "abandoned": true,
+  "score": 74.2,
+  "droppedVulns": 0
+ },
+ {
+  "name": "lite-server",
+  "weeklyDownloads": 26100,
+  "latestVersion": "2.6.1",
+  "lastPublish": "2020-11-11",
+  "yearsSincePublish": 5.579161994613434,
+  "deprecated": false,
+  "license": "MIT",
+  "repository": "git+https://github.com/johnpapa/lite-server.git",
+  "maintainers": 1,
+  "vulns": [
+   {
+    "id": "GHSA-89w7-5q45-r53w",
+    "cves": [
+     "CVE-2022-25940"
+    ],
+    "severity": "HIGH",
+    "cwes": [
+     "CWE-20",
+     "CWE-400"
+    ],
+    "summary": "lite-server vulnerable to Denial of Service",
+    "published": "2022-12-20",
+    "introduced": "0",
+    "verify": "in unfixed range"
+   }
+  ],
+  "maxSeverity": "HIGH",
+  "permissiveLicense": true,
+  "likelySmallPatch": true,
+  "abandoned": true,
+  "score": 73.9,
+  "droppedVulns": 0
+ },
+ {
+  "name": "@ndhoule/defaults",
+  "weeklyDownloads": 12616,
+  "latestVersion": "2.0.1",
+  "lastPublish": "2016-05-02",
+  "yearsSincePublish": 10.10646414201521,
+  "deprecated": false,
+  "license": "MIT",
+  "repository": "git+https://github.com/ndhoule/defaults.git",
+  "maintainers": 1,
+  "vulns": [
+   {
+    "id": "GHSA-79h2-v6hh-wq23",
+    "cves": [
+     "CVE-2024-57066"
+    ],
+    "severity": "HIGH",
+    "cwes": [
+     "CWE-1321"
+    ],
+    "summary": "@ndhoule/defaults prototype pollution",
+    "published": "2025-02-06",
+    "introduced": "0",
+    "verify": "in unfixed range"
+   }
+  ],
+  "maxSeverity": "HIGH",
+  "permissiveLicense": true,
+  "likelySmallPatch": true,
+  "abandoned": true,
+  "score": 73.8,
+  "droppedVulns": 0
+ },
+ {
+  "name": "jquery-deparam",
+  "weeklyDownloads": 12172,
+  "latestVersion": "0.5.3",
+  "lastPublish": "2017-01-04",
+  "yearsSincePublish": 9.43264513269962,
+  "deprecated": false,
+  "license": "MIT",
+  "repository": "git+https://github.com/AceMetrix/jquery-deparam.git",
+  "maintainers": 2,
+  "vulns": [
+   {
+    "id": "GHSA-xg68-chx2-253g",
+    "cves": [
+     "CVE-2021-20087"
+    ],
+    "severity": "HIGH",
+    "cwes": [
+     "CWE-1321"
+    ],
+    "summary": "Prototype Pollution in jquery-deparam",
+    "published": "2021-05-24",
+    "introduced": "0",
+    "verify": "in unfixed range"
+   }
+  ],
+  "maxSeverity": "HIGH",
+  "permissiveLicense": true,
+  "likelySmallPatch": true,
+  "abandoned": true,
+  "score": 73.5,
+  "droppedVulns": 0
+ },
+ {
+  "name": "git-clone",
+  "weeklyDownloads": 137058,
+  "latestVersion": "0.2.0",
+  "lastPublish": "2021-09-28",
+  "yearsSincePublish": 4.700986203231939,
+  "deprecated": false,
+  "license": "ISC",
+  "repository": "git://github.com/jaz303/git-clone.git",
+  "maintainers": 1,
+  "vulns": [
+   {
+    "id": "GHSA-8jmw-wjr8-2x66",
+    "cves": [
+     "CVE-2022-25900"
+    ],
+    "severity": "HIGH",
+    "cwes": [
+     "CWE-77",
+     "CWE-88"
+    ],
+    "summary": "Command injection in git-clone",
+    "published": "2022-07-02",
+    "introduced": "0",
+    "verify": "in unfixed range"
+   }
+  ],
+  "maxSeverity": "HIGH",
+  "permissiveLicense": true,
+  "likelySmallPatch": false,
+  "abandoned": true,
+  "score": 72.4,
+  "droppedVulns": 0
+ },
+ {
+  "name": "angular",
+  "weeklyDownloads": 588990,
+  "latestVersion": "1.8.3",
+  "lastPublish": "2022-04-07",
+  "yearsSincePublish": 4.176663362484157,
+  "deprecated": true,
+  "license": "MIT",
+  "repository": "git+https://github.com/angular/angular.js.git",
+  "maintainers": 1,
+  "vulns": [
+   {
+    "id": "GHSA-2qqx-w9hr-q5gx",
+    "cves": [
+     "CVE-2023-26117"
+    ],
+    "severity": "MODERATE",
+    "cwes": [
+     "CWE-1333"
+    ],
+    "summary": "angular vulnerable to regular expression denial of service via the $resource service",
+    "published": "2023-03-30",
+    "introduced": "0",
+    "verify": "in unfixed range"
+   },
+   {
+    "id": "GHSA-2vrf-hf26-jrp5",
+    "cves": [
+     "CVE-2023-26116"
+    ],
+    "severity": "MODERATE",
+    "cwes": [
+     "CWE-1333"
+    ],
+    "summary": "angular vulnerable to regular expression denial of service via the angular.copy() utility",
+    "published": "2023-03-30",
+    "introduced": "0",
+    "verify": "in unfixed range"
+   },
+   {
+    "id": "GHSA-4w4v-5hc9-xrr2",
+    "cves": [
+     "CVE-2024-21490"
+    ],
+    "severity": "HIGH",
+    "cwes": [
+     "CWE-1333"
+    ],
+    "summary": "angular vulnerable to super-linear runtime due to backtracking",
+    "published": "2024-02-10",
+    "introduced": "1.3.0",
+    "verify": "in unfixed range"
+   },
+   {
+    "id": "GHSA-j58c-ww9w-pwp5",
+    "cves": [
+     "CVE-2025-0716"
+    ],
+    "severity": "LOW",
+    "cwes": [
+     "CWE-791"
+    ],
+    "summary": "AngularJS improperly sanitizes SVG elements",
+    "published": "2025-04-29",
+    "introduced": "0",
+    "verify": "in unfixed range"
+   },
+   {
+    "id": "GHSA-m2h2-264f-f486",
+    "cves": [
+     "CVE-2022-25844"
+    ],
+    "severity": "MODERATE",
+    "cwes": [
+     "CWE-1333",
+     "CWE-770"
+    ],
+    "summary": "angular vulnerable to regular expression denial of service (ReDoS)",
+    "published": "2022-05-03",
+    "introduced": "1.7.0",
+    "verify": "in unfixed range"
+   },
+   {
+    "id": "GHSA-m9gf-397r-hwpg",
+    "cves": [
+     "CVE-2024-8372"
+    ],
+    "severity": "LOW",
+    "cwes": [
+     "CWE-1289"
+    ],
+    "summary": "AngularJS allows attackers to bypass common image source restrictions",
+    "published": "2024-09-09",
+    "introduced": "1.3.0-rc.4",
+    "verify": "in unfixed range"
+   },
+   {
+    "id": "GHSA-mqm9-c95h-x2p6",
+    "cves": [
+     "CVE-2024-8373"
+    ],
+    "severity": "LOW",
+    "cwes": [
+     "CWE-791"
+    ],
+    "summary": "AngularJS allows attackers to bypass common image source restrictions",
+    "published": "2024-09-09",
+    "introduced": "0",
+    "verify": "in unfixed range"
+   },
+   {
+    "id": "GHSA-prc3-vjfx-vhm9",
+    "cves": [
+     "CVE-2022-25869"
+    ],
+    "severity": "MODERATE",
+    "cwes": [
+     "CWE-79"
+    ],
+    "summary": "Angular (deprecated package) Cross-site Scripting",
+    "published": "2022-07-16",
+    "introduced": "0",
+    "verify": "in unfixed range"
+   },
+   {
+    "id": "GHSA-qwqh-hm9m-p5hr",
+    "cves": [
+     "CVE-2023-26118"
+    ],
+    "severity": "MODERATE",
+    "cwes": [
+     "CWE-1333"
+    ],
+    "summary": "angular vulnerable to regular expression denial of service via the <input type=\"url\"> element",
+    "published": "2023-03-30",
+    "introduced": "0",
+    "verify": "in unfixed range"
+   }
+  ],
+  "maxSeverity": "HIGH",
+  "permissiveLicense": true,
+  "likelySmallPatch": true,
+  "abandoned": true,
+  "score": 72.3,
+  "droppedVulns": 0
+ },
+ {
+  "name": "request",
+  "weeklyDownloads": 14558838,
+  "latestVersion": "2.88.2",
+  "lastPublish": "2020-02-11",
+  "yearsSincePublish": 6.329091340747782,
+  "deprecated": true,
+  "license": "Apache-2.0",
+  "repository": "git+https://github.com/request/request.git",
+  "maintainers": 4,
+  "vulns": [
+   {
+    "id": "GHSA-p8p7-x288-28g6",
+    "cves": [
+     "CVE-2023-28155"
+    ],
+    "severity": "MODERATE",
+    "cwes": [
+     "CWE-918"
+    ],
+    "summary": "Server-Side Request Forgery in Request",
+    "published": "2023-03-16",
+    "introduced": "0",
+    "verify": "in unfixed range"
+   }
+  ],
+  "maxSeverity": "MODERATE",
+  "permissiveLicense": true,
+  "likelySmallPatch": false,
+  "abandoned": true,
+  "score": 64.5,
+  "droppedVulns": 0
+ },
+ {
+  "name": "strapi",
+  "weeklyDownloads": 10827,
+  "latestVersion": "3.6.11",
+  "lastPublish": "2022-11-22",
+  "yearsSincePublish": 3.55050333643853,
+  "deprecated": true,
+  "license": "SEE LICENSE IN LICENSE",
+  "repository": "git://github.com/strapi/strapi.git",
+  "maintainers": 11,
+  "vulns": [
+   {
+    "id": "GHSA-9qgm-w87q-hx89",
+    "cves": [
+     "CVE-2022-27263"
+    ],
+    "severity": "CRITICAL",
+    "cwes": [
+     "CWE-434"
+    ],
+    "summary": "Unrestricted Upload of File with Dangerous Type in Strapi",
+    "published": "2022-04-13",
+    "introduced": "0",
+    "verify": "in unfixed range"
+   }
+  ],
+  "maxSeverity": "CRITICAL",
+  "permissiveLicense": false,
+  "likelySmallPatch": true,
+  "abandoned": true,
+  "score": 57.3,
+  "droppedVulns": 2
+ },
+ {
+  "name": "wangeditor",
+  "weeklyDownloads": 29797,
+  "latestVersion": "4.7.15",
+  "lastPublish": "2022-04-12",
+  "yearsSincePublish": 4.164075884283903,
+  "deprecated": false,
+  "license": "MIT",
+  "repository": "git+https://github.com/wangeditor-team/wangEditor.git",
+  "maintainers": 1,
+  "vulns": [
+   {
+    "id": "GHSA-g7mw-5cq6-fv82",
+    "cves": [],
+    "severity": "HIGH",
+    "cwes": [
+     "CWE-79"
+    ],
+    "summary": "Cross-Site Scripting in wangeditor",
+    "published": "2020-09-02",
+    "introduced": "0",
+    "verify": "in unfixed range"
+   }
+  ],
+  "maxSeverity": "HIGH",
+  "permissiveLicense": true,
+  "likelySmallPatch": true,
+  "abandoned": true,
+  "score": 55.9,
+  "droppedVulns": 0
+ },
+ {
+  "name": "validate.js",
+  "weeklyDownloads": 901096,
+  "latestVersion": "0.13.1",
+  "lastPublish": "2019-06-15",
+  "yearsSincePublish": 6.988710529087452,
+  "deprecated": false,
+  "license": "MIT",
+  "repository": "git+https://github.com/ansman/validate.js.git",
+  "maintainers": 1,
+  "vulns": [
+   {
+    "id": "GHSA-rv73-9c8w-jp4c",
+    "cves": [
+     "CVE-2020-26308"
+    ],
+    "severity": "MODERATE",
+    "cwes": [
+     "CWE-1333"
+    ],
+    "summary": "validate.js Regular Expression Denial of Service vulnerability",
+    "published": "2024-10-26",
+    "introduced": "0",
+    "verify": "in unfixed range"
+   }
+  ],
+  "maxSeverity": "MODERATE",
+  "permissiveLicense": true,
+  "likelySmallPatch": true,
+  "abandoned": true,
+  "score": 53.6,
+  "droppedVulns": 0
+ },
+ {
+  "name": "@nguniversal/common",
+  "weeklyDownloads": 50722,
+  "latestVersion": "16.2.0",
+  "lastPublish": "2023-08-11",
+  "yearsSincePublish": 2.8330460061153357,
+  "deprecated": false,
+  "license": "MIT",
+  "repository": "git+https://github.com/angular/universal.git",
+  "maintainers": 2,
+  "vulns": [
+   {
+    "id": "GHSA-68x2-mx4q-78m7",
+    "cves": [
+     "CVE-2025-59052"
+    ],
+    "severity": "HIGH",
+    "cwes": [
+     "CWE-362"
+    ],
+    "summary": "Angular SSR: Global Platform Injector Race Condition Leads to Cross-Request Data Leakage",
+    "published": "2025-09-10",
+    "introduced": "16.0.0-next.0",
+    "verify": "in unfixed range"
+   },
+   {
+    "id": "GHSA-x288-3778-4hhx",
+    "cves": [
+     "CVE-2026-27739"
+    ],
+    "severity": "CRITICAL",
+    "cwes": [
+     "CWE-918"
+    ],
+    "summary": "Angular SSR is vulnerable to SSRF and Header Injection via request handling pipeline",
+    "published": "2026-02-25",
+    "introduced": "0",
+    "verify": "in unfixed range"
+   }
+  ],
+  "maxSeverity": "CRITICAL",
+  "permissiveLicense": true,
+  "likelySmallPatch": false,
+  "abandoned": true,
+  "score": 53.3,
+  "droppedVulns": 0
+ },
+ {
+  "name": "useragent",
+  "weeklyDownloads": 807082,
+  "latestVersion": "2.3.0",
+  "lastPublish": "2018-01-30",
+  "yearsSincePublish": 8.36229935117237,
+  "deprecated": false,
+  "license": "MIT",
+  "repository": "git+ssh://git@github.com/3rd-Eden/useragent.git",
+  "maintainers": 2,
+  "vulns": [
+   {
+    "id": "GHSA-mgfv-m47x-4wqp",
+    "cves": [
+     "CVE-2020-26311"
+    ],
+    "severity": "MODERATE",
+    "cwes": [
+     "CWE-1333"
+    ],
+    "summary": "useragent Regular Expression Denial of Service vulnerability",
+    "published": "2024-10-26",
+    "introduced": "0",
+    "verify": "in unfixed range"
+   }
+  ],
+  "maxSeverity": "MODERATE",
+  "permissiveLicense": true,
+  "likelySmallPatch": true,
+  "abandoned": true,
+  "score": 53.2,
+  "droppedVulns": 0
+ },
+ {
+  "name": "@nguniversal/express-engine",
+  "weeklyDownloads": 44246,
+  "latestVersion": "16.2.0",
+  "lastPublish": "2023-08-11",
+  "yearsSincePublish": 2.833046091318124,
+  "deprecated": false,
+  "license": "MIT",
+  "repository": "git+https://github.com/angular/universal.git",
+  "maintainers": 2,
+  "vulns": [
+   {
+    "id": "GHSA-x288-3778-4hhx",
+    "cves": [
+     "CVE-2026-27739"
+    ],
+    "severity": "CRITICAL",
+    "cwes": [
+     "CWE-918"
+    ],
+    "summary": "Angular SSR is vulnerable to SSRF and Header Injection via request handling pipeline",
+    "published": "2026-02-25",
+    "introduced": "0",
+    "verify": "in unfixed range"
+   }
+  ],
+  "maxSeverity": "CRITICAL",
+  "permissiveLicense": true,
+  "likelySmallPatch": false,
+  "abandoned": true,
+  "score": 52.6,
+  "droppedVulns": 0
+ },
+ {
+  "name": "libxmljs",
+  "weeklyDownloads": 46420,
+  "latestVersion": "1.0.11",
+  "lastPublish": "2023-10-18",
+  "yearsSincePublish": 2.6471754393219267,
+  "deprecated": false,
+  "license": "MIT",
+  "repository": "git+ssh://git@github.com/libxmljs/libxmljs.git",
+  "maintainers": 3,
+  "vulns": [
+   {
+    "id": "GHSA-6433-x5p4-8jc7",
+    "cves": [
+     "CVE-2024-34391"
+    ],
+    "severity": "CRITICAL",
+    "cwes": [
+     "CWE-843"
+    ],
+    "summary": "libxmljs vulnerable to type confusion when parsing specially crafted XML",
+    "published": "2024-05-02",
+    "introduced": "0",
+    "verify": "in unfixed range"
+   },
+   {
+    "id": "GHSA-jv72-59wq-8rxm",
+    "cves": [
+     "CVE-2025-25341"
+    ],
+    "severity": "HIGH",
+    "cwes": [
+     "CWE-400"
+    ],
+    "summary": "libxmljs has segmentation fault, potentially leading to a denial-of-service (DoS)",
+    "published": "2025-12-26",
+    "introduced": "0",
+    "verify": "in unfixed range"
+   },
+   {
+    "id": "GHSA-mg49-jqgw-gcj6",
+    "cves": [
+     "CVE-2024-34392"
+    ],
+    "severity": "CRITICAL",
+    "cwes": [
+     "CWE-843"
+    ],
+    "summary": "libxmljs vulnerable to type confusion when parsing specially crafted XML ",
+    "published": "2024-05-02",
+    "introduced": "0",
+    "verify": "in unfixed range"
+   }
+  ],
+  "maxSeverity": "CRITICAL",
+  "permissiveLicense": true,
+  "likelySmallPatch": true,
+  "abandoned": true,
+  "score": 49.4,
+  "droppedVulns": 0
+ },
+ {
+  "name": "utilities",
+  "weeklyDownloads": 10561,
+  "latestVersion": "1.0.6",
+  "lastPublish": "2022-05-11",
+  "yearsSincePublish": 4.083938561755387,
+  "deprecated": true,
+  "license": "UNKNOWN",
+  "repository": "git://github.com/mde/utilities.git",
+  "maintainers": 5,
+  "vulns": [
+   {
+    "id": "GHSA-wxfj-84xf-7gxv",
+    "cves": [
+     "CVE-2023-26105"
+    ],
+    "severity": "HIGH",
+    "cwes": [
+     "CWE-1321"
+    ],
+    "summary": "mde utilities contains Prototype Pollution",
+    "published": "2023-02-28",
+    "introduced": "0",
+    "verify": "in unfixed range"
+   }
+  ],
+  "maxSeverity": "HIGH",
+  "permissiveLicense": false,
+  "likelySmallPatch": true,
+  "abandoned": true,
+  "score": 49.3,
+  "droppedVulns": 0
+ }
+]

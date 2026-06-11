@@ -1,0 +1,17 @@
+{
+  "cves": ["CVE-2025-25975"],
+  "ghsas": ["GHSA-8g77-54rh-46hx"],
+  "severity": "Critical",
+  "cwe": "CWE-1321 Prototype Pollution",
+  "title": "Prototype Pollution in parse-git-config via expandKeys",
+  "affectedVersion": "3.0.0",
+  "affectedRange": "<= 3.0.0 (all published versions)",
+  "date": "2026-06-10",
+  "testScript": "mocha test/test.js test/security.js",
+  "testFile": "test/security.js",
+  "shortFix": "Patches CVE-2025-25975 (prototype pollution).",
+  "longFix": "expandKeys built nested objects from git config section names without guarding reserved property names; a section such as [__proto__ \"x\"] polluted Object.prototype. Section/subsection names resolving to __proto__/constructor/prototype are now rejected.",
+  "summary": "parse-git-config's expandKeys() turns git-config section names into nested objects. With no guard on reserved keys, a crafted .git/config (e.g. from an untrusted repository) parsed with expandKeys:true could mutate Object.prototype for the whole process.",
+  "poc": "const parse = require('parse-git-config');\nparse.expandKeys({ '__proto__ \"isPolluted\"': true });\nconsole.log(({}).isPolluted); // => true on the unpatched version",
+  "fixExplanation": "Section and subsection names that resolve to __proto__, constructor, or prototype are dropped. Legitimate git configuration is unaffected (no real .gitconfig has a section literally named __proto__)."
+}

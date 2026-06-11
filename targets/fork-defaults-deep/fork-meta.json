@@ -1,0 +1,17 @@
+{
+  "cves": ["CVE-2018-16486"],
+  "ghsas": ["GHSA-pjxw-22xf-6pwc"],
+  "severity": "Critical",
+  "cwe": "CWE-1321 Prototype Pollution",
+  "title": "Prototype Pollution in defaults-deep via constructor.prototype",
+  "affectedVersion": "0.2.4",
+  "affectedRange": "<= 0.2.4 (all published versions)",
+  "date": "2026-06-11",
+  "testScript": "node --test test/security.test.js",
+  "testFile": "test/security.test.js",
+  "shortFix": "Patches CVE-2018-16486 (prototype pollution).",
+  "longFix": "The original guard blocked only `__proto__`, leaving the `constructor.prototype` walk reachable. The merge loop now skips `__proto__`, `constructor`, and `prototype` keys.",
+  "summary": "`defaults-deep` recursively copies source properties into a target. The published version guards against a literal `__proto__` key but still recurses through `constructor` into `constructor.prototype`, allowing an attacker-controlled source object (e.g. parsed from untrusted JSON) to add or overwrite properties on `Object.prototype` for the whole process.",
+  "poc": "const defaultsDeep = require('defaults-deep');\ndefaultsDeep({}, JSON.parse('{\"constructor\":{\"prototype\":{\"polluted\":\"yes\"}}}'));\nconsole.log(({}).polluted); // => 'yes'  (Object.prototype polluted)",
+  "fixExplanation": "Keys that name a prototype slot (`__proto__`, `constructor`, `prototype`) are skipped during the recursive merge, so no source data can reach `Object.prototype`. Legitimate deep-default behavior is unchanged — real configuration data does not contain these reserved section names."
+}

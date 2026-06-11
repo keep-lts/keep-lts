@@ -1,0 +1,17 @@
+{
+  "cves": ["CVE-2020-7661"],
+  "ghsas": ["GHSA-v4rh-8p82-6h5w"],
+  "severity": "High",
+  "cwe": "CWE-1333 Inefficient Regular Expression Complexity (ReDoS)",
+  "title": "Regular Expression Denial of Service in url-regex",
+  "affectedVersion": "5.0.0",
+  "affectedRange": "<= 5.0.0 (all published versions)",
+  "date": "2026-06-11",
+  "testScript": "node --test test/security.test.js",
+  "testFile": "test/security.test.js",
+  "shortFix": "Patches CVE-2020-7661 (ReDoS) by rewriting the host/domain sub-patterns to run in linear time — pure JS, no native dependency.",
+  "longFix": "The generated URL regex used host/domain sub-patterns of the form `(?:X[-_]*)*X+`, whose nested quantifiers backtrack catastrophically. They are rewritten to the equivalent, unambiguous `X+(?:[-_]+X+)*`, which matches the identical language in linear time.",
+  "summary": "url-regex builds a regular expression for matching/validating URLs. Its host and domain sub-patterns contained nested quantifiers that backtrack catastrophically: a string like `http://` followed by a long run of host characters and one non-matching byte takes time quadratic-or-worse in the input length, so untrusted input can hang the event loop (a ~20 KB string already takes ~600 ms; larger inputs take many seconds).",
+  "poc": "const urlRegex = require('url-regex');\nconst re = urlRegex({ exact: true });\nre.test('http://' + 'a'.repeat(200000) + '!'); // hangs for many seconds on 5.0.0",
+  "fixExplanation": "The host and domain sub-patterns are rewritten from `(?:[a-z0-9][-_]*)*[a-z0-9]+` to `[a-z0-9]+(?:[-_]+[a-z0-9]+)*` (and the `-`-only domain variant similarly). The two forms accept exactly the same hostnames — verified identical across a corpus of 27 URLs in all four strict/exact option combinations — but the rewrite removes the ambiguous overlap that caused backtracking, so matching is linear. Unlike `url-regex-safe`, which only avoids the ReDoS when the optional native `re2` module is installed (and silently falls back to the vulnerable engine otherwise), this fix is pure JavaScript and always safe."
+}

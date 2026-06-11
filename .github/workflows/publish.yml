@@ -1,0 +1,44 @@
+name: Publish to npm
+
+# Manual, deliberate publishing with signed npm provenance attestations.
+# Trigger from the GitHub UI: Actions → "Publish to npm" → Run workflow.
+# Leave "dry run" checked first to see exactly what would publish.
+
+on:
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Dry run (run the test gate, but do not publish)"
+        type: boolean
+        default: true
+
+permissions:
+  contents: read
+  id-token: write        # OIDC token — REQUIRED for npm provenance
+
+concurrency:
+  group: npm-publish
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22                       # ships npm 10+ (provenance support)
+          registry-url: https://registry.npmjs.org
+
+      - name: Publish forks
+        working-directory: publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}   # npm automation/granular token with publish rights
+        run: |
+          chmod +x publish-all.sh
+          if [ "${{ inputs.dry_run }}" = "false" ]; then
+            ./publish-all.sh --yes
+          else
+            ./publish-all.sh
+          fi

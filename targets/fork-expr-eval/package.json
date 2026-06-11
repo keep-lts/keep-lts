@@ -1,0 +1,68 @@
+{
+  "name": "@keep-lts/expr-eval",
+  "version": "2.0.3",
+  "description": "Security-maintained drop-in fork of expr-eval. Patches CVE-2025-12735 and CVE-2025-13204 by restricting member access. Original API unchanged.",
+  "main": "dist/bundle.js",
+  "module": "dist/index.mjs",
+  "typings": "parser.d.ts",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "eslint": "^6.3.0",
+    "eslint-config-semistandard": "^15.0.0",
+    "eslint-config-standard": "^13.0.1",
+    "eslint-plugin-import": "^2.15.0",
+    "eslint-plugin-node": "^9.2.0",
+    "eslint-plugin-promise": "^4.0.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "mocha": "^6.2.0",
+    "nyc": "^14.1.1",
+    "rollup": "^1.20.3",
+    "rollup-plugin-uglify": "^6.0.3"
+  },
+  "scripts": {
+    "test": "node --test test/security.test.js",
+    "coverage": "npm run build && nyc --reporter=lcov --reporter=text-summary mocha",
+    "lint": "eslint index.js src test rollup.config.js rollup-min.config.js",
+    "watch": "rollup -c rollup.config.js -w",
+    "build": "rollup -c rollup.config.js && rollup -c rollup-min.config.js && rollup -c rollup-esm.config.js",
+    "prepublish": "npm run build"
+  },
+  "files": [
+    "dist/",
+    "parser.d.ts",
+    "CHANGELOG.md",
+    "SECURITY.md"
+  ],
+  "repository": "keep-lts/expr-eval",
+  "keywords": [
+    "expression",
+    "math",
+    "evaluate",
+    "eval",
+    "function",
+    "parser",
+    "cve-2025-12735",
+    "cve-2025-13204",
+    "security",
+    "patch",
+    "lts",
+    "fork",
+    "cwe-94-code-injection-/-cwe-1321-prototype-pollution"
+  ],
+  "author": "Matthew Crumley",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/keep-lts/expr-eval/issues"
+  },
+  "homepage": "https://github.com/keep-lts/expr-eval",
+  "contributors": [
+    "Keep LTS (security maintenance fork)"
+  ],
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  }
+}

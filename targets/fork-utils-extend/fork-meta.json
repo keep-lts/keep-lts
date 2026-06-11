@@ -1,0 +1,17 @@
+{
+  "cves": ["CVE-2024-57077", "CVE-2020-8147"],
+  "ghsas": ["GHSA-7qgg-vw88-cc99", "GHSA-6pq3-928q-x6w6"],
+  "severity": "Critical",
+  "cwe": "CWE-1321 Prototype Pollution",
+  "title": "Prototype Pollution in utils-extend's deep extend",
+  "affectedVersion": "1.0.8",
+  "affectedRange": "<= 1.0.8 (all published versions)",
+  "date": "2026-06-11",
+  "testScript": "node --test test/security.test.js",
+  "testFile": "test/security.test.js",
+  "shortFix": "Patches CVE-2024-57077 and CVE-2020-8147 (prototype pollution).",
+  "longFix": "The recursive `extend` merged source keys with no guard on reserved property names; a `__proto__` key recursed into and polluted Object.prototype. The merge loop now skips `__proto__`, `constructor`, and `prototype`.",
+  "summary": "`utils-extend`'s deep `extend()` recursively merges a source object into a target. With no guard on reserved keys, a source object parsed from untrusted JSON containing `__proto__` causes the recursion to walk into and mutate `Object.prototype`, polluting every object in the process.",
+  "poc": "const u = require('utils-extend');\nu.extend({}, JSON.parse('{\"__proto__\":{\"polluted\":\"yes\"}}'));\nconsole.log(({}).polluted); // => 'yes'",
+  "fixExplanation": "Source keys naming a prototype slot (`__proto__`, `constructor`, `prototype`) are skipped during the recursive merge. All legitimate deep-merge behavior — nested objects, arrays, and the multi-source `extend()` wrapper — is preserved."
+}

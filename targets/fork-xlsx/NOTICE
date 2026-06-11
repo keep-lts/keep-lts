@@ -1,0 +1,27 @@
+@keep-lts/xlsx
+Copyright (C) 2012-present SheetJS LLC (https://sheetjs.com)
+
+This product includes software developed by SheetJS LLC, licensed under the
+Apache License, Version 2.0 (see LICENSE).
+
+--------------------------------------------------------------------------------
+MODIFICATIONS BY Keep LTS (unofficial security-maintenance fork)
+--------------------------------------------------------------------------------
+
+This distribution is a fork of `xlsx` (SheetJS Community Edition) version 0.18.5
+— the last version published to the npm registry. It applies two security fixes
+that SheetJS shipped only in later, CDN-only releases, back-ported to the 0.18.5
+baseline so that npm consumers have a remediated drop-in:
+
+  * CVE-2023-30533 (prototype pollution on file read)
+      ported from the SheetJS 0.19.3 fix to `sheet_insert_comments`.
+  * CVE-2024-22363 (ReDoS in core-property parsing)
+      ported from the SheetJS 0.20.2 fix (indexOf-based `str_match_xml`).
+
+The changed regions in xlsx.js are marked with `CVE-...` comments. No other
+functional changes have been made; legitimate parsing is byte-for-byte equivalent
+to upstream 0.18.5 (verified by a cross-version equivalence test).
+
+This fork is NOT affiliated with, sponsored by, or endorsed by SheetJS LLC.
+For ongoing support and the latest releases, please see https://sheetjs.com/
+and https://cdn.sheetjs.com/.

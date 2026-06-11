@@ -1,0 +1,17 @@
+{
+  "cves": ["CVE-2025-57318"],
+  "ghsas": ["GHSA-xq4f-3jxp-qv6m"],
+  "severity": "High",
+  "cwe": "CWE-1321 Prototype Pollution",
+  "title": "Prototype Pollution in csvjson via toSchemaObject headers",
+  "affectedVersion": "5.1.0",
+  "affectedRange": "<= 5.1.0 (all published versions)",
+  "date": "2026-06-11",
+  "testScript": "node --test test/security.test.js",
+  "testFile": "test/security.test.js",
+  "shortFix": "Patches CVE-2025-57318 (prototype pollution).",
+  "longFix": "`toSchemaObject` builds nested objects from CSV header names via `addDataInSchema` with no guard on reserved keys; a header like `__proto__.x` or `constructor.prototype.x` mutated Object.prototype. Headers whose dotted/bracketed segments name a prototype slot are now rejected.",
+  "summary": "`csvjson.toSchemaObject()` interprets dotted/bracketed CSV column headers (e.g. `name.first`) to build nested objects. With no guard on reserved property names, a header such as `__proto__.polluted` or `constructor.prototype.polluted` causes the schema builder to walk into and mutate `Object.prototype`, affecting every object in the process (the `__proto__[]` variant instead throws, a denial-of-service). The attacker only needs to control the header row of a parsed CSV.",
+  "poc": "const csvjson = require('csvjson');\ncsvjson.toSchemaObject('__proto__.polluted\\nyes');\nconsole.log(({}).polluted); // => 'yes'",
+  "fixExplanation": "`addDataInSchema` now splits each header on `.`, `[`, and `]` and rejects the header if any segment is `__proto__`, `constructor`, or `prototype`. Legitimate nested headers — and headers that merely contain those words as substrings, e.g. `constructorName` — are unaffected."
+}

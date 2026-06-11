@@ -1,0 +1,11 @@
+# raw pipeline inputs/outputs (regenerable via pipeline/*.mjs)
+data/osv/
+data/*.zip
+# derived data kept small enough to commit: nofix-packages.json, targets-*.json
+node_modules/
+**/node_modules/
+.DS_Store
+# generated discovery site (regenerable via site/generate.mjs)
+site/dist/
+# scaffolded fork tarballs
+targets/**/*.tgz

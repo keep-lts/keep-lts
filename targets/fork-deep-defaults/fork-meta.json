@@ -1,0 +1,17 @@
+{
+  "cves": ["CVE-2021-25944"],
+  "ghsas": ["GHSA-h6xg-rg33-9mf4"],
+  "severity": "Critical",
+  "cwe": "CWE-1321 Prototype Pollution",
+  "title": "Prototype Pollution in deep-defaults",
+  "affectedVersion": "1.0.5",
+  "affectedRange": "<= 1.0.5 (all published versions)",
+  "date": "2026-06-11",
+  "testScript": "node --test test/security.test.js",
+  "testFile": "test/security.test.js",
+  "shortFix": "Patches CVE-2021-25944 (prototype pollution).",
+  "longFix": "The recursive merge had no guard on reserved keys; a `__proto__` key in the source recursed into and polluted `Object.prototype`. The merge now skips `__proto__`, `constructor`, and `prototype`.",
+  "summary": "`deep-defaults` recursively fills in defaults from a source object. With no guard on reserved property names, a source object parsed from untrusted JSON containing `__proto__` causes the recursion to walk into `Object.prototype` and add properties there, polluting every object in the process.",
+  "poc": "const dd = require('deep-defaults');\ndd({}, JSON.parse('{\"__proto__\":{\"polluted\":\"yes\"}}'));\nconsole.log(({}).polluted); // => 'yes'",
+  "fixExplanation": "Source keys naming a prototype slot (`__proto__`, `constructor`, `prototype`) are skipped, so untrusted data can never reach `Object.prototype`. All legitimate default-merging behavior is preserved (verified by the ported upstream behavior cases)."
+}

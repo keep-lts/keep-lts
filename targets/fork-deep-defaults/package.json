@@ -1,0 +1,41 @@
+{
+  "name": "@keep-lts/deep-defaults",
+  "description": "Security-maintained drop-in fork of deep-defaults. Patches CVE-2021-25944 (prototype pollution). Original API unchanged.",
+  "version": "1.0.6",
+  "main": "lib/index.js",
+  "repository": "keep-lts/deep-defaults",
+  "homepage": "https://github.com/keep-lts/deep-defaults",
+  "author": {
+    "name": "Daniel Kang",
+    "email": "me@daniel.gs"
+  },
+  "dependencies": {
+    "lodash": "^4.17.5"
+  },
+  "devDependencies": {
+    "jshint": "2.5.x",
+    "mocha": "1.20.x"
+  },
+  "scripts": {
+    "test": "node --test test/security.test.js"
+  },
+  "license": "MIT",
+  "contributors": [
+    "Keep LTS (security maintenance fork)"
+  ],
+  "bugs": {
+    "url": "https://github.com/keep-lts/deep-defaults/issues"
+  },
+  "keywords": [
+    "cve-2021-25944",
+    "security",
+    "patch",
+    "lts",
+    "fork",
+    "cwe-1321-prototype-pollution"
+  ],
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  }
+}

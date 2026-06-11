@@ -1,0 +1,17 @@
+{
+  "cves": ["CVE-2021-25943"],
+  "ghsas": ["GHSA-cwcx-rxgc-cmw3"],
+  "severity": "Critical",
+  "cwe": "CWE-1321 Prototype Pollution",
+  "title": "Prototype Pollution in 101 via set/put keypaths",
+  "affectedVersion": "1.6.3",
+  "affectedRange": "<= 1.6.3 (all published versions)",
+  "date": "2026-06-11",
+  "testScript": "node --test test/security.test.js",
+  "testFile": "test/security.test.js",
+  "shortFix": "Patches CVE-2021-25943 (prototype pollution).",
+  "longFix": "`set` and `put` passed user-supplied keypaths directly to keypather, which walks `__proto__`/`constructor`/`prototype` segments. All keypather writes now go through a guard that rejects keypaths targeting a prototype slot.",
+  "summary": "The `set` and `put` functions accept a dotted/bracketed keypath and delegate to the `keypather` library to assign a nested value. A keypath such as `__proto__.polluted` or `constructor.prototype.polluted` causes keypather to walk into and mutate `Object.prototype`, affecting every object in the process. This is reachable from the 3-arg, 2-arg, and partial-application forms of both functions.",
+  "poc": "const set = require('101/set');\nset({}, '__proto__.polluted', 'yes');\nconsole.log(({}).polluted); // => 'yes'",
+  "fixExplanation": "A small `_safe-keypath.js` wrapper validates every keypath before it reaches keypather; keypaths whose segments resolve to `__proto__`, `constructor`, or `prototype` are rejected (the write is skipped). Legitimate keypaths — including keys that merely contain those words as substrings, e.g. `constructorName` — are unaffected."
+}
