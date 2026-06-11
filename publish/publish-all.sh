@@ -22,6 +22,11 @@ TARGETS="$HERE/../targets"
 REPO_ROOT="$(cd "$HERE/.." && pwd)"   # the deployable repo root (the lts/ directory)
 DRY=1; [ "${1:-}" = "--yes" ] && DRY=0
 
+# Forks to skip. @keep-lts/101 is rejected by npm (E400 "that word is not allowed")
+# because the name "101" is blocked; it needs a rename, handled separately.
+SKIP_FORKS="fork-101"
+skip_fork() { case " $SKIP_FORKS " in *" $(basename "$1") "*) return 0;; *) return 1;; esac; }
+
 # Provenance is OFF unless explicitly requested (KEEPLTS_PROVENANCE=true). It only
 # works from a CI with an OIDC token AND a PUBLIC repo, so keeping it opt-in lets a
 # private-repo or local publish succeed. (This overrides publishConfig.provenance.)
@@ -37,6 +42,7 @@ echo
 published=0; skipped=0; failed=0
 for dir in "$TARGETS"/fork-*/; do
   [ -f "$dir/package.json" ] || continue
+  skip_fork "$dir" && { echo "skip   $(basename "$dir") (excluded — name blocked by npm)"; echo; continue; }
   name=$(node -p "require('$dir/package.json').name")
   version=$(node -p "require('$dir/package.json').version")
 
@@ -87,6 +93,7 @@ if [ $DRY -eq 0 ]; then
   echo "== ensuring public access =="
   for dir in "$TARGETS"/fork-*/; do
     [ -f "$dir/package.json" ] || continue
+    skip_fork "$dir" && continue
     name=$(node -p "require('$dir/package.json').name")
     if npm access set status=public "$name" >/dev/null 2>&1 || npm access public "$name" >/dev/null 2>&1; then
       echo "  ✓ public  $name"
