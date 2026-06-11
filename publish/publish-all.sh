@@ -80,6 +80,23 @@ for dir in "$TARGETS"/fork-*/; do
   echo
 done
 
+# Ensure every package is PUBLIC. npm can publish scoped packages as restricted
+# (private) — especially for a new org — so flip them all to public. Idempotent,
+# and it also fixes any packages published privately on a previous run.
+if [ $DRY -eq 0 ]; then
+  echo "== ensuring public access =="
+  for dir in "$TARGETS"/fork-*/; do
+    [ -f "$dir/package.json" ] || continue
+    name=$(node -p "require('$dir/package.json').name")
+    if npm access set status=public "$name" >/dev/null 2>&1 || npm access public "$name" >/dev/null 2>&1; then
+      echo "  ✓ public  $name"
+    else
+      echo "  ✗ could not set public: $name (may need a manual toggle on npmjs.com)"; failed=$((failed+1))
+    fi
+  done
+  echo
+fi
+
 echo "== summary =="
 [ $DRY -eq 1 ] && echo "dry-run complete. Re-run with --yes to publish." || echo "published: $published   skipped: $skipped   failed: $failed"
 [ $failed -gt 0 ] && exit 1 || exit 0
