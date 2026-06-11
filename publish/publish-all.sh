@@ -71,7 +71,9 @@ for dir in "$TARGETS"/fork-*/; do
       echo "  • would run: npm publish --access public $PROV"
     else
       echo "  • npm publish --access public $PROV"
-      npm publish --access public $PROV
+      # `set -e` is suppressed inside this `( … ) && … || …` subshell, so a failed
+      # publish would otherwise fall through to the success message. Check explicitly.
+      npm publish --access public $PROV || { echo "  ✗ publish FAILED"; exit 1; }
       echo "  ✓ published"
     fi
   ) && { [ $DRY -eq 0 ] && published=$((published+1)) || true; } || { echo "  ✗ FAILED: $name"; failed=$((failed+1)); }
