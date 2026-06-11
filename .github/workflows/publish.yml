@@ -11,6 +11,10 @@ on:
         description: "Dry run (run the test gate, but do not publish)"
         type: boolean
         default: true
+      provenance:
+        description: "Add signed provenance (ONLY works if this repo is PUBLIC — leave off while private)"
+        type: boolean
+        default: false
 
 permissions:
   contents: read
@@ -35,6 +39,7 @@ jobs:
         working-directory: publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}   # npm automation/granular token with publish rights
+          KEEPLTS_PROVENANCE: ${{ inputs.provenance }}
         run: |
           chmod +x publish-all.sh
           if [ "${{ inputs.dry_run }}" = "false" ]; then

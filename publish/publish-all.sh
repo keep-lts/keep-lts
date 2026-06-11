@@ -22,14 +22,16 @@ TARGETS="$HERE/../targets"
 REPO_ROOT="$(cd "$HERE/.." && pwd)"   # the deployable repo root (the lts/ directory)
 DRY=1; [ "${1:-}" = "--yes" ] && DRY=0
 
-# Provenance only works from a CI with an OIDC token. Detect that; otherwise turn
-# it off so a local publish succeeds (this overrides publishConfig.provenance).
-PROV="--no-provenance"; IN_CI=0
-if [ -n "${ACTIONS_ID_TOKEN_REQUEST_URL:-}" ]; then PROV="--provenance"; IN_CI=1; fi
+# Provenance is OFF unless explicitly requested (KEEPLTS_PROVENANCE=true). It only
+# works from a CI with an OIDC token AND a PUBLIC repo, so keeping it opt-in lets a
+# private-repo or local publish succeed. (This overrides publishConfig.provenance.)
+IN_CI=0; [ -n "${ACTIONS_ID_TOKEN_REQUEST_URL:-}" ] && IN_CI=1
+PROV="--no-provenance"
+[ "${KEEPLTS_PROVENANCE:-}" = "true" ] && PROV="--provenance"
 
 echo "== Keep LTS publish =="
 [ $DRY -eq 1 ] && echo "(dry-run — pass --yes to publish for real)"
-[ "$PROV" = "--provenance" ] && echo "provenance: ON  (CI/OIDC detected)" || echo "provenance: off (local publish)"
+[ "$PROV" = "--provenance" ] && echo "provenance: ON  (requested)" || echo "provenance: off"
 echo
 
 published=0; skipped=0; failed=0
