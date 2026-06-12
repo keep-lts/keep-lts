@@ -5,7 +5,7 @@
  * a developer's `npm audit` flags a package with "no fix available" and they search for one.
  *
  * Brand-neutral: edit BRAND below (or set env vars) before deploying. */
-import { readFileSync, writeFileSync, mkdirSync, readdirSync, existsSync } from "node:fs";
+import { readFileSync, writeFileSync, mkdirSync, readdirSync, existsSync, rmSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 import { join, dirname } from "node:path";
 
@@ -31,6 +31,10 @@ const TEST_COUNTS = {
 };
 const downloads = JSON.parse(readFileSync(join(TARGETS, "..", "site-downloads.json"), "utf8"));
 
+// Packages not yet live on npm (so the site only advertises installable fixes).
+// "101" is excluded — npm blocks that package name; it ships once renamed.
+const NOT_PUBLISHED = new Set(["101"]);
+
 // ---- gather package data ----
 const pkgs = [];
 for (const d of readdirSync(TARGETS)) {
@@ -42,6 +46,7 @@ for (const d of readdirSync(TARGETS)) {
   const meta = JSON.parse(readFileSync(metaPath, "utf8"));
   const pkg = JSON.parse(readFileSync(pkgPath, "utf8"));
   const orig = pkg.name.replace(BRAND.scope + "/", "");
+  if (NOT_PUBLISHED.has(orig)) continue;
   pkgs.push({
     orig, scoped: pkg.name, version: pkg.version, license: pkg.license,
     dl: downloads[orig] || 0, tests: TEST_COUNTS[orig] || null, meta,
@@ -108,6 +113,7 @@ function packagePage(p) {
 <code>${esc(p.orig)}</code> resolves to the patched fork, then reinstall:</p>
 <pre class="copy"><code>${esc(overrides)}</code></pre>
 <p class="muted">Equivalent for Yarn: use <code>resolutions</code>. The public API is unchanged — nothing else to do.</p>
+<p class="live">✓ Live on npm: <a href="https://www.npmjs.com/package/${esc(p.scoped)}"><code>${esc(p.scoped)}</code></a> &nbsp;·&nbsp; or install directly: <code>npm i ${esc(p.scoped)}</code></p>
 </section>
 
 <section>
@@ -129,7 +135,7 @@ function packagePage(p) {
 <ul class="checks">
 <li>Minimal, surgical patch — security only, no feature changes.</li>
 <li>A regression test that <strong>fails on the original and passes on the patch</strong>; legitimate behavior preserved.</li>
-<li>Published with npm provenance/signing; upstream license &amp; attribution retained.</li>
+<li>Published under the <code>${esc(BRAND.scope)}</code> org with the full advisory and tests inside the package; upstream license &amp; attribution retained.</li>
 </ul>
 <p class="muted">Full advisory and changelog ship inside the package (<code>SECURITY.md</code>, <code>CHANGELOG.md</code>).</p>
 </section>
@@ -167,6 +173,19 @@ function indexPage() {
 <p class="muted">Each is a drop-in replacement: add one <code>overrides</code> entry, reinstall, done.</p>
 <table class="catalog"><thead><tr><th>Package</th><th>Fixes</th><th>Severity</th><th class="num">Downloads/wk</th><th></th></tr></thead>
 <tbody>${rows}</tbody></table>
+</section>
+
+<section class="wrap pro">
+<h2>For teams that get audited</h2>
+<p>Every fix above is free, forever. But if your SOC&nbsp;2 / PCI / ISO audit needs more than a
+community fork — a <strong>guaranteed patch SLA</strong>, private support, and a real vendor on the
+hook — that's <strong>${esc(BRAND.name)} LTS Pro</strong>.</p>
+<ul class="prolist">
+<li><b>Guaranteed remediation window</b> when a new CVE lands on a package you depend on.</li>
+<li><b>SBOM / VEX attestations</b> your compliance team can hand straight to the auditor.</li>
+<li><b>One contract</b> covering your whole tail of abandoned dependencies, not 50 separate forks.</li>
+</ul>
+<a class="cta big" href="mailto:hello@${BRAND.domain}?subject=${encodeURIComponent(BRAND.name + " LTS Pro")}">Talk to us about Pro →</a>
 </section>
 
 <section class="wrap band">
@@ -252,6 +271,13 @@ table.catalog{width:100%;border-collapse:collapse;margin:18px 0 10px}
 .sev{display:inline-block;padding:2px 9px;border-radius:999px;font-size:11px;font-weight:700;letter-spacing:.04em;text-transform:uppercase}
 .sev.crit{background:rgba(255,107,107,.14);color:var(--crit)}.sev.high{background:rgba(255,159,67,.14);color:var(--high)}.sev.med{background:rgba(255,209,102,.14);color:var(--med)}
 .band{margin:46px auto;padding:26px;background:var(--panel);border:1px solid var(--line);border-radius:14px}
+.live{margin-top:14px;padding-top:12px;border-top:1px solid var(--line);font-size:14px;color:var(--ok)}
+.live a{color:var(--acc)}
+.pro{margin:46px auto;padding:30px;background:var(--okbg);border:1px solid #1f5a3f;border-radius:14px}
+.pro h2{margin-top:0}.prolist{list-style:none;padding:0;margin:14px 0 22px}
+.prolist li{padding:7px 0 7px 26px;position:relative}.prolist li:before{content:"→";position:absolute;left:0;color:var(--ok)}
+.cta.big{display:inline-block;background:var(--ok);color:#04150d;font-weight:700;padding:11px 20px;border-radius:10px}
+.cta.big:hover{text-decoration:none;filter:brightness(1.08)}
 .article{padding:34px 22px 60px;max-width:820px}
 .crumbs{color:var(--mut);font-size:13px;margin-bottom:14px}
 .article h1{font-size:30px;margin:8px 0 6px;letter-spacing:-.01em}
@@ -273,6 +299,7 @@ footer .muted{font-size:13px;max-width:80ch}
 @media(max-width:640px){.hero h1{font-size:30px}.facts{grid-template-columns:1fr}.nav nav a{margin-left:12px}}`;
 
 // ---- emit ----
+rmSync(OUT, { recursive: true, force: true });   // clean stale output (e.g. removed packages)
 mkdirSync(join(OUT, "packages"), { recursive: true });
 writeFileSync(join(OUT, "style.css"), CSS);
 writeFileSync(join(OUT, "index.html"), indexPage());
