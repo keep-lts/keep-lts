@@ -9,3 +9,6 @@ node_modules/
 site/dist/
 # scaffolded fork tarballs
 targets/**/*.tgz
+
+# sales/outreach material — prospect list + contacts, kept out of the public repo
+outreach/
