@@ -1,5 +1,477 @@
 [
  {
+  "name": "@budibase/server",
+  "vulns": [
+   {
+    "id": "GHSA-2xgg-r2wc-c5r2",
+    "cves": [
+     "CVE-2026-73408"
+    ],
+    "severity": "HIGH",
+    "cwes": [
+     "CWE-89"
+    ],
+    "summary": "Budibase: MySQL DESCRIBE Backtick Injection via multipleStatements in Database Connector",
+    "published": "2026-07-24",
+    "introduced": "0"
+   },
+   {
+    "id": "GHSA-4qcj-m5wp-jmf4",
+    "cves": [
+     "CVE-2026-73301"
+    ],
+    "severity": "MODERATE",
+    "cwes": [
+     "CWE-862"
+    ],
+    "summary": " Budibase: Missing RBAC on GET /api/global/groups allows BASIC users to enumerate all tenant groups and role mappings",
+    "published": "2026-07-24",
+    "introduced": "0"
+   },
+   {
+    "id": "GHSA-6x9p-4r67-5gjx",
+    "cves": [
+     "CVE-2026-54356"
+    ],
+    "severity": "HIGH",
+    "cwes": [
+     "CWE-862"
+    ],
+    "summary": "Budibase authenticated arbitrary S3 signed upload URL issuance via `/api/attachments/:datasourceId/url`",
+    "published": "2026-08-26",
+    "introduced": "0"
+   },
+   {
+    "id": "GHSA-c8vc-7pv3-g98p",
+    "cves": [
+     "CVE-2026-73303"
+    ],
+    "severity": "HIGH",
+    "cwes": [
+     "CWE-639"
+    ],
+    "summary": " Budibase: Email Change IDOR via POST /api/v2/email allows full Account Takeover (accountId not validated against session)",
+    "published": "2026-07-24",
+    "introduced": "0"
+   },
+   {
+    "id": "GHSA-cr7p-cr3q-h5cm",
+    "cves": [
+     "CVE-2026-73306"
+    ],
+    "severity": "MODERATE",
+    "cwes": [
+     "CWE-204"
+    ],
+    "summary": " Budibase: Account Enumeration via Login Lockout Response Differential",
+    "published": "2026-07-24",
+    "introduced": "0"
+   },
+   {
+    "id": "GHSA-gh4h-34gr-87r7",
+    "cves": [
+     "CVE-2026-73308"
+    ],
+    "severity": "MODERATE",
+    "cwes": [
+     "CWE-200"
+    ],
+    "summary": " Budibase: OAuth2 Token Disclosure via Automation Test Results Broadcast to Other Builders",
+    "published": "2026-07-24",
+    "introduced": "0"
+   },
+   {
+    "id": "GHSA-hfhx-w8p8-4hc7",
+    "cves": [
+     "CVE-2026-73307"
+    ],
+    "severity": "MODERATE",
+    "cwes": [
+     "CWE-918"
+    ],
+    "summary": "Budibase: SSRF via bare fetch() in uploadUrl during AI table generation",
+    "published": "2026-07-24",
+    "introduced": "0"
+   },
+   {
+    "id": "GHSA-hp6v-6jw7-gv2f",
+    "cves": [
+     "CVE-2026-73302"
+    ],
+    "severity": "CRITICAL",
+    "cwes": [
+     "CWE-287"
+    ],
+    "summary": " Budibase: OIDC SSO account takeover: incoming identity linked by email without checking email_verified",
+    "published": "2026-07-24",
+    "introduced": "0"
+   },
+   {
+    "id": "GHSA-hr66-5mqr-8mpx",
+    "cves": [
+     "CVE-2026-73406"
+    ],
+    "severity": "HIGH",
+    "cwes": [
+     "CWE-200"
+    ],
+    "summary": " Budibase: Unauthenticated user information disclosure via public tenant user lookup endpoint",
+    "published": "2026-07-24",
+    "introduced": "0"
+   },
+   {
+    "id": "GHSA-j9fc-w3mr-x6mv",
+    "cves": [
+     "CVE-2026-73305"
+    ],
+    "severity": "HIGH",
+    "cwes": [
+     "CWE-269",
+     "CWE-862",
+     "CWE-863"
+    ],
+    "summary": " Budibase: Privilege escalation via public role assignment API missing app-level authorization",
+    "published": "2026-07-24",
+    "introduced": "0"
+   },
+   {
+    "id": "GHSA-mqhr-6j6h-74p5",
+    "cves": [
+     "CVE-2026-73407"
+    ],
+    "severity": "CRITICAL",
+    "cwes": [
+     "CWE-200"
+    ],
+    "summary": " Budibase: Unauthenticated REST Datasource Credential Theft via Cross-Origin Auth Leak ",
+    "published": "2026-07-24",
+    "introduced": "0"
+   },
+   {
+    "id": "GHSA-pmpg-2mxq-6xwr",
+    "cves": [
+     "CVE-2026-73617"
+    ],
+    "severity": "HIGH",
+    "cwes": [
+     "CWE-89"
+    ],
+    "summary": " Budibase: NoSQL injection in MongoDB integration: collection dump, $where JS exec, cross-collection pivot, arbitrary update/delete",
+    "published": "2026-07-24",
+    "introduced": "0"
+   },
+   {
+    "id": "GHSA-ppr4-5f46-j9c6",
+    "cves": [
+     "CVE-2026-73409"
+    ],
+    "severity": "HIGH",
+    "cwes": [
+     "CWE-209"
+    ],
+    "summary": " Budibase: Server Filesystem Existence/Read Oracle via Builder-Controlled MongoDB tlsCertificateKeyFile",
+    "published": "2026-07-24",
+    "introduced": "0"
+   },
+   {
+    "id": "GHSA-pvcr-8mvp-w8qr",
+    "cves": [
+     "CVE-2026-72849"
+    ],
+    "severity": "HIGH",
+    "cwes": [
+     "CWE-285",
+     "CWE-345",
+     "CWE-352"
+    ],
+    "summary": " Budibase: Chat-Link Handoff Identity Confusion (Same-Tenant Account-Link CSRF)",
+    "published": "2026-07-24",
+    "introduced": "0"
+   },
+   {
+    "id": "GHSA-q6x4-v3qx-85qw",
+    "cves": [
+     "CVE-2026-73300"
+    ],
+    "severity": "CRITICAL",
+    "cwes": [
+     "CWE-89"
+    ],
+    "summary": " Budibase: SQL Injection via `multipleStatements: true`",
+    "published": "2026-07-24",
+    "introduced": "0"
+   },
+   {
+    "id": "GHSA-qw6m-8fw2-2v64",
+    "cves": [
+     "CVE-2026-73618"
+    ],
+    "severity": "HIGH",
+    "cwes": [
+     "CWE-943"
+    ],
+    "summary": " Budibase: NoSQL Injection via JSON Parameter Interpolation in MongoDB Query Execution",
+    "published": "2026-07-24",
+    "introduced": "0"
+   },
+   {
+    "id": "GHSA-v42f-v8xc-j435",
+    "cves": [
+     "CVE-2026-73410"
+    ],
+    "severity": "HIGH",
+    "cwes": [
+     "CWE-367",
+     "CWE-918"
+    ],
+    "summary": "Budibase: SSRF via DNS rebinding in the REST datasource integration",
+    "published": "2026-07-24",
+    "introduced": "0"
+   },
+   {
+    "id": "GHSA-xcx6-4f2g-hhgx",
+    "cves": [
+     "CVE-2026-72859"
+    ],
+    "severity": "HIGH",
+    "cwes": [
+     "CWE-863"
+    ],
+    "summary": " Budibase: S3 presigned URL endpoint authorization regression in v3.39.4 allows BASIC users to obtain S3 PutObject presigned URLs",
+    "published": "2026-07-24",
+    "introduced": "0"
+   },
+   {
+    "id": "GHSA-xg5g-26x8-cvf4",
+    "cves": [
+     "CVE-2026-72855"
+    ],
+    "severity": "HIGH",
+    "cwes": [
+     "CWE-918"
+    ],
+    "summary": " Budibase: DNS rebinding SSRF bypasses remain in OpenAPI import and REST query execution",
+    "published": "2026-07-24",
+    "introduced": "0"
+   }
+  ]
+ },
+ {
+  "name": "xmldom",
+  "vulns": [
+   {
+    "id": "GHSA-27p8-2357-5qqv",
+    "cves": [
+     "CVE-2026-83608"
+    ],
+    "severity": "HIGH",
+    "cwes": [
+     "CWE-91"
+    ],
+    "summary": "xmldom: DocType `name` Injection Bypasses requireWellFormed",
+    "published": "2026-09-08",
+    "introduced": "0"
+   },
+   {
+    "id": "GHSA-2v35-w6hq-6mfw",
+    "cves": [
+     "CVE-2026-41673"
+    ],
+    "severity": "HIGH",
+    "cwes": [
+     "CWE-674"
+    ],
+    "summary": "xmldom: Uncontrolled recursion in XML serialization leads to DoS",
+    "published": "2026-04-22",
+    "introduced": "0"
+   },
+   {
+    "id": "GHSA-4w3w-2rp5-g8jm",
+    "cves": [
+     "CVE-2026-83605"
+    ],
+    "severity": "HIGH",
+    "cwes": [
+     "CWE-91"
+    ],
+    "summary": "xmldom: Attribute name injection via setAttribute() bypasses requireWellFormed",
+    "published": "2026-09-08",
+    "introduced": "0"
+   },
+   {
+    "id": "GHSA-5fg8-2547-mr8q",
+    "cves": [
+     "CVE-2021-32796"
+    ],
+    "severity": "MODERATE",
+    "cwes": [
+     "CWE-116"
+    ],
+    "summary": "Misinterpretation of malicious XML input",
+    "published": "2021-08-03",
+    "introduced": "0"
+   },
+   {
+    "id": "GHSA-6gmq-8vp8-gcm6",
+    "cves": [
+     "CVE-2026-83610"
+    ],
+    "severity": "MODERATE",
+    "cwes": [
+     "CWE-116"
+    ],
+    "summary": "xmldom: XML fragment injection via invalid EntityReference.nodeName during requireWellFormed serialization",
+    "published": "2026-09-02",
+    "introduced": "0"
+   },
+   {
+    "id": "GHSA-6h8r-xr42-gp59",
+    "cves": [
+     "CVE-2026-83611"
+    ],
+    "severity": "MODERATE",
+    "cwes": [
+     "CWE-1286"
+    ],
+    "summary": "xmldom: Parser silently accepts a not-well-formed end tag whose name is followed by a line break and trailing content",
+    "published": "2026-09-08",
+    "introduced": "0"
+   },
+   {
+    "id": "GHSA-8344-3jmq-59r6",
+    "cves": [
+     "CVE-2026-83613"
+    ],
+    "severity": "HIGH",
+    "cwes": [
+     "CWE-407"
+    ],
+    "summary": "xmldom: Quadratic-time attribute deduplication",
+    "published": "2026-09-08",
+    "introduced": "0"
+   },
+   {
+    "id": "GHSA-93r5-fhx6-vmg9",
+    "cves": [
+     "CVE-2026-83614"
+    ],
+    "severity": "HIGH",
+    "cwes": [
+     "CWE-400",
+     "CWE-407"
+    ],
+    "summary": "xmldom: Quadratic-time parsing via the malformed-input recovery path — `parseElementStartPart` re-scan and `normalize()` adjacent-text merge",
+    "published": "2026-09-08",
+    "introduced": "0.3.0"
+   },
+   {
+    "id": "GHSA-965w-775f-mr7g",
+    "cves": [
+     "CVE-2026-83615"
+    ],
+    "severity": "HIGH",
+    "cwes": [
+     "CWE-770"
+    ],
+    "summary": "xmldom: Quadratic-memory consumption",
+    "published": "2026-09-08",
+    "introduced": "0.1.5"
+   },
+   {
+    "id": "GHSA-c7q8-3ch8-vqpv",
+    "cves": [
+     "CVE-2026-83616"
+    ],
+    "severity": "HIGH",
+    "cwes": [
+     "CWE-91"
+    ],
+    "summary": "xmldom: Processing Instruction Target Injection Bypasses requireWellFormed",
+    "published": "2026-09-08",
+    "introduced": "0"
+   },
+   {
+    "id": "GHSA-crh6-fp67-6883",
+    "cves": [
+     "CVE-2022-39353"
+    ],
+    "severity": "CRITICAL",
+    "cwes": [
+     "CWE-1288",
+     "CWE-20"
+    ],
+    "summary": "xmldom allows multiple root nodes in a DOM",
+    "published": "2022-11-01",
+    "introduced": "0"
+   },
+   {
+    "id": "GHSA-f6ww-3ggp-fr8h",
+    "cves": [
+     "CVE-2026-41674"
+    ],
+    "severity": "HIGH",
+    "cwes": [
+     "CWE-91"
+    ],
+    "summary": "xmldom has XML injection through unvalidated DocumentType serialization",
+    "published": "2026-04-22",
+    "introduced": "0"
+   },
+   {
+    "id": "GHSA-j759-j44w-7fr8",
+    "cves": [
+     "CVE-2026-41672"
+    ],
+    "severity": "HIGH",
+    "cwes": [
+     "CWE-91"
+    ],
+    "summary": "xmldom has XML node injection through unvalidated comment serialization",
+    "published": "2026-04-22",
+    "introduced": "0"
+   },
+   {
+    "id": "GHSA-w2rr-34g9-rvrj",
+    "cves": [
+     "CVE-2026-83607"
+    ],
+    "severity": "HIGH",
+    "cwes": [
+     "CWE-91"
+    ],
+    "summary": "xmldom: Element name injection via createElement() bypasses requireWellFormed",
+    "published": "2026-09-08",
+    "introduced": "0"
+   },
+   {
+    "id": "GHSA-wh4c-j3r5-mjhp",
+    "cves": [
+     "CVE-2026-34601"
+    ],
+    "severity": "HIGH",
+    "cwes": [
+     "CWE-91"
+    ],
+    "summary": "xmldom: XML injection via unsafe CDATA serialization allows attacker-controlled markup insertion",
+    "published": "2026-04-01",
+    "introduced": "0"
+   },
+   {
+    "id": "GHSA-x6wf-f3px-wcqx",
+    "cves": [
+     "CVE-2026-41675"
+    ],
+    "severity": "HIGH",
+    "cwes": [
+     "CWE-91"
+    ],
+    "summary": "xmldom has XML node injection through unvalidated processing instruction serialization",
+    "published": "2026-04-22",
+    "introduced": "0"
+   }
+  ]
+ },
+ {
   "name": "flowise",
   "vulns": [
    {
@@ -111,9 +583,12 @@
    },
    {
     "id": "GHSA-8vvx-qvq9-5948",
-    "cves": [],
+    "cves": [
+     "CVE-2025-71338"
+    ],
     "severity": "CRITICAL",
     "cwes": [
+     "CWE-73",
      "CWE-94"
     ],
     "summary": "Flowise allows arbitrary file write to RCE",
@@ -122,10 +597,13 @@
    },
    {
     "id": "GHSA-9c4c-g95m-c8cp",
-    "cves": [],
-    "severity": "MODERATE",
+    "cves": [
+     "CVE-2025-71332"
+    ],
+    "severity": "HIGH",
     "cwes": [
-     "CWE-564"
+     "CWE-564",
+     "CWE-89"
     ],
     "summary": "FlowiseDB vulnerable to SQL Injection by authenticated users",
     "published": "2025-04-07",
@@ -146,7 +624,9 @@
    },
    {
     "id": "GHSA-h42x-xx2q-6v6g",
-    "cves": [],
+    "cves": [
+     "CVE-2025-71333"
+    ],
     "severity": "CRITICAL",
     "cwes": [
      "CWE-434"
@@ -184,7 +664,9 @@
    },
    {
     "id": "GHSA-v5w9-prxf-w882",
-    "cves": [],
+    "cves": [
+     "CVE-2025-71327"
+    ],
     "severity": "HIGH",
     "cwes": [
      "CWE-287"
@@ -423,6 +905,333 @@
   ]
  },
  {
+  "name": "nocodb",
+  "vulns": [
+   {
+    "id": "GHSA-2c5x-4jgf-88mj",
+    "cves": [
+     "CVE-2026-46548"
+    ],
+    "severity": "MODERATE",
+    "cwes": [
+     "CWE-918"
+    ],
+    "summary": "NocoDB: SSRF Protection Bypass in Notification Webhook Plugins (Slack, Discord, Mattermost, Teams)",
+    "published": "2026-05-21",
+    "introduced": "0"
+   },
+   {
+    "id": "GHSA-6mhr-74x2-98v9",
+    "cves": [
+     "CVE-2026-53929"
+    ],
+    "severity": "MODERATE",
+    "cwes": [
+     "CWE-79"
+    ],
+    "summary": "NocoDB: Stored Cross-Site Scripting via Secure Attachment",
+    "published": "2026-06-17",
+    "introduced": "0"
+   },
+   {
+    "id": "GHSA-8rwr-f68v-cvw6",
+    "cves": [
+     "CVE-2026-46553"
+    ],
+    "severity": "LOW",
+    "cwes": [
+     "CWE-770"
+    ],
+    "summary": "NocoDB: Attachment Size Limit Bypass via Upload-by-URL",
+    "published": "2026-05-21",
+    "introduced": "0"
+   },
+   {
+    "id": "GHSA-99vc-2jx2-688p",
+    "cves": [
+     "CVE-2026-46551"
+    ],
+    "severity": "MODERATE",
+    "cwes": [
+     "CWE-770"
+    ],
+    "summary": "NocoDB: Missing File Size Enforcement in Upload-by-URL Allows Denial of Service via Disk Exhaustion",
+    "published": "2026-05-21",
+    "introduced": "0"
+   },
+   {
+    "id": "GHSA-9qgr-6vpg-9gh9",
+    "cves": [
+     "CVE-2026-46547"
+    ],
+    "severity": "MODERATE",
+    "cwes": [
+     "CWE-79"
+    ],
+    "summary": "NocoDB: Reflected Cross-Site Scripting via Page Leaving Redirect URL",
+    "published": "2026-05-21",
+    "introduced": "0"
+   },
+   {
+    "id": "GHSA-chqv-vrj7-qffp",
+    "cves": [
+     "CVE-2026-46552"
+    ],
+    "severity": "MODERATE",
+    "cwes": [
+     "CWE-285"
+    ],
+    "summary": "NocoDB: Shared-base link access can invite arbitrary users as persistent base members",
+    "published": "2026-05-21",
+    "introduced": "0"
+   },
+   {
+    "id": "GHSA-f74w-272x-mqcv",
+    "cves": [
+     "CVE-2026-46550"
+    ],
+    "severity": "MODERATE",
+    "cwes": [
+     "CWE-614"
+    ],
+    "summary": "NocoDB: Refresh Token Cookie Set Without `secure` and `sameSite` Flags",
+    "published": "2026-05-21",
+    "introduced": "0"
+   },
+   {
+    "id": "GHSA-f76x-f9vj-92jv",
+    "cves": [
+     "CVE-2026-46554"
+    ],
+    "severity": "LOW",
+    "cwes": [
+     "CWE-613"
+    ],
+    "summary": "NocoDB: Stale Auth Cache After API Token Deletion",
+    "published": "2026-05-21",
+    "introduced": "0"
+   },
+   {
+    "id": "GHSA-gprh-27j3-g5h4",
+    "cves": [
+     "CVE-2026-53927"
+    ],
+    "severity": "MODERATE",
+    "cwes": [
+     "CWE-918"
+    ],
+    "summary": "NocoDB: Server-Side Request Forgery via Spreadsheet Fetch URL",
+    "published": "2026-06-17",
+    "introduced": "0"
+   },
+   {
+    "id": "GHSA-h6vv-pcq8-7xm4",
+    "cves": [
+     "CVE-2026-53930"
+    ],
+    "severity": "MODERATE",
+    "cwes": [
+     "CWE-918"
+    ],
+    "summary": "NocoDB: Server-Side Request Forgery via Base Migration URL",
+    "published": "2026-06-17",
+    "introduced": "0"
+   },
+   {
+    "id": "GHSA-hmcr-rmjq-47qr",
+    "cves": [
+     "CVE-2026-53931"
+    ],
+    "severity": "MODERATE",
+    "cwes": [
+     "CWE-441",
+     "CWE-918"
+    ],
+    "summary": "NocoDB: Server-Side Request Forgery via Spreadsheet Import Endpoint",
+    "published": "2026-06-17",
+    "introduced": "0"
+   },
+   {
+    "id": "GHSA-m5qg-rvjq-727p",
+    "cves": [
+     "CVE-2026-46549"
+    ],
+    "severity": "LOW",
+    "cwes": [
+     "CWE-863"
+    ],
+    "summary": "NocoDB: OAuth Token Scope Not Enforced at ACL Layer Allows Scope Escalation",
+    "published": "2026-05-21",
+    "introduced": "0"
+   },
+   {
+    "id": "GHSA-r989-7g3j-wjhw",
+    "cves": [
+     "CVE-2026-53928"
+    ],
+    "severity": "MODERATE",
+    "cwes": [
+     "CWE-613"
+    ],
+    "summary": "NocoDB: Refresh Tokens Persist Through Password Recovery",
+    "published": "2026-06-17",
+    "introduced": "0"
+   }
+  ]
+ },
+ {
+  "name": "@angular/platform-server",
+  "vulns": [
+   {
+    "id": "GHSA-45q2-gjvg-7973",
+    "cves": [
+     "CVE-2026-41423"
+    ],
+    "severity": "HIGH",
+    "cwes": [
+     "CWE-918"
+    ],
+    "summary": "Angular: SSRF via protocol-relative and backslash URLs in Angular Platform-Server",
+    "published": "2026-04-16",
+    "introduced": "0"
+   },
+   {
+    "id": "GHSA-f67j-2jqw-jpq7",
+    "cves": [
+     "CVE-2026-101895"
+    ],
+    "severity": "HIGH",
+    "cwes": [
+     "CWE-400",
+     "CWE-835"
+    ],
+    "summary": "Angular SSR: Denial of Service (DoS) via Infinite Loop on Malformed DOCTYPE",
+    "published": "2026-09-28",
+    "introduced": "0"
+   },
+   {
+    "id": "GHSA-f6mr-pjwc-34m4",
+    "cves": [
+     "CVE-2026-88056"
+    ],
+    "severity": "HIGH",
+    "cwes": [
+     "CWE-918"
+    ],
+    "summary": "Angular: SSRF and Cross-Origin Credential Disclosure via URL Resolution Discrepancy in SSR",
+    "published": "2026-09-10",
+    "introduced": "0"
+   },
+   {
+    "id": "GHSA-gxx4-3xcv-f8qx",
+    "cves": [
+     "CVE-2026-50556"
+    ],
+    "severity": "HIGH",
+    "cwes": [
+     "CWE-79"
+    ],
+    "summary": "@angular/platform-server: Missing `<noscript>` Raw-Text Serialization Escaping leads to Cross-Site Scripting (XSS) in Angular SSR",
+    "published": "2026-06-15",
+    "introduced": "0"
+   },
+   {
+    "id": "GHSA-hqr9-c56f-3x7f",
+    "cves": [
+     "CVE-2026-50555"
+    ],
+    "severity": "HIGH",
+    "cwes": [
+     "CWE-79"
+    ],
+    "summary": "@angular/platform-server: Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')",
+    "published": "2026-06-15",
+    "introduced": "0"
+   },
+   {
+    "id": "GHSA-j3r3-mxqp-r2p4",
+    "cves": [
+     "CVE-2026-88058"
+    ],
+    "severity": "HIGH",
+    "cwes": [
+     "CWE-116",
+     "CWE-79"
+    ],
+    "summary": "Angular SSR: XSS via Unescaped Processing Instruction (<?...?>) Nodes in Fallback Raw-Content Elements",
+    "published": "2026-09-28",
+    "introduced": "0"
+   },
+   {
+    "id": "GHSA-rfh7-fxqc-q52v",
+    "cves": [
+     "CVE-2026-46417"
+    ],
+    "severity": "HIGH",
+    "cwes": [
+     "CWE-918"
+    ],
+    "summary": "@angular/platform-server: SSRF via Hostname Hijacking",
+    "published": "2026-05-19",
+    "introduced": "0"
+   },
+   {
+    "id": "GHSA-v3p8-whq6-r5jg",
+    "cves": [
+     "CVE-2026-88060"
+    ],
+    "severity": "HIGH",
+    "cwes": [
+     "CWE-116",
+     "CWE-79"
+    ],
+    "summary": "Angular: SSR XSS via Unescaped <template> Content Across DocumentFragment Boundaries in Fallback Raw-Content Elements",
+    "published": "2026-09-10",
+    "introduced": "0"
+   },
+   {
+    "id": "GHSA-vpx6-8pjr-4g3v",
+    "cves": [
+     "CVE-2026-69149"
+    ],
+    "severity": "HIGH",
+    "cwes": [
+     "CWE-79"
+    ],
+    "summary": "Angular SSR: Missing Fallback Raw-Content Serialization Escaping leads to Cross-Site Scripting (XSS)",
+    "published": "2026-08-03",
+    "introduced": "0"
+   },
+   {
+    "id": "GHSA-w739-gvwx-grc3",
+    "cves": [
+     "CVE-2026-111754"
+    ],
+    "severity": "MODERATE",
+    "cwes": [
+     "CWE-601"
+    ],
+    "summary": "@angular/platform-server: Open Redirect via Protocol-Relative URLs in Server-Side Rendering (SSR)",
+    "published": "2026-10-20",
+    "introduced": "0"
+   },
+   {
+    "id": "GHSA-xrxm-cp7j-8xf6",
+    "cves": [
+     "CVE-2026-50168"
+    ],
+    "severity": "HIGH",
+    "cwes": [
+     "CWE-346",
+     "CWE-918"
+    ],
+    "summary": "@angular/platform-server: URL Parser Differential leading to SSRF Allowlist Bypass",
+    "published": "2026-06-15",
+    "introduced": "0"
+   }
+  ]
+ },
+ {
   "name": "angular",
   "vulns": [
    {
@@ -463,6 +1272,20 @@
     "summary": "angular vulnerable to super-linear runtime due to backtracking",
     "published": "2024-02-10",
     "introduced": "1.3.0"
+   },
+   {
+    "id": "GHSA-7x27-g8rg-x87w",
+    "cves": [
+     "CVE-2026-11998"
+    ],
+    "severity": "HIGH",
+    "cwes": [
+     "CWE-79",
+     "CWE-791"
+    ],
+    "summary": "Angular's deprecated package has a Cross-Site Scripting issue",
+    "published": "2026-06-24",
+    "introduced": "1.2.0-rc.3"
    },
    {
     "id": "GHSA-j58c-ww9w-pwp5",
@@ -702,7 +1525,9 @@
    },
    {
     "id": "GHSA-9p93-7j67-5pc2",
-    "cves": [],
+    "cves": [
+     "CVE-2026-34512"
+    ],
     "severity": "HIGH",
     "cwes": [
      "CWE-226",
@@ -728,7 +1553,9 @@
    },
    {
     "id": "GHSA-fqw4-mph7-2vr8",
-    "cves": [],
+    "cves": [
+     "CVE-2026-35625"
+    ],
     "severity": "CRITICAL",
     "cwes": [
      "CWE-863"
@@ -739,7 +1566,9 @@
    },
    {
     "id": "GHSA-mw7w-g3mg-xqm7",
-    "cves": [],
+    "cves": [
+     "CVE-2026-35642"
+    ],
     "severity": "MODERATE",
     "cwes": [
      "CWE-288",
@@ -903,115 +1732,6 @@
   ]
  },
  {
-  "name": "nocodb",
-  "vulns": [
-   {
-    "id": "GHSA-2c5x-4jgf-88mj",
-    "cves": [
-     "CVE-2026-46548"
-    ],
-    "severity": "MODERATE",
-    "cwes": [
-     "CWE-918"
-    ],
-    "summary": "NocoDB: SSRF Protection Bypass in Notification Webhook Plugins (Slack, Discord, Mattermost, Teams)",
-    "published": "2026-05-21",
-    "introduced": "0"
-   },
-   {
-    "id": "GHSA-8rwr-f68v-cvw6",
-    "cves": [
-     "CVE-2026-46553"
-    ],
-    "severity": "LOW",
-    "cwes": [
-     "CWE-770"
-    ],
-    "summary": "NocoDB: Attachment Size Limit Bypass via Upload-by-URL",
-    "published": "2026-05-21",
-    "introduced": "0"
-   },
-   {
-    "id": "GHSA-99vc-2jx2-688p",
-    "cves": [
-     "CVE-2026-46551"
-    ],
-    "severity": "MODERATE",
-    "cwes": [
-     "CWE-770"
-    ],
-    "summary": "NocoDB: Missing File Size Enforcement in Upload-by-URL Allows Denial of Service via Disk Exhaustion",
-    "published": "2026-05-21",
-    "introduced": "0"
-   },
-   {
-    "id": "GHSA-9qgr-6vpg-9gh9",
-    "cves": [
-     "CVE-2026-46547"
-    ],
-    "severity": "MODERATE",
-    "cwes": [
-     "CWE-79"
-    ],
-    "summary": "NocoDB: Reflected Cross-Site Scripting via Page Leaving Redirect URL",
-    "published": "2026-05-21",
-    "introduced": "0"
-   },
-   {
-    "id": "GHSA-chqv-vrj7-qffp",
-    "cves": [
-     "CVE-2026-46552"
-    ],
-    "severity": "MODERATE",
-    "cwes": [
-     "CWE-285"
-    ],
-    "summary": "NocoDB: Shared-base link access can invite arbitrary users as persistent base members",
-    "published": "2026-05-21",
-    "introduced": "0"
-   },
-   {
-    "id": "GHSA-f74w-272x-mqcv",
-    "cves": [
-     "CVE-2026-46550"
-    ],
-    "severity": "MODERATE",
-    "cwes": [
-     "CWE-614"
-    ],
-    "summary": "NocoDB: Refresh Token Cookie Set Without `secure` and `sameSite` Flags",
-    "published": "2026-05-21",
-    "introduced": "0"
-   },
-   {
-    "id": "GHSA-f76x-f9vj-92jv",
-    "cves": [
-     "CVE-2026-46554"
-    ],
-    "severity": "LOW",
-    "cwes": [
-     "CWE-613"
-    ],
-    "summary": "NocoDB: Stale Auth Cache After API Token Deletion",
-    "published": "2026-05-21",
-    "introduced": "0"
-   },
-   {
-    "id": "GHSA-m5qg-rvjq-727p",
-    "cves": [
-     "CVE-2026-46549"
-    ],
-    "severity": "LOW",
-    "cwes": [
-     "CWE-863"
-    ],
-    "summary": "NocoDB: OAuth Token Scope Not Enforced at ACL Layer Allows Scope Escalation",
-    "published": "2026-05-21",
-    "introduced": "0"
-   }
-  ]
- },
- {
   "name": "editor.md",
   "vulns": [
    {
@@ -1116,199 +1836,212 @@
   ]
  },
  {
-  "name": "nx",
+  "name": "@angular/core",
   "vulns": [
    {
-    "id": "GHSA-cxm3-wv7p-598c",
+    "id": "GHSA-692r-grfm-v8x7",
     "cves": [
-     "CVE-2025-10894"
+     "CVE-2026-52725"
     ],
-    "severity": "CRITICAL",
+    "severity": "MODERATE",
     "cwes": [
-     "CWE-506"
+     "CWE-79"
     ],
-    "summary": "Malicious versions of Nx were published",
-    "published": "2025-08-27"
+    "summary": "@angular/core: Angular Template and Dynamic Component Namespace Bypass leading to Cross-Site Scripting (XSS)",
+    "published": "2026-06-15",
+    "introduced": "0"
    },
    {
-    "id": "GHSA-cxm3-wv7p-598c",
+    "id": "GHSA-f3m7-gqxr-g87x",
     "cves": [
-     "CVE-2025-10894"
+     "CVE-2026-50557"
     ],
-    "severity": "CRITICAL",
+    "severity": "MODERATE",
     "cwes": [
-     "CWE-506"
+     "CWE-79"
     ],
-    "summary": "Malicious versions of Nx were published",
-    "published": "2025-08-27"
+    "summary": "Angular: Template and Attribute Namespace Sanitization Bypass (XSS)",
+    "published": "2026-06-15",
+    "introduced": "0"
    },
    {
-    "id": "GHSA-cxm3-wv7p-598c",
+    "id": "GHSA-g93w-mfhg-p222",
     "cves": [
-     "CVE-2025-10894"
+     "CVE-2026-32635"
     ],
-    "severity": "CRITICAL",
+    "severity": "HIGH",
     "cwes": [
-     "CWE-506"
+     "CWE-79"
     ],
-    "summary": "Malicious versions of Nx were published",
-    "published": "2025-08-27"
+    "summary": "Angular vulnerable to XSS in i18n attribute bindings",
+    "published": "2026-03-13",
+    "introduced": "17.0.0-next.0"
    },
    {
-    "id": "GHSA-cxm3-wv7p-598c",
+    "id": "GHSA-hh8m-fm6v-7cvg",
     "cves": [
-     "CVE-2025-10894"
+     "CVE-2026-88057"
     ],
-    "severity": "CRITICAL",
+    "severity": "MODERATE",
     "cwes": [
-     "CWE-506"
+     "CWE-79"
     ],
-    "summary": "Malicious versions of Nx were published",
-    "published": "2025-08-27"
+    "summary": "Angular: Sanitization bypass via directive host bindings on concrete host elements in @angular/core and @angular/compiler",
+    "published": "2026-09-10",
+    "introduced": "0"
    },
    {
-    "id": "GHSA-cxm3-wv7p-598c",
+    "id": "GHSA-jj27-h5hq-8x99",
     "cves": [
-     "CVE-2025-10894"
+     "CVE-2026-69151"
     ],
-    "severity": "CRITICAL",
+    "severity": "HIGH",
     "cwes": [
-     "CWE-506"
+     "CWE-79"
     ],
-    "summary": "Malicious versions of Nx were published",
-    "published": "2025-08-27"
+    "summary": "Angular i18n: Cross-Site Scripting (XSS) via event-handler attributes",
+    "published": "2026-08-03",
+    "introduced": "0"
    },
    {
-    "id": "GHSA-cxm3-wv7p-598c",
+    "id": "GHSA-jrmj-c5cx-3cw6",
     "cves": [
-     "CVE-2025-10894"
+     "CVE-2026-22610"
     ],
-    "severity": "CRITICAL",
+    "severity": "HIGH",
     "cwes": [
-     "CWE-506"
+     "CWE-79"
     ],
-    "summary": "Malicious versions of Nx were published",
-    "published": "2025-08-27"
+    "summary": "Angular has XSS Vulnerability via Unsanitized SVG Script Attributes",
+    "published": "2026-01-09",
+    "introduced": "0"
    },
    {
-    "id": "GHSA-cxm3-wv7p-598c",
+    "id": "GHSA-prjf-86w9-mfqv",
     "cves": [
-     "CVE-2025-10894"
+     "CVE-2026-27970"
     ],
-    "severity": "CRITICAL",
+    "severity": "HIGH",
     "cwes": [
-     "CWE-506"
+     "CWE-79"
     ],
-    "summary": "Malicious versions of Nx were published",
-    "published": "2025-08-27"
+    "summary": "Angular i18n vulnerable to Cross-Site Scripting",
+    "published": "2026-02-27",
+    "introduced": "0"
    },
    {
-    "id": "GHSA-cxm3-wv7p-598c",
+    "id": "GHSA-rgjc-h3x7-9mwg",
     "cves": [
-     "CVE-2025-10894"
+     "CVE-2026-54267"
     ],
-    "severity": "CRITICAL",
+    "severity": "HIGH",
     "cwes": [
-     "CWE-506"
+     "CWE-471",
+     "CWE-79"
     ],
-    "summary": "Malicious versions of Nx were published",
-    "published": "2025-08-27"
+    "summary": "Angular Client Hydration DOM Clobbering & Response-Cache Poisoning",
+    "published": "2026-06-15",
+    "introduced": "0"
    }
   ]
  },
  {
-  "name": "xmldom",
+  "name": "@angular/common",
   "vulns": [
    {
-    "id": "GHSA-2v35-w6hq-6mfw",
+    "id": "GHSA-39pv-4j6c-2g6v",
     "cves": [
-     "CVE-2026-41673"
+     "CVE-2026-54266"
     ],
     "severity": "HIGH",
     "cwes": [
-     "CWE-674"
+     "CWE-328",
+     "CWE-345"
     ],
-    "summary": "xmldom: Uncontrolled recursion in XML serialization leads to DoS",
-    "published": "2026-04-22",
+    "summary": "@angular/common: Weak 32-Bit Cache Key Hashing in `HttpTransferCache` Leading to Cross-Request Data Leakage and State Poisoning",
+    "published": "2026-06-15",
     "introduced": "0"
    },
    {
-    "id": "GHSA-5fg8-2547-mr8q",
+    "id": "GHSA-48r7-hpm6-gfxm",
     "cves": [
-     "CVE-2021-32796"
+     "CVE-2026-54268"
+    ],
+    "severity": "HIGH",
+    "cwes": [
+     "CWE-1333",
+     "CWE-400"
+    ],
+    "summary": "@angular/common: Denial of Service (DoS) via OOM in Date Formatting (formatDate)",
+    "published": "2026-06-15",
+    "introduced": "0"
+   },
+   {
+    "id": "GHSA-jfgx-762w-99vr",
+    "cves": [
+     "CVE-2026-111753"
     ],
     "severity": "MODERATE",
     "cwes": [
-     "CWE-116"
+     "CWE-201",
+     "CWE-359"
     ],
-    "summary": "Misinterpretation of malicious XML input",
-    "published": "2021-08-03",
+    "summary": "@angular/common: XSRF Token Leakage via URL Parsing Discrepancy in Angular HTTP Client (Incomplete fix for CVE-2025-66035)",
+    "published": "2026-10-20",
     "introduced": "0"
    },
    {
-    "id": "GHSA-crh6-fp67-6883",
+    "id": "GHSA-jhpw-976m-542j",
     "cves": [
-     "CVE-2022-39353"
-    ],
-    "severity": "CRITICAL",
-    "cwes": [
-     "CWE-1288",
-     "CWE-20"
-    ],
-    "summary": "xmldom allows multiple root nodes in a DOM",
-    "published": "2022-11-01",
-    "introduced": "0"
-   },
-   {
-    "id": "GHSA-f6ww-3ggp-fr8h",
-    "cves": [
-     "CVE-2026-41674"
+     "CVE-2026-68945"
     ],
     "severity": "HIGH",
     "cwes": [
-     "CWE-91"
+     "CWE-345"
     ],
-    "summary": "xmldom has XML injection through unvalidated DocumentType serialization",
-    "published": "2026-04-22",
+    "summary": "Angular: Cache-Key Ambiguity in HttpTransferCache Leading to Cross-Request Response Reuse and State Poisoning",
+    "published": "2026-08-03",
     "introduced": "0"
    },
    {
-    "id": "GHSA-j759-j44w-7fr8",
+    "id": "GHSA-p297-fm68-3q8c",
     "cves": [
-     "CVE-2026-41672"
+     "CVE-2026-88059"
     ],
-    "severity": "HIGH",
+    "severity": "MODERATE",
     "cwes": [
-     "CWE-91"
+     "CWE-200",
+     "CWE-524"
     ],
-    "summary": "xmldom has XML node injection through unvalidated comment serialization",
-    "published": "2026-04-22",
+    "summary": "Angular: Information Leak via `HttpTransferCache` Bypass When Using `withRequestsMadeViaParent`",
+    "published": "2026-09-10",
     "introduced": "0"
    },
    {
-    "id": "GHSA-wh4c-j3r5-mjhp",
+    "id": "GHSA-p3vc-36g9-x9gr",
     "cves": [
-     "CVE-2026-34601"
+     "CVE-2026-50171"
     ],
     "severity": "HIGH",
     "cwes": [
-     "CWE-91"
+     "CWE-400",
+     "CWE-834"
     ],
-    "summary": "xmldom: XML injection via unsafe CDATA serialization allows attacker-controlled markup insertion",
-    "published": "2026-04-01",
+    "summary": "@angular/common: Denial of Service (DoS) via OOM in Number Formatting (digitsInfo)",
+    "published": "2026-06-15",
     "introduced": "0"
    },
    {
-    "id": "GHSA-x6wf-f3px-wcqx",
+    "id": "GHSA-q6f4-qqrg-jv6x",
     "cves": [
-     "CVE-2026-41675"
+     "CVE-2026-50170"
     ],
     "severity": "HIGH",
     "cwes": [
-     "CWE-91"
+     "CWE-524"
     ],
-    "summary": "xmldom has XML node injection through unvalidated processing instruction serialization",
-    "published": "2026-04-22",
+    "summary": "@angular/common: Information Leak via Default Caching of Credentialed Requests in HttpTransferCache",
+    "published": "2026-06-15",
     "introduced": "0"
    }
   ]
@@ -1413,86 +2146,97 @@
   ]
  },
  {
-  "name": "liquidjs",
+  "name": "@angular/compiler",
   "vulns": [
    {
-    "id": "GHSA-2qv6-9wx5-cwv4",
+    "id": "GHSA-58w9-8g37-x9v5",
     "cves": [
-     "CVE-2026-44644"
+     "CVE-2026-54265"
     ],
     "severity": "MODERATE",
     "cwes": [
      "CWE-79"
     ],
-    "summary": "LiquidJS's strip_html filter bypass via newline characters in HTML tags enables XSS",
-    "published": "2026-05-27",
+    "summary": "@angular/compiler: Two-Way Property Binding Sanitization Bypass (XSS)",
+    "published": "2026-06-15",
     "introduced": "0"
    },
    {
-    "id": "GHSA-6q5m-63h6-5x4v",
+    "id": "GHSA-f3m7-gqxr-g87x",
     "cves": [
-     "CVE-2026-33287"
-    ],
-    "severity": "HIGH",
-    "cwes": [
-     "CWE-20",
-     "CWE-400"
-    ],
-    "summary": "LiquidJS has Exponential Memory Amplification through its replace_first Filter $& Pattern",
-    "published": "2026-03-25",
-    "introduced": "0"
-   },
-   {
-    "id": "GHSA-8xx9-69p8-7jp3",
-    "cves": [
-     "CVE-2026-44645"
+     "CVE-2026-50557"
     ],
     "severity": "MODERATE",
     "cwes": [
-     "CWE-400"
+     "CWE-79"
     ],
-    "summary": "LiquidJS has a renderLimit DoS guard bypass via empty `{% for %}` body",
-    "published": "2026-05-27",
+    "summary": "Angular: Template and Attribute Namespace Sanitization Bypass (XSS)",
+    "published": "2026-06-15",
     "introduced": "0"
    },
    {
-    "id": "GHSA-9r5m-9576-7f6x",
+    "id": "GHSA-g93w-mfhg-p222",
     "cves": [
-     "CVE-2026-33285"
+     "CVE-2026-32635"
     ],
     "severity": "HIGH",
     "cwes": [
-     "CWE-20",
-     "CWE-400"
+     "CWE-79"
     ],
-    "summary": "LiquidJS: memoryLimit Bypass through Negative Range Values Leads to Process Crash",
-    "published": "2026-03-25",
-    "introduced": "0"
+    "summary": "Angular vulnerable to XSS in i18n attribute bindings",
+    "published": "2026-03-13",
+    "introduced": "17.0.0-next.0"
    },
    {
-    "id": "GHSA-9x9p-qf8f-mvjg",
+    "id": "GHSA-hh8m-fm6v-7cvg",
     "cves": [
-     "CVE-2026-44646"
+     "CVE-2026-88057"
     ],
     "severity": "MODERATE",
     "cwes": [
-     "CWE-693"
+     "CWE-79"
     ],
-    "summary": "LiquidJS's `{% render %}` tag silently bypasses per-render `ownPropertyOnly:true` via `Context.spawn()`",
-    "published": "2026-05-27",
+    "summary": "Angular: Sanitization bypass via directive host bindings on concrete host elements in @angular/core and @angular/compiler",
+    "published": "2026-09-10",
     "introduced": "0"
    },
    {
-    "id": "GHSA-hh27-hf48-9f5q",
+    "id": "GHSA-jj27-h5hq-8x99",
     "cves": [
-     "CVE-2026-45357"
+     "CVE-2026-69151"
     ],
     "severity": "HIGH",
     "cwes": [
-     "CWE-400"
+     "CWE-79"
     ],
-    "summary": "LiquidJS has a memory and render limit bypass via unbounded width padding in `date` filter (strftime)",
-    "published": "2026-05-27",
+    "summary": "Angular i18n: Cross-Site Scripting (XSS) via event-handler attributes",
+    "published": "2026-08-03",
+    "introduced": "0"
+   },
+   {
+    "id": "GHSA-jrmj-c5cx-3cw6",
+    "cves": [
+     "CVE-2026-22610"
+    ],
+    "severity": "HIGH",
+    "cwes": [
+     "CWE-79"
+    ],
+    "summary": "Angular has XSS Vulnerability via Unsanitized SVG Script Attributes",
+    "published": "2026-01-09",
+    "introduced": "0"
+   },
+   {
+    "id": "GHSA-v4hv-rgfq-gp49",
+    "cves": [
+     "CVE-2025-66412"
+    ],
+    "severity": "HIGH",
+    "cwes": [
+     "CWE-79"
+    ],
+    "summary": "Angular Stored XSS Vulnerability via SVG Animation, SVG URL and MathML Attributes",
+    "published": "2025-12-02",
     "introduced": "0"
    }
   ]
@@ -1969,6 +2713,68 @@
   ]
  },
  {
+  "name": "9router",
+  "vulns": [
+   {
+    "id": "GHSA-6g2f-w7g3-77vf",
+    "cves": [
+     "CVE-2026-49353"
+    ],
+    "severity": "HIGH",
+    "cwes": [
+     "CWE-290"
+    ],
+    "summary": "9router has an Incomplete Fix: Local-Only Access Gate Bypass in 9router via Host Header SpoofING",
+    "published": "2026-07-02",
+    "introduced": "0"
+   },
+   {
+    "id": "GHSA-8g4w-4ffg-8vgx",
+    "cves": [
+     "CVE-2026-56677"
+    ],
+    "severity": "HIGH",
+    "cwes": [
+     "CWE-306",
+     "CWE-918"
+    ],
+    "summary": "9Router: Authenticated Server-Side Request Forgery (SSRF) via OIDC Provider Test Endpoint",
+    "published": "2026-08-17",
+    "introduced": "0"
+   },
+   {
+    "id": "GHSA-qvfm-67h2-2qfx",
+    "cves": [
+     "CVE-2026-55500"
+    ],
+    "severity": "CRITICAL",
+    "cwes": [
+     "CWE-200"
+    ],
+    "summary": "9routers has Exposure of Sensitive Information and Unprotected Database Import/Export, Allowing Complete Credential Theft and Database Takeo",
+    "published": "2026-07-06",
+    "introduced": "0"
+   },
+   {
+    "id": "GHSA-vjc7-jrh9-9j86",
+    "cves": [
+     "CVE-2026-59801",
+     "CVE-2026-62327",
+     "CVE-2026-62328"
+    ],
+    "severity": "CRITICAL",
+    "cwes": [
+     "CWE-200",
+     "CWE-306",
+     "CWE-862"
+    ],
+    "summary": "9router has unauthenticated CRUD on /api/providers and Full API Key Leak via /api/usage/stats",
+    "published": "2026-07-06",
+    "introduced": "0"
+   }
+  ]
+ },
+ {
   "name": "xdlocalstorage",
   "vulns": [
    {
@@ -2135,6 +2941,112 @@
     ],
     "summary": "Arbitrary file upload in Ghost",
     "published": "2022-04-13",
+    "introduced": "0"
+   }
+  ]
+ },
+ {
+  "name": "decompress",
+  "vulns": [
+   {
+    "id": "GHSA-h39j-r5qq-r9mm",
+    "cves": [
+     "CVE-2026-10732"
+    ],
+    "severity": "MODERATE",
+    "cwes": [
+     "CWE-22",
+     "CWE-29"
+    ],
+    "summary": "decompress: Arbitrary File Write via Archive Extraction (Zip Slip)",
+    "published": "2026-06-05",
+    "introduced": "0"
+   },
+   {
+    "id": "GHSA-hrh2-vp3x-79xf",
+    "cves": [
+     "CVE-2026-101894"
+    ],
+    "severity": "CRITICAL",
+    "cwes": [
+     "CWE-22",
+     "CWE-59"
+    ],
+    "summary": "@xhmikosr/decompress: Path traversal via symlink chain",
+    "published": "2026-09-29",
+    "introduced": "0"
+   },
+   {
+    "id": "GHSA-jwp9-9v96-94mx",
+    "cves": [
+     "CVE-2026-39243"
+    ],
+    "severity": "MODERATE",
+    "cwes": [
+     "CWE-59"
+    ],
+    "summary": "decompress allows arbitrary hardlink creation during archive extraction",
+    "published": "2026-07-10",
+    "introduced": "0"
+   },
+   {
+    "id": "GHSA-mp2f-45pm-3cg9",
+    "cves": [
+     "CVE-2026-53486"
+    ],
+    "severity": "CRITICAL",
+    "cwes": [
+     "CWE-22",
+     "CWE-59",
+     "CWE-732"
+    ],
+    "summary": "Decompress: Archive extraction can create files and links outside of the target directory",
+    "published": "2026-07-06",
+    "introduced": "0"
+   }
+  ]
+ },
+ {
+  "name": "showdown",
+  "vulns": [
+   {
+    "id": "GHSA-22g5-r2x5-97cx",
+    "cves": [
+     "CVE-2026-59710"
+    ],
+    "severity": "MODERATE",
+    "cwes": [
+     "CWE-79"
+    ],
+    "summary": "showdown allows stored cross-site scripting through table header ID injection",
+    "published": "2026-07-07",
+    "introduced": "0"
+   },
+   {
+    "id": "GHSA-cr32-g25g-vxjj",
+    "cves": [
+     "CVE-2026-59711"
+    ],
+    "severity": "MODERATE",
+    "cwes": [
+     "CWE-79"
+    ],
+    "summary": "showdown metadata title handling allows cross-site scripting",
+    "published": "2026-07-06",
+    "introduced": "0"
+   },
+   {
+    "id": "GHSA-rmmh-p597-ppvv",
+    "cves": [
+     "CVE-2024-1899"
+    ],
+    "severity": "MODERATE",
+    "cwes": [
+     "CWE-674",
+     "CWE-777"
+    ],
+    "summary": "Showdown vulnerable to Regular Expression Denial of Service (ReDoS) in link/anchor parsing",
+    "published": "2024-02-26",
     "introduced": "0"
    }
   ]
@@ -2444,6 +3356,143 @@
   ]
  },
  {
+  "name": "@mariozechner/pi-coding-agent",
+  "vulns": [
+   {
+    "id": "GHSA-7v5m-pr3q-6453",
+    "cves": [
+     "CVE-2026-54326"
+    ],
+    "severity": "LOW",
+    "cwes": [
+     "CWE-79"
+    ],
+    "summary": "Pi Agent: Potential XSS in HTML session exports via Markdown URL sanitization bypass",
+    "published": "2026-06-16",
+    "introduced": "0.27.5"
+   },
+   {
+    "id": "GHSA-jfgx-wxx8-mp94",
+    "cves": [
+     "CVE-2026-54328"
+    ],
+    "severity": "HIGH",
+    "cwes": [
+     "CWE-379"
+    ],
+    "summary": "Pi Agent: Predictable temporary extension install paths allow local privilege escalation on shared Linux hosts",
+    "published": "2026-06-17",
+    "introduced": "0.50.0"
+   },
+   {
+    "id": "GHSA-r95r-rj6r-c39x",
+    "cves": [
+     "CVE-2026-54327"
+    ],
+    "severity": "LOW",
+    "cwes": [
+     "CWE-367",
+     "CWE-732"
+    ],
+    "summary": "Pi Agent: Race condition in Pi auth.json writes could expose stored credentials",
+    "published": "2026-06-17",
+    "introduced": "0.28.0"
+   }
+  ]
+ },
+ {
+  "name": "expr-eval",
+  "vulns": [
+   {
+    "id": "GHSA-8gw3-rxh4-v6jx",
+    "cves": [
+     "CVE-2025-13204"
+    ],
+    "severity": "HIGH",
+    "cwes": [
+     "CWE-1321"
+    ],
+    "summary": "expr-eval vulnerable to Prototype Pollution",
+    "published": "2025-11-14",
+    "introduced": "0"
+   },
+   {
+    "id": "GHSA-jc85-fpwf-qm7x",
+    "cves": [
+     "CVE-2025-12735"
+    ],
+    "severity": "HIGH",
+    "cwes": [
+     "CWE-94"
+    ],
+    "summary": "expr-eval does not restrict functions passed to the evaluate function",
+    "published": "2025-11-05",
+    "introduced": "0"
+   },
+   {
+    "id": "GHSA-q9v2-7m5w-4693",
+    "cves": [
+     "CVE-2026-12866"
+    ],
+    "severity": "CRITICAL",
+    "cwes": [
+     "CWE-94"
+    ],
+    "summary": "expr-eval vulnerable to Code Execution",
+    "published": "2026-06-23",
+    "introduced": "0"
+   }
+  ]
+ },
+ {
+  "name": "@angular/service-worker",
+  "vulns": [
+   {
+    "id": "GHSA-95qp-cmmw-mgqv",
+    "cves": [
+     "CVE-2026-50184"
+    ],
+    "severity": "MODERATE",
+    "cwes": [
+     "CWE-200",
+     "CWE-524"
+    ],
+    "summary": "@angular/service-worker: Request Credential & Cache Policy Stripping",
+    "published": "2026-06-15",
+    "introduced": "0"
+   },
+   {
+    "id": "GHSA-gv2q-mqqv-365m",
+    "cves": [
+     "CVE-2026-50169"
+    ],
+    "severity": "MODERATE",
+    "cwes": [
+     "CWE-200",
+     "CWE-441",
+     "CWE-524"
+    ],
+    "summary": "Angular Service Worker Policy-Bypass & Credential-Stripping Vulnerabilities",
+    "published": "2026-06-15",
+    "introduced": "0"
+   },
+   {
+    "id": "GHSA-qxh6-94w6-9r5p",
+    "cves": [
+     "CVE-2026-54264"
+    ],
+    "severity": "HIGH",
+    "cwes": [
+     "CWE-200",
+     "CWE-359"
+    ],
+    "summary": "@angular/service-worker: Sensitive Header Leakage on Cross-Origin Redirects in Angular Service Worker",
+    "published": "2026-06-15",
+    "introduced": "0"
+   }
+  ]
+ },
+ {
   "name": "@evershop/evershop",
   "vulns": [
    {
@@ -2520,94 +3569,6 @@
     ],
     "summary": "Embedded malware in rc",
     "published": "2021-11-04"
-   }
-  ]
- },
- {
-  "name": "@angular/core",
-  "vulns": [
-   {
-    "id": "GHSA-g93w-mfhg-p222",
-    "cves": [
-     "CVE-2026-32635"
-    ],
-    "severity": "HIGH",
-    "cwes": [
-     "CWE-79"
-    ],
-    "summary": "Angular vulnerable to XSS in i18n attribute bindings",
-    "published": "2026-03-13",
-    "introduced": "17.0.0-next.0"
-   },
-   {
-    "id": "GHSA-jrmj-c5cx-3cw6",
-    "cves": [
-     "CVE-2026-22610"
-    ],
-    "severity": "HIGH",
-    "cwes": [
-     "CWE-79"
-    ],
-    "summary": "Angular has XSS Vulnerability via Unsanitized SVG Script Attributes",
-    "published": "2026-01-09",
-    "introduced": "0"
-   },
-   {
-    "id": "GHSA-prjf-86w9-mfqv",
-    "cves": [
-     "CVE-2026-27970"
-    ],
-    "severity": "HIGH",
-    "cwes": [
-     "CWE-79"
-    ],
-    "summary": "Angular i18n vulnerable to Cross-Site Scripting",
-    "published": "2026-02-27",
-    "introduced": "0"
-   }
-  ]
- },
- {
-  "name": "@angular/compiler",
-  "vulns": [
-   {
-    "id": "GHSA-g93w-mfhg-p222",
-    "cves": [
-     "CVE-2026-32635"
-    ],
-    "severity": "HIGH",
-    "cwes": [
-     "CWE-79"
-    ],
-    "summary": "Angular vulnerable to XSS in i18n attribute bindings",
-    "published": "2026-03-13",
-    "introduced": "17.0.0-next.0"
-   },
-   {
-    "id": "GHSA-jrmj-c5cx-3cw6",
-    "cves": [
-     "CVE-2026-22610"
-    ],
-    "severity": "HIGH",
-    "cwes": [
-     "CWE-79"
-    ],
-    "summary": "Angular has XSS Vulnerability via Unsanitized SVG Script Attributes",
-    "published": "2026-01-09",
-    "introduced": "0"
-   },
-   {
-    "id": "GHSA-v4hv-rgfq-gp49",
-    "cves": [
-     "CVE-2025-66412"
-    ],
-    "severity": "HIGH",
-    "cwes": [
-     "CWE-79"
-    ],
-    "summary": "Angular Stored XSS Vulnerability via SVG Animation, SVG URL and MathML Attributes",
-    "published": "2025-12-02",
-    "introduced": "0"
    }
   ]
  },
@@ -3218,32 +4179,60 @@
   ]
  },
  {
-  "name": "@angular/platform-server",
+  "name": "@hapi/joi",
   "vulns": [
    {
-    "id": "GHSA-45q2-gjvg-7973",
+    "id": "GHSA-4528-x5fx-h6hg",
     "cves": [
-     "CVE-2026-41423"
+     "CVE-2026-118772"
     ],
     "severity": "HIGH",
     "cwes": [
-     "CWE-918"
+     "CWE-1333"
     ],
-    "summary": "Angular: SSRF via protocol-relative and backslash URLs in Angular Platform-Server",
-    "published": "2026-04-16",
+    "summary": "joi: quadratic-time split in `string().email({ multiple: true })` allows denial of service",
+    "published": "2026-10-30",
+    "introduced": "16.0.0"
+   },
+   {
+    "id": "GHSA-6w3j-5fw6-r9vr",
+    "cves": [
+     "CVE-2026-122131",
+     "CVE-2026-84368"
+    ],
+    "severity": "LOW",
+    "cwes": [
+     "CWE-1321"
+    ],
+    "summary": "joi: Prototype pollution via a `__proto__` language key in custom messages",
+    "published": "2026-09-08",
+    "introduced": "16.0.0"
+   }
+  ]
+ },
+ {
+  "name": "@keystone-6/core",
+  "vulns": [
+   {
+    "id": "GHSA-45jq-c8xm-jfw9",
+    "cves": [
+     "CVE-2026-10802"
+    ],
+    "severity": "LOW",
+    "cwes": [
+     "CWE-400"
+    ],
+    "summary": "Keystone: GraphQL API Endpoint Lacks Query Depth Limits",
+    "published": "2026-06-04",
     "introduced": "0"
    },
    {
-    "id": "GHSA-rfh7-fxqc-q52v",
-    "cves": [
-     "CVE-2026-46417"
-    ],
-    "severity": "HIGH",
-    "cwes": [
-     "CWE-918"
-    ],
-    "summary": "@angular/platform-server: SSRF via Hostname Hijacking",
-    "published": "2026-05-19",
+    "id": "GHSA-5fp6-4xw3-xqq3",
+    "cves": [],
+    "severity": "LOW",
+    "cwes": [],
+    "summary": "@keystone-6/core's bundled cuid package known to be insecure",
+    "published": "2023-06-12",
     "introduced": "0"
    }
   ]
@@ -3670,6 +4659,33 @@
   ]
  },
  {
+  "name": "content",
+  "vulns": [
+   {
+    "id": "GHSA-5854-jvxx-2cg9",
+    "cves": [],
+    "severity": "HIGH",
+    "cwes": [],
+    "summary": "Denial of Service in content",
+    "published": "2020-09-03",
+    "introduced": "0"
+   },
+   {
+    "id": "GHSA-8494-f6mr-cjpv",
+    "cves": [
+     "CVE-2026-119202"
+    ],
+    "severity": "HIGH",
+    "cwes": [
+     "CWE-1333"
+    ],
+    "summary": "@hapi/content: quadratic-time parsing of Content-Disposition parameters allows denial of service",
+    "published": "2026-10-30",
+    "introduced": "3.0.6"
+   }
+  ]
+ },
+ {
   "name": "node-static",
   "vulns": [
    {
@@ -3891,6 +4907,39 @@
   ]
  },
  {
+  "name": "@angular/router",
+  "vulns": [
+   {
+    "id": "GHSA-62vg-58rm-qff7",
+    "cves": [
+     "CVE-2026-111752"
+    ],
+    "severity": "HIGH",
+    "cwes": [
+     "CWE-400",
+     "CWE-405"
+    ],
+    "summary": "@angular/router: Denial of Service via Unmatched Empty-Path Outlet Route Matching in Server-Side Rendering (SSR)",
+    "published": "2026-10-20",
+    "introduced": "0"
+   },
+   {
+    "id": "GHSA-ff3f-86qr-9cv3",
+    "cves": [
+     "CVE-2026-101896"
+    ],
+    "severity": "HIGH",
+    "cwes": [
+     "CWE-400",
+     "CWE-770"
+    ],
+    "summary": "Angular Server-Side Rendering (SSR): Denial of Service via Numeric URL Matrix Parameters",
+    "published": "2026-09-30",
+    "introduced": "0"
+   }
+  ]
+ },
+ {
   "name": "socket.io-file",
   "vulns": [
    {
@@ -4106,6 +5155,223 @@
   ]
  },
  {
+  "name": "extract-zip",
+  "vulns": [
+   {
+    "id": "GHSA-7pqw-9j4j-h8q3",
+    "cves": [
+     "CVE-2026-19693"
+    ],
+    "severity": "HIGH",
+    "cwes": [
+     "CWE-22"
+    ],
+    "summary": "extract-zip allows arbitrary file writes through symlink archive entries",
+    "published": "2026-08-17",
+    "introduced": "0"
+   },
+   {
+    "id": "GHSA-jmr9-qjv8-65gv",
+    "cves": [
+     "CVE-2026-56876"
+    ],
+    "severity": "HIGH",
+    "cwes": [
+     "CWE-22"
+    ],
+    "summary": "extract-zip unvalidated symlink path traversal",
+    "published": "2026-06-26",
+    "introduced": "0"
+   }
+  ]
+ },
+ {
+  "name": "vue-i18n",
+  "vulns": [
+   {
+    "id": "GHSA-83rm-6c8r-g728",
+    "cves": [
+     "CVE-2026-118257"
+    ],
+    "severity": "HIGH",
+    "cwes": [
+     "CWE-116",
+     "CWE-79"
+    ],
+    "summary": "Vue I18n: escapeParameter does not prevent XSS through srcdoc in translation messages",
+    "published": "2026-10-28"
+   },
+   {
+    "id": "GHSA-83rm-6c8r-g728",
+    "cves": [
+     "CVE-2026-118257"
+    ],
+    "severity": "HIGH",
+    "cwes": [
+     "CWE-116",
+     "CWE-79"
+    ],
+    "summary": "Vue I18n: escapeParameter does not prevent XSS through srcdoc in translation messages",
+    "published": "2026-10-28"
+   }
+  ]
+ },
+ {
+  "name": "petite-vue-i18n",
+  "vulns": [
+   {
+    "id": "GHSA-83rm-6c8r-g728",
+    "cves": [
+     "CVE-2026-118257"
+    ],
+    "severity": "HIGH",
+    "cwes": [
+     "CWE-116",
+     "CWE-79"
+    ],
+    "summary": "Vue I18n: escapeParameter does not prevent XSS through srcdoc in translation messages",
+    "published": "2026-10-28"
+   },
+   {
+    "id": "GHSA-83rm-6c8r-g728",
+    "cves": [
+     "CVE-2026-118257"
+    ],
+    "severity": "HIGH",
+    "cwes": [
+     "CWE-116",
+     "CWE-79"
+    ],
+    "summary": "Vue I18n: escapeParameter does not prevent XSS through srcdoc in translation messages",
+    "published": "2026-10-28"
+   }
+  ]
+ },
+ {
+  "name": "@intlify/core-base",
+  "vulns": [
+   {
+    "id": "GHSA-83rm-6c8r-g728",
+    "cves": [
+     "CVE-2026-118257"
+    ],
+    "severity": "HIGH",
+    "cwes": [
+     "CWE-116",
+     "CWE-79"
+    ],
+    "summary": "Vue I18n: escapeParameter does not prevent XSS through srcdoc in translation messages",
+    "published": "2026-10-28"
+   },
+   {
+    "id": "GHSA-83rm-6c8r-g728",
+    "cves": [
+     "CVE-2026-118257"
+    ],
+    "severity": "HIGH",
+    "cwes": [
+     "CWE-116",
+     "CWE-79"
+    ],
+    "summary": "Vue I18n: escapeParameter does not prevent XSS through srcdoc in translation messages",
+    "published": "2026-10-28"
+   }
+  ]
+ },
+ {
+  "name": "@intlify/core",
+  "vulns": [
+   {
+    "id": "GHSA-83rm-6c8r-g728",
+    "cves": [
+     "CVE-2026-118257"
+    ],
+    "severity": "HIGH",
+    "cwes": [
+     "CWE-116",
+     "CWE-79"
+    ],
+    "summary": "Vue I18n: escapeParameter does not prevent XSS through srcdoc in translation messages",
+    "published": "2026-10-28"
+   },
+   {
+    "id": "GHSA-83rm-6c8r-g728",
+    "cves": [
+     "CVE-2026-118257"
+    ],
+    "severity": "HIGH",
+    "cwes": [
+     "CWE-116",
+     "CWE-79"
+    ],
+    "summary": "Vue I18n: escapeParameter does not prevent XSS through srcdoc in translation messages",
+    "published": "2026-10-28"
+   }
+  ]
+ },
+ {
+  "name": "@intlify/vue-i18n-core",
+  "vulns": [
+   {
+    "id": "GHSA-83rm-6c8r-g728",
+    "cves": [
+     "CVE-2026-118257"
+    ],
+    "severity": "HIGH",
+    "cwes": [
+     "CWE-116",
+     "CWE-79"
+    ],
+    "summary": "Vue I18n: escapeParameter does not prevent XSS through srcdoc in translation messages",
+    "published": "2026-10-28"
+   },
+   {
+    "id": "GHSA-83rm-6c8r-g728",
+    "cves": [
+     "CVE-2026-118257"
+    ],
+    "severity": "HIGH",
+    "cwes": [
+     "CWE-116",
+     "CWE-79"
+    ],
+    "summary": "Vue I18n: escapeParameter does not prevent XSS through srcdoc in translation messages",
+    "published": "2026-10-28"
+   }
+  ]
+ },
+ {
+  "name": "@intlify/shared",
+  "vulns": [
+   {
+    "id": "GHSA-83rm-6c8r-g728",
+    "cves": [
+     "CVE-2026-118257"
+    ],
+    "severity": "HIGH",
+    "cwes": [
+     "CWE-116",
+     "CWE-79"
+    ],
+    "summary": "Vue I18n: escapeParameter does not prevent XSS through srcdoc in translation messages",
+    "published": "2026-10-28"
+   },
+   {
+    "id": "GHSA-83rm-6c8r-g728",
+    "cves": [
+     "CVE-2026-118257"
+    ],
+    "severity": "HIGH",
+    "cwes": [
+     "CWE-116",
+     "CWE-79"
+    ],
+    "summary": "Vue I18n: escapeParameter does not prevent XSS through srcdoc in translation messages",
+    "published": "2026-10-28"
+   }
+  ]
+ },
+ {
   "name": "safer-eval",
   "vulns": [
    {
@@ -4187,37 +5453,6 @@
     ],
     "summary": "Postiz App has a High-Severity SSRF Vulnerability via Next.js",
     "published": "2026-03-27",
-    "introduced": "0"
-   }
-  ]
- },
- {
-  "name": "expr-eval",
-  "vulns": [
-   {
-    "id": "GHSA-8gw3-rxh4-v6jx",
-    "cves": [
-     "CVE-2025-13204"
-    ],
-    "severity": "HIGH",
-    "cwes": [
-     "CWE-1321"
-    ],
-    "summary": "expr-eval vulnerable to Prototype Pollution",
-    "published": "2025-11-14",
-    "introduced": "0"
-   },
-   {
-    "id": "GHSA-jc85-fpwf-qm7x",
-    "cves": [
-     "CVE-2025-12735"
-    ],
-    "severity": "HIGH",
-    "cwes": [
-     "CWE-94"
-    ],
-    "summary": "expr-eval does not restrict functions passed to the evaluate function",
-    "published": "2025-11-05",
     "introduced": "0"
    }
   ]
@@ -4336,122 +5571,6 @@
     "summary": "Markdownify has Files or Directories Accessible to External Parties",
     "published": "2022-11-04",
     "introduced": "0"
-   }
-  ]
- },
- {
-  "name": "@nx/devkit",
-  "vulns": [
-   {
-    "id": "GHSA-cxm3-wv7p-598c",
-    "cves": [
-     "CVE-2025-10894"
-    ],
-    "severity": "CRITICAL",
-    "cwes": [
-     "CWE-506"
-    ],
-    "summary": "Malicious versions of Nx were published",
-    "published": "2025-08-27"
-   },
-   {
-    "id": "GHSA-cxm3-wv7p-598c",
-    "cves": [
-     "CVE-2025-10894"
-    ],
-    "severity": "CRITICAL",
-    "cwes": [
-     "CWE-506"
-    ],
-    "summary": "Malicious versions of Nx were published",
-    "published": "2025-08-27"
-   }
-  ]
- },
- {
-  "name": "@nx/js",
-  "vulns": [
-   {
-    "id": "GHSA-cxm3-wv7p-598c",
-    "cves": [
-     "CVE-2025-10894"
-    ],
-    "severity": "CRITICAL",
-    "cwes": [
-     "CWE-506"
-    ],
-    "summary": "Malicious versions of Nx were published",
-    "published": "2025-08-27"
-   },
-   {
-    "id": "GHSA-cxm3-wv7p-598c",
-    "cves": [
-     "CVE-2025-10894"
-    ],
-    "severity": "CRITICAL",
-    "cwes": [
-     "CWE-506"
-    ],
-    "summary": "Malicious versions of Nx were published",
-    "published": "2025-08-27"
-   }
-  ]
- },
- {
-  "name": "@nx/workspace",
-  "vulns": [
-   {
-    "id": "GHSA-cxm3-wv7p-598c",
-    "cves": [
-     "CVE-2025-10894"
-    ],
-    "severity": "CRITICAL",
-    "cwes": [
-     "CWE-506"
-    ],
-    "summary": "Malicious versions of Nx were published",
-    "published": "2025-08-27"
-   },
-   {
-    "id": "GHSA-cxm3-wv7p-598c",
-    "cves": [
-     "CVE-2025-10894"
-    ],
-    "severity": "CRITICAL",
-    "cwes": [
-     "CWE-506"
-    ],
-    "summary": "Malicious versions of Nx were published",
-    "published": "2025-08-27"
-   }
-  ]
- },
- {
-  "name": "@nx/node",
-  "vulns": [
-   {
-    "id": "GHSA-cxm3-wv7p-598c",
-    "cves": [
-     "CVE-2025-10894"
-    ],
-    "severity": "CRITICAL",
-    "cwes": [
-     "CWE-506"
-    ],
-    "summary": "Malicious versions of Nx were published",
-    "published": "2025-08-27"
-   },
-   {
-    "id": "GHSA-cxm3-wv7p-598c",
-    "cves": [
-     "CVE-2025-10894"
-    ],
-    "severity": "CRITICAL",
-    "cwes": [
-     "CWE-506"
-    ],
-    "summary": "Malicious versions of Nx were published",
-    "published": "2025-08-27"
    }
   ]
  },
@@ -4934,6 +6053,38 @@
   ]
  },
  {
+  "name": "@nx/azure-cache",
+  "vulns": [
+   {
+    "id": "GHSA-rrr2-jcr8-7q3x",
+    "cves": [
+     "CVE-2025-36852"
+    ],
+    "severity": "CRITICAL",
+    "cwes": [
+     "CWE-829"
+    ],
+    "summary": "@nx/azure-cache Vulnerable to Build Cache Poisoning via Untrusted Pull Requests",
+    "published": "2025-06-10",
+    "introduced": "0"
+   },
+   {
+    "id": "GHSA-vp3h-ghgh-jr7g",
+    "cves": [
+     "CVE-2026-71476"
+    ],
+    "severity": "HIGH",
+    "cwes": [
+     "CWE-22",
+     "CWE-59"
+    ],
+    "summary": "Nx: Zip-Slip in the self-hosted remote cache",
+    "published": "2026-08-06",
+    "introduced": "0"
+   }
+  ]
+ },
+ {
   "name": "mootools",
   "vulns": [
    {
@@ -4961,6 +6112,37 @@
     ],
     "summary": "Prototype Pollution in mootools",
     "published": "2021-09-02",
+    "introduced": "0"
+   }
+  ]
+ },
+ {
+  "name": "dompurify",
+  "vulns": [
+   {
+    "id": "GHSA-v8jm-5vwx-cfxm",
+    "cves": [
+     "CVE-2025-15599"
+    ],
+    "severity": "MODERATE",
+    "cwes": [
+     "CWE-79"
+    ],
+    "summary": "DOMPurify contains a Cross-site Scripting vulnerability",
+    "published": "2026-03-03",
+    "introduced": "2.5.3"
+   },
+   {
+    "id": "GHSA-x4vx-rjvf-j5p4",
+    "cves": [
+     "CVE-2026-65901"
+    ],
+    "severity": "LOW",
+    "cwes": [
+     "CWE-79"
+    ],
+    "summary": "DOMPurify: `IN_PLACE` mode trusts attacker-controlled `nodeName` on live non-form nodes, allowing script retention and XSS via attacker-supp",
+    "published": "2026-06-15",
     "introduced": "0"
    }
   ]
@@ -5815,6 +6997,40 @@
   ]
  },
  {
+  "name": "@typespec/openapi3",
+  "vulns": [
+   {
+    "id": "GHSA-2q42-4q24-7rgv",
+    "cves": [],
+    "severity": "HIGH",
+    "cwes": [
+     "CWE-22",
+     "CWE-73"
+    ],
+    "summary": "OpenAPI3 version value escapes `emitterOutputDir` and overwrites YAML/JSON outside the output tree",
+    "published": "2026-09-08",
+    "introduced": "0"
+   }
+  ]
+ },
+ {
+  "name": "@typespec/compiler",
+  "vulns": [
+   {
+    "id": "GHSA-2q42-4q24-7rgv",
+    "cves": [],
+    "severity": "HIGH",
+    "cwes": [
+     "CWE-22",
+     "CWE-73"
+    ],
+    "summary": "OpenAPI3 version value escapes `emitterOutputDir` and overwrites YAML/JSON outside the output tree",
+    "published": "2026-09-08",
+    "introduced": "0"
+   }
+  ]
+ },
+ {
   "name": "codify",
   "vulns": [
    {
@@ -5949,6 +7165,22 @@
     ],
     "summary": "Arbitrary local file read vulnerability during template rendering ",
     "published": "2023-03-15",
+    "introduced": "0"
+   }
+  ]
+ },
+ {
+  "name": "@justice8096/sagemath-mcp-server",
+  "vulns": [
+   {
+    "id": "GHSA-2vq3-mpmf-9xgr",
+    "cves": [
+     "CVE-2026-106763"
+    ],
+    "severity": "HIGH",
+    "cwes": [],
+    "summary": "@justice8096/sagemath-mcp-server: executes arbitrary code via the escapeShellString and sanitizeCode functions",
+    "published": "2026-10-23",
     "introduced": "0"
    }
   ]
@@ -6260,7 +7492,9 @@
   "vulns": [
    {
     "id": "GHSA-365g-vjw2-grx8",
-    "cves": [],
+    "cves": [
+     "CVE-2025-71380"
+    ],
     "severity": "HIGH",
     "cwes": [
      "CWE-78"
@@ -6276,7 +7510,9 @@
   "vulns": [
    {
     "id": "GHSA-365g-vjw2-grx8",
-    "cves": [],
+    "cves": [
+     "CVE-2025-71380"
+    ],
     "severity": "HIGH",
     "cwes": [
      "CWE-78"
@@ -6370,6 +7606,22 @@
     ],
     "summary": "Prototype Pollution in deep.assign",
     "published": "2022-07-01"
+   }
+  ]
+ },
+ {
+  "name": "@jsonbored/gittensory-mcp",
+  "vulns": [
+   {
+    "id": "GHSA-382c-vx95-w3p5",
+    "cves": [],
+    "severity": "MODERATE",
+    "cwes": [
+     "CWE-284"
+    ],
+    "summary": "Gittensory: Missing contributor-scoped access control on profile endpoint and MCP tool leaks miner financial data",
+    "published": "2026-07-09",
+    "introduced": "0"
    }
   ]
  },
@@ -7352,24 +8604,6 @@
   ]
  },
  {
-  "name": "mjml",
-  "vulns": [
-   {
-    "id": "GHSA-45h5-66jx-r2wf",
-    "cves": [
-     "CVE-2025-67898"
-    ],
-    "severity": "MODERATE",
-    "cwes": [
-     "CWE-36"
-    ],
-    "summary": "MJML allows mj-include directory traversal due to an incomplete fix for CVE-2020-12827",
-    "published": "2025-12-15",
-    "introduced": "0"
-   }
-  ]
- },
- {
   "name": "static-resource-server",
   "vulns": [
    {
@@ -7438,6 +8672,23 @@
     "summary": "Budibase Unrestricted Server-Side Request Forgery (SSRF) via REST Datasource Query Preview",
     "published": "2026-03-18",
     "introduced": "0"
+   }
+  ]
+ },
+ {
+  "name": "@aws-cdk/aws-codebuild",
+  "vulns": [
+   {
+    "id": "GHSA-464c-974j-9xm6",
+    "cves": [],
+    "severity": "LOW",
+    "cwes": [
+     "CWE-311",
+     "CWE-682"
+    ],
+    "summary": "AWS CDK CodeBuild S3 Log Encryption Boolean Inversion",
+    "published": "2026-07-24",
+    "introduced": "1.75.0"
    }
   ]
  },
@@ -8845,20 +10096,6 @@
   ]
  },
  {
-  "name": "content",
-  "vulns": [
-   {
-    "id": "GHSA-5854-jvxx-2cg9",
-    "cves": [],
-    "severity": "HIGH",
-    "cwes": [],
-    "summary": "Denial of Service in content",
-    "published": "2020-09-03",
-    "introduced": "0"
-   }
-  ]
- },
- {
   "name": "query-string-parser",
   "vulns": [
    {
@@ -9028,20 +10265,6 @@
     ],
     "summary": "Malicious Package in asynnc",
     "published": "2020-09-02",
-    "introduced": "0"
-   }
-  ]
- },
- {
-  "name": "@keystone-6/core",
-  "vulns": [
-   {
-    "id": "GHSA-5fp6-4xw3-xqq3",
-    "cves": [],
-    "severity": "LOW",
-    "cwes": [],
-    "summary": "@keystone-6/core's bundled cuid package known to be insecure",
-    "published": "2023-06-12",
     "introduced": "0"
    }
   ]
@@ -9463,6 +10686,24 @@
     ],
     "summary": "Malicious Package in discord_debug_log",
     "published": "2020-09-02",
+    "introduced": "0"
+   }
+  ]
+ },
+ {
+  "name": "@wonderwhy-er/desktop-commander",
+  "vulns": [
+   {
+    "id": "GHSA-5xx3-j724-wmx5",
+    "cves": [
+     "CVE-2026-10690"
+    ],
+    "severity": "LOW",
+    "cwes": [
+     "CWE-918"
+    ],
+    "summary": "DesktopCommanderMCP is vulnerable to SSRF",
+    "published": "2026-06-03",
     "introduced": "0"
    }
   ]
@@ -9891,6 +11132,24 @@
     ],
     "summary": "Directory Traversal in lactate",
     "published": "2019-06-14",
+    "introduced": "0"
+   }
+  ]
+ },
+ {
+  "name": "youtransfer",
+  "vulns": [
+   {
+    "id": "GHSA-68mc-h6h8-79wj",
+    "cves": [
+     "CVE-2026-50880"
+    ],
+    "severity": "CRITICAL",
+    "cwes": [
+     "CWE-94"
+    ],
+    "summary": "YouTransfer has an issue in the sendmail transport integration that allows arbitrary code execution",
+    "published": "2026-06-15",
     "introduced": "0"
    }
   ]
@@ -11130,7 +12389,7 @@
      "CWE-538",
      "CWE-94"
     ],
-    "summary": "Insertion of Sensitive Information into Externally-Accessible File or Directory and Exposure of Sensitive Information to an Unauthorized Act",
+    "summary": "hbs: Insertion of Sensitive Information into Externally-Accessible File or Directory and Exposure of Sensitive Information to an Unauthorize",
     "published": "2021-09-02",
     "introduced": "0"
    }
@@ -11166,6 +12425,24 @@
     ],
     "summary": "static-dev-server vulnerable to path traversal",
     "published": "2022-11-29"
+   }
+  ]
+ },
+ {
+  "name": "@angular/ssr",
+  "vulns": [
+   {
+    "id": "GHSA-7g7c-h8rr-7p6q",
+    "cves": [
+     "CVE-2026-104871"
+    ],
+    "severity": "MODERATE",
+    "cwes": [
+     "CWE-22"
+    ],
+    "summary": "Angular SSR: Path Traversal to Sibling Directories in CommonEngine on Windows",
+    "published": "2026-10-05",
+    "introduced": "0"
    }
   ]
  },
@@ -11971,20 +13248,21 @@
   ]
  },
  {
-  "name": "@ai-sdk/provider-utils",
+  "name": "qti-neon",
   "vulns": [
    {
-    "id": "GHSA-866g-f22w-33x8",
+    "id": "GHSA-85rg-p3fr-xc2f",
     "cves": [
-     "CVE-2026-8769"
+     "CVE-2026-54609"
     ],
-    "severity": "LOW",
+    "severity": "HIGH",
     "cwes": [
-     "CWE-400"
+     "CWE-400",
+     "CWE-406",
+     "CWE-770"
     ],
-    "summary": "@ai-sdk/provider-utils has an Uncontrolled Resource Consumption issue",
-    "published": "2026-05-18",
-    "introduced": "0"
+    "summary": "QTINeon has unauthenticated relay-to-host amplification via unbounded RECONNECT_REQUEST forwarding",
+    "published": "2026-07-28"
    }
   ]
  },
@@ -12016,6 +13294,25 @@
     ],
     "summary": "Denial of Service in url-relative",
     "published": "2019-06-05",
+    "introduced": "0"
+   }
+  ]
+ },
+ {
+  "name": "node-forge",
+  "vulns": [
+   {
+    "id": "GHSA-86w9-cpqp-85rv",
+    "cves": [
+     "CVE-2026-33894",
+     "CVE-2026-85393"
+    ],
+    "severity": "HIGH",
+    "cwes": [
+     "CWE-347"
+    ],
+    "summary": "node-forge RSA PKCS#1 v1.5 signature verification accepts extra nested DigestAlgorithm elements",
+    "published": "2026-09-03",
     "introduced": "0"
    }
   ]
@@ -13777,6 +15074,24 @@
   ]
  },
  {
+  "name": "tidgi",
+  "vulns": [
+   {
+    "id": "GHSA-9hc2-hjx8-q6pv",
+    "cves": [
+     "CVE-2026-14722"
+    ],
+    "severity": "CRITICAL",
+    "cwes": [
+     "CWE-94"
+    ],
+    "summary": "TidGi Desktop Remote Code Execution via Malicious TiddlyWiki Repository Import — Tiddler Startup Module Auto-Execution",
+    "published": "2026-07-14",
+    "introduced": "0"
+   }
+  ]
+ },
+ {
   "name": "boogeyman",
   "vulns": [
    {
@@ -14037,6 +15352,25 @@
     "summary": "Prototype Pollution in deep-setter",
     "published": "2020-09-04",
     "introduced": "0.0.0"
+   }
+  ]
+ },
+ {
+  "name": "liquidjs",
+  "vulns": [
+   {
+    "id": "GHSA-9r5m-9576-7f6x",
+    "cves": [
+     "CVE-2026-33285"
+    ],
+    "severity": "HIGH",
+    "cwes": [
+     "CWE-20",
+     "CWE-400"
+    ],
+    "summary": "LiquidJS: memoryLimit Bypass through Negative Range Values Leads to Process Crash",
+    "published": "2026-03-25",
+    "introduced": "0"
    }
   ]
  },
@@ -15117,57 +16451,6 @@
   ]
  },
  {
-  "name": "@nx/key",
-  "vulns": [
-   {
-    "id": "GHSA-cxm3-wv7p-598c",
-    "cves": [
-     "CVE-2025-10894"
-    ],
-    "severity": "CRITICAL",
-    "cwes": [
-     "CWE-506"
-    ],
-    "summary": "Malicious versions of Nx were published",
-    "published": "2025-08-27"
-   }
-  ]
- },
- {
-  "name": "@nx/enterprise-cloud",
-  "vulns": [
-   {
-    "id": "GHSA-cxm3-wv7p-598c",
-    "cves": [
-     "CVE-2025-10894"
-    ],
-    "severity": "CRITICAL",
-    "cwes": [
-     "CWE-506"
-    ],
-    "summary": "Malicious versions of Nx were published",
-    "published": "2025-08-27"
-   }
-  ]
- },
- {
-  "name": "@nx/eslint",
-  "vulns": [
-   {
-    "id": "GHSA-cxm3-wv7p-598c",
-    "cves": [
-     "CVE-2025-10894"
-    ],
-    "severity": "CRITICAL",
-    "cwes": [
-     "CWE-506"
-    ],
-    "summary": "Malicious versions of Nx were published",
-    "published": "2025-08-27"
-   }
-  ]
- },
- {
   "name": "qinserve",
   "vulns": [
    {
@@ -15546,6 +16829,78 @@
   ]
  },
  {
+  "name": "@grackle-ai/mcp",
+  "vulns": [
+   {
+    "id": "GHSA-f9ff-5x35-7gfw",
+    "cves": [],
+    "severity": "HIGH",
+    "cwes": [
+     "CWE-613",
+     "CWE-639",
+     "CWE-862"
+    ],
+    "summary": "Grackle: Fail-open authorization in the MCP tool layer lets scoped agents perform cross-task and cross-session mutations (IDOR)",
+    "published": "2026-07-02",
+    "introduced": "0"
+   }
+  ]
+ },
+ {
+  "name": "@grackle-ai/plugin-core",
+  "vulns": [
+   {
+    "id": "GHSA-f9ff-5x35-7gfw",
+    "cves": [],
+    "severity": "HIGH",
+    "cwes": [
+     "CWE-613",
+     "CWE-639",
+     "CWE-862"
+    ],
+    "summary": "Grackle: Fail-open authorization in the MCP tool layer lets scoped agents perform cross-task and cross-session mutations (IDOR)",
+    "published": "2026-07-02",
+    "introduced": "0"
+   }
+  ]
+ },
+ {
+  "name": "@grackle-ai/auth",
+  "vulns": [
+   {
+    "id": "GHSA-f9ff-5x35-7gfw",
+    "cves": [],
+    "severity": "HIGH",
+    "cwes": [
+     "CWE-613",
+     "CWE-639",
+     "CWE-862"
+    ],
+    "summary": "Grackle: Fail-open authorization in the MCP tool layer lets scoped agents perform cross-task and cross-session mutations (IDOR)",
+    "published": "2026-07-02",
+    "introduced": "0"
+   }
+  ]
+ },
+ {
+  "name": "@sd-jwt/decode",
+  "vulns": [
+   {
+    "id": "GHSA-f9j6-8p6x-r9j6",
+    "cves": [
+     "CVE-2026-62374"
+    ],
+    "severity": "HIGH",
+    "cwes": [
+     "CWE-176"
+    ],
+    "summary": "SD JWT JS: Tampered disclosures silently dropped instead of rejected",
+    "published": "2026-11-02",
+    "introduced": "0"
+   }
+  ]
+ },
+ {
   "name": "vnu-jar",
   "vulns": [
    {
@@ -15874,6 +17229,24 @@
   ]
  },
  {
+  "name": "@rog0x/mcp-docker-tools",
+  "vulns": [
+   {
+    "id": "GHSA-fq6x-j3g6-xx83",
+    "cves": [
+     "CVE-2026-106765"
+    ],
+    "severity": "HIGH",
+    "cwes": [
+     "CWE-77"
+    ],
+    "summary": "@rog0x/mcp-docker-tools: executes arbitrary code via the handleImageList function",
+    "published": "2026-10-23",
+    "introduced": "0"
+   }
+  ]
+ },
+ {
   "name": "hulp",
   "vulns": [
    {
@@ -15955,6 +17328,24 @@
     ],
     "summary": "discordi.js is malware",
     "published": "2018-08-06",
+    "introduced": "0"
+   }
+  ]
+ },
+ {
+  "name": "@cyntler/react-doc-viewer",
+  "vulns": [
+   {
+    "id": "GHSA-fvhg-p4hf-79x3",
+    "cves": [
+     "CVE-2026-30691"
+    ],
+    "severity": "MODERATE",
+    "cwes": [
+     "CWE-79"
+    ],
+    "summary": "@cyntler/react-doc-viewer's TXTRenderer fails to sanitize file content and explicitly casts raw data as a ReactNode",
+    "published": "2026-05-20",
     "introduced": "0"
    }
   ]
@@ -16664,6 +18055,24 @@
   ]
  },
  {
+  "name": "react-dev-utils",
+  "vulns": [
+   {
+    "id": "GHSA-g9g6-gvq9-j4vp",
+    "cves": [
+     "CVE-2026-14802"
+    ],
+    "severity": "MODERATE",
+    "cwes": [
+     "CWE-77"
+    ],
+    "summary": " react-dev-utils openBrowser permits command injection on macOS",
+    "published": "2026-07-06",
+    "introduced": "0"
+   }
+  ]
+ },
+ {
   "name": "erxes",
   "vulns": [
    {
@@ -16799,6 +18208,24 @@
     "summary": "@puchunjie/doc-tools-mcp has a Path Traversal Issue",
     "published": "2026-05-04",
     "introduced": "0"
+   }
+  ]
+ },
+ {
+  "name": "deepmerge",
+  "vulns": [
+   {
+    "id": "GHSA-gcqx-w48m-w2h4",
+    "cves": [
+     "CVE-2026-93753"
+    ],
+    "severity": "LOW",
+    "cwes": [
+     "CWE-1321"
+    ],
+    "summary": "deepmerge mergeObject() allows prototype poisoning of returned objects",
+    "published": "2026-09-18",
+    "introduced": "4.2.0"
    }
   ]
  },
@@ -17368,6 +18795,24 @@
   ]
  },
  {
+  "name": "blitz",
+  "vulns": [
+   {
+    "id": "GHSA-h2p9-cr4h-px24",
+    "cves": [
+     "CVE-2026-9520"
+    ],
+    "severity": "LOW",
+    "cwes": [
+     "CWE-79"
+    ],
+    "summary": "Blitz has a Cross-site Scripting issue",
+    "published": "2026-05-26",
+    "introduced": "0"
+   }
+  ]
+ },
+ {
   "name": "gulp-styledocco",
   "vulns": [
    {
@@ -17697,6 +19142,25 @@
     ],
     "summary": "@apostrophecms/cli: Command Injection in apos create via Unsanitized Password Input",
     "published": "2026-05-14",
+    "introduced": "0"
+   }
+  ]
+ },
+ {
+  "name": "omniroute",
+  "vulns": [
+   {
+    "id": "GHSA-hf57-cqmx-p4gr",
+    "cves": [
+     "CVE-2026-88062"
+    ],
+    "severity": "CRITICAL",
+    "cwes": [
+     "CWE-306",
+     "CWE-94"
+    ],
+    "summary": " OmniRoute ACP Custom-Agent Remote Code Execution (RCE)",
+    "published": "2026-09-10",
     "introduced": "0"
    }
   ]
@@ -18895,6 +20359,24 @@
   ]
  },
  {
+  "name": "payload",
+  "vulns": [
+   {
+    "id": "GHSA-jg8r-5jh2-v2xj",
+    "cves": [
+     "CVE-2026-11779"
+    ],
+    "severity": "MODERATE",
+    "cwes": [
+     "CWE-307"
+    ],
+    "summary": "Payload CMS default account-unlock access allows authenticated users to reset other accounts' lockouts",
+    "published": "2026-06-26",
+    "introduced": "0"
+   }
+  ]
+ },
+ {
   "name": "gedi",
   "vulns": [
    {
@@ -19275,6 +20757,25 @@
   ]
  },
  {
+  "name": "@rog0x/mcp-git-tools",
+  "vulns": [
+   {
+    "id": "GHSA-jwc4-922r-f2rw",
+    "cves": [
+     "CVE-2026-106764"
+    ],
+    "severity": "HIGH",
+    "cwes": [
+     "CWE-77",
+     "CWE-94"
+    ],
+    "summary": "@rog0x/mcp-git-tools executes arbitrary code via the resolveBaseBranch function",
+    "published": "2026-10-23",
+    "introduced": "0"
+   }
+  ]
+ },
+ {
   "name": "pytservce",
   "vulns": [
    {
@@ -19441,6 +20942,24 @@
     "summary": "Malicious Package in crytpo-js",
     "published": "2020-09-03",
     "introduced": "0.0.0"
+   }
+  ]
+ },
+ {
+  "name": "@aws/agentcore",
+  "vulns": [
+   {
+    "id": "GHSA-m4x6-gwgp-4pm7",
+    "cves": [
+     "CVE-2026-11393"
+    ],
+    "severity": "HIGH",
+    "cwes": [
+     "CWE-94"
+    ],
+    "summary": "AgentCore CLI Bedrock Agent Import Vulnerable to Code Injection via Improper Triple-Quote Escaping",
+    "published": "2026-07-29",
+    "introduced": "0.3.0-preview.7.0"
    }
   ]
  },
@@ -20234,6 +21753,24 @@
     ],
     "summary": "Downloads Resources over HTTP in native-opencv",
     "published": "2019-02-18",
+    "introduced": "0"
+   }
+  ]
+ },
+ {
+  "name": "node-opcua",
+  "vulns": [
+   {
+    "id": "GHSA-mq36-523m-x7vv",
+    "cves": [
+     "CVE-2026-54155"
+    ],
+    "severity": "HIGH",
+    "cwes": [
+     "CWE-347"
+    ],
+    "summary": "node-opcua missing nonce verification in UserNameIdentityToken authentication",
+    "published": "2026-08-20",
     "introduced": "0"
    }
   ]
@@ -22275,6 +23812,24 @@
   ]
  },
  {
+  "name": "@platejs/core",
+  "vulns": [
+   {
+    "id": "GHSA-qrfj-mgw8-j9c6",
+    "cves": [
+     "CVE-2026-88976"
+    ],
+    "severity": "MODERATE",
+    "cwes": [
+     "CWE-79"
+    ],
+    "summary": "@platejs/core HTML deserialization can trigger browser behavior during parsing",
+    "published": "2026-09-17",
+    "introduced": "54.0.0-beta.0"
+   }
+  ]
+ },
+ {
   "name": "discord-fix",
   "vulns": [
    {
@@ -22911,25 +24466,6 @@
   ]
  },
  {
-  "name": "showdown",
-  "vulns": [
-   {
-    "id": "GHSA-rmmh-p597-ppvv",
-    "cves": [
-     "CVE-2024-1899"
-    ],
-    "severity": "MODERATE",
-    "cwes": [
-     "CWE-674",
-     "CWE-777"
-    ],
-    "summary": "Showdown vulnerable to Regular Expression Denial of Service (ReDoS) in link/anchor parsing",
-    "published": "2024-02-26",
-    "introduced": "0"
-   }
-  ]
- },
- {
   "name": "elding",
   "vulns": [
    {
@@ -23020,24 +24556,6 @@
   ]
  },
  {
-  "name": "@nx/azure-cache",
-  "vulns": [
-   {
-    "id": "GHSA-rrr2-jcr8-7q3x",
-    "cves": [
-     "CVE-2025-36852"
-    ],
-    "severity": "CRITICAL",
-    "cwes": [
-     "CWE-829"
-    ],
-    "summary": "@nx/azure-cache Vulnerable to Build Cache Poisoning via Untrusted Pull Requests",
-    "published": "2025-06-10",
-    "introduced": "0"
-   }
-  ]
- },
- {
   "name": "require-port",
   "vulns": [
    {
@@ -23084,6 +24602,44 @@
     "summary": "validate.js Regular Expression Denial of Service vulnerability",
     "published": "2024-10-26",
     "introduced": "0"
+   }
+  ]
+ },
+ {
+  "name": "@capacitor/android",
+  "vulns": [
+   {
+    "id": "GHSA-rvm3-566m-v7fv",
+    "cves": [
+     "CVE-2026-103922"
+    ],
+    "severity": "CRITICAL",
+    "cwes": [
+     "CWE-346",
+     "CWE-441"
+    ],
+    "summary": "Capacitor Android and iOS: remote content can be loaded at the app origin via the internal HTTP proxy path",
+    "published": "2026-10-05",
+    "introduced": "8.0.0"
+   }
+  ]
+ },
+ {
+  "name": "@capacitor/ios",
+  "vulns": [
+   {
+    "id": "GHSA-rvm3-566m-v7fv",
+    "cves": [
+     "CVE-2026-103922"
+    ],
+    "severity": "CRITICAL",
+    "cwes": [
+     "CWE-346",
+     "CWE-441"
+    ],
+    "summary": "Capacitor Android and iOS: remote content can be loaded at the app origin via the internal HTTP proxy path",
+    "published": "2026-10-05",
+    "introduced": "8.0.0"
    }
   ]
  },
@@ -23662,24 +25218,6 @@
   ]
  },
  {
-  "name": "dompurify",
-  "vulns": [
-   {
-    "id": "GHSA-v8jm-5vwx-cfxm",
-    "cves": [
-     "CVE-2025-15599"
-    ],
-    "severity": "MODERATE",
-    "cwes": [
-     "CWE-79"
-    ],
-    "summary": "DOMPurify contains a Cross-site Scripting vulnerability",
-    "published": "2026-03-03",
-    "introduced": "2.5.3"
-   }
-  ]
- },
- {
   "name": "k0a_multer",
   "vulns": [
    {
@@ -23997,6 +25535,44 @@
   ]
  },
  {
+  "name": "nuxt",
+  "vulns": [
+   {
+    "id": "GHSA-vjh5-4x84-xrqp",
+    "cves": [
+     "CVE-2026-114132"
+    ],
+    "severity": "MODERATE",
+    "cwes": [
+     "CWE-178",
+     "CWE-863"
+    ],
+    "summary": "Nuxt: Server-side route rules (`redirect`, `headers`, `proxy`, `ssr`) are skipped for case-variant paths when routing is case-insensitive",
+    "published": "2026-10-22",
+    "introduced": "3.0.0"
+   }
+  ]
+ },
+ {
+  "name": "@nuxt/nitro-server",
+  "vulns": [
+   {
+    "id": "GHSA-vjh5-4x84-xrqp",
+    "cves": [
+     "CVE-2026-114132"
+    ],
+    "severity": "MODERATE",
+    "cwes": [
+     "CWE-178",
+     "CWE-863"
+    ],
+    "summary": "Nuxt: Server-side route rules (`redirect`, `headers`, `proxy`, `ssr`) are skipped for case-variant paths when routing is case-insensitive",
+    "published": "2026-10-22",
+    "introduced": "3.20.0"
+   }
+  ]
+ },
+ {
   "name": "images",
   "vulns": [
    {
@@ -24078,6 +25654,139 @@
     "summary": "Malicious Package in ember_cli_babe",
     "published": "2020-09-03",
     "introduced": "0.0.0"
+   }
+  ]
+ },
+ {
+  "name": "@nx/s3-cache",
+  "vulns": [
+   {
+    "id": "GHSA-vp3h-ghgh-jr7g",
+    "cves": [
+     "CVE-2026-71476"
+    ],
+    "severity": "HIGH",
+    "cwes": [
+     "CWE-22",
+     "CWE-59"
+    ],
+    "summary": "Nx: Zip-Slip in the self-hosted remote cache",
+    "published": "2026-08-06",
+    "introduced": "0"
+   }
+  ]
+ },
+ {
+  "name": "@nx/gcs-cache",
+  "vulns": [
+   {
+    "id": "GHSA-vp3h-ghgh-jr7g",
+    "cves": [
+     "CVE-2026-71476"
+    ],
+    "severity": "HIGH",
+    "cwes": [
+     "CWE-22",
+     "CWE-59"
+    ],
+    "summary": "Nx: Zip-Slip in the self-hosted remote cache",
+    "published": "2026-08-06",
+    "introduced": "0"
+   }
+  ]
+ },
+ {
+  "name": "@nx/shared-fs-cache",
+  "vulns": [
+   {
+    "id": "GHSA-vp3h-ghgh-jr7g",
+    "cves": [
+     "CVE-2026-71476"
+    ],
+    "severity": "HIGH",
+    "cwes": [
+     "CWE-22",
+     "CWE-59"
+    ],
+    "summary": "Nx: Zip-Slip in the self-hosted remote cache",
+    "published": "2026-08-06",
+    "introduced": "0"
+   }
+  ]
+ },
+ {
+  "name": "@nx/powerpack-s3-cache",
+  "vulns": [
+   {
+    "id": "GHSA-vp3h-ghgh-jr7g",
+    "cves": [
+     "CVE-2026-71476"
+    ],
+    "severity": "HIGH",
+    "cwes": [
+     "CWE-22",
+     "CWE-59"
+    ],
+    "summary": "Nx: Zip-Slip in the self-hosted remote cache",
+    "published": "2026-08-06",
+    "introduced": "0"
+   }
+  ]
+ },
+ {
+  "name": "@nx/powerpack-gcs-cache",
+  "vulns": [
+   {
+    "id": "GHSA-vp3h-ghgh-jr7g",
+    "cves": [
+     "CVE-2026-71476"
+    ],
+    "severity": "HIGH",
+    "cwes": [
+     "CWE-22",
+     "CWE-59"
+    ],
+    "summary": "Nx: Zip-Slip in the self-hosted remote cache",
+    "published": "2026-08-06",
+    "introduced": "0"
+   }
+  ]
+ },
+ {
+  "name": "@nx/powerpack-azure-cache",
+  "vulns": [
+   {
+    "id": "GHSA-vp3h-ghgh-jr7g",
+    "cves": [
+     "CVE-2026-71476"
+    ],
+    "severity": "HIGH",
+    "cwes": [
+     "CWE-22",
+     "CWE-59"
+    ],
+    "summary": "Nx: Zip-Slip in the self-hosted remote cache",
+    "published": "2026-08-06",
+    "introduced": "0"
+   }
+  ]
+ },
+ {
+  "name": "@nx/powerpack-shared-fs-cache",
+  "vulns": [
+   {
+    "id": "GHSA-vp3h-ghgh-jr7g",
+    "cves": [
+     "CVE-2026-71476"
+    ],
+    "severity": "HIGH",
+    "cwes": [
+     "CWE-22",
+     "CWE-59"
+    ],
+    "summary": "Nx: Zip-Slip in the self-hosted remote cache",
+    "published": "2026-08-06",
+    "introduced": "0"
    }
   ]
  },
@@ -24202,6 +25911,40 @@
   ]
  },
  {
+  "name": "@grackle-ai/runtime-sdk",
+  "vulns": [
+   {
+    "id": "GHSA-vv65-f55v-xm6g",
+    "cves": [],
+    "severity": "HIGH",
+    "cwes": [
+     "CWE-78",
+     "CWE-88"
+    ],
+    "summary": "Grackle has command/argument injection in the git worktree executor that enables RCE on provisioned hosts via an unsanitized task branch nam",
+    "published": "2026-07-02",
+    "introduced": "0"
+   }
+  ]
+ },
+ {
+  "name": "@grackle-ai/powerline",
+  "vulns": [
+   {
+    "id": "GHSA-vv65-f55v-xm6g",
+    "cves": [],
+    "severity": "HIGH",
+    "cwes": [
+     "CWE-78",
+     "CWE-88"
+    ],
+    "summary": "Grackle has command/argument injection in the git worktree executor that enables RCE on provisioned hosts via an unsanitized task branch nam",
+    "published": "2026-07-02",
+    "introduced": "0"
+   }
+  ]
+ },
+ {
   "name": "smb",
   "vulns": [
    {
@@ -24248,6 +25991,24 @@
     "summary": "Malicious Package in babel-loadre",
     "published": "2020-09-04",
     "introduced": "0.0.0"
+   }
+  ]
+ },
+ {
+  "name": "adm-zip",
+  "vulns": [
+   {
+    "id": "GHSA-vwc7-r8mq-g2x9",
+    "cves": [
+     "CVE-2026-76845"
+    ],
+    "severity": "MODERATE",
+    "cwes": [
+     "CWE-59"
+    ],
+    "summary": "adm-zip extraction follows destination symlinks, allowing arbitrary file overwrite",
+    "published": "2026-08-24",
+    "introduced": "0.5.9"
    }
   ]
  },
@@ -25417,6 +27178,24 @@
   ]
  },
  {
+  "name": "@outerbase/studio",
+  "vulns": [
+   {
+    "id": "GHSA-wwf9-7jrc-rv4q",
+    "cves": [
+     "CVE-2026-55650"
+    ],
+    "severity": "MODERATE",
+    "cwes": [
+     "CWE-79"
+    ],
+    "summary": "Outerbase Studio: Stored XSS in Text Widget Leads to Authentication Token Exposure",
+    "published": "2026-06-19",
+    "introduced": "0"
+   }
+  ]
+ },
+ {
   "name": "file-logging",
   "vulns": [
    {
@@ -26526,24 +28305,6 @@
     "summary": "mpregular vulnerable to prototype pollution",
     "published": "2025-09-24",
     "introduced": "0"
-   }
-  ]
- },
- {
-  "name": "lodash.unset",
-  "vulns": [
-   {
-    "id": "GHSA-xxjr-mmjv-4gpg",
-    "cves": [
-     "CVE-2025-13465"
-    ],
-    "severity": "MODERATE",
-    "cwes": [
-     "CWE-1321"
-    ],
-    "summary": "Lodash has Prototype Pollution Vulnerability in `_.unset` and `_.omit` functions",
-    "published": "2026-01-21",
-    "introduced": "4.0.0"
    }
   ]
  }

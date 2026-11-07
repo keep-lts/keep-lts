@@ -81,3 +81,20 @@ than a false promise of safety. Do **not** market these as "secured." Flagged, n
 2. **Batch 2:** `xmldom` + `html-minifier` + `url-regex` (Tier B, medium effort).
 3. **Flagship:** `xlsx` — own milestone. Its 10.5M/wk reach is the single best
    reputation and lead-gen asset in the whole pool.
+
+---
+
+## Batch 3 — refreshed discovery (2026-11-07, fresh OSV data, 68 verified targets)
+
+New since June: a wave of 2026 archive-extraction advisories hit packages nobody maintains.
+Ranked by commercial value (downloads × how often auditors will flag it × no drop-in successor):
+
+| # | Package | dl/wk | Issue (no fix on npm) | Upstream status | Verdict |
+|---|---|---|---|---|---|
+| 1 | **extract-zip** | **28.2M** | 2× HIGH symlink path traversal / arbitrary file write (GHSA-7pqw-9j4j-h8q3, GHSA-jmr9-qjv8-65gv, 2026) | last commit 2021; 3 community fix PRs (Aug–Sep 2026) unmerged | **BUILD NEXT — flagship #2.** No drop-in successor (yauzl is lower-level). BSD-2. |
+| 2 | **ip** | **9.3M** | HIGH SSRF: `isPublic()` misclassifies shorthand/odd IPv4 (GHSA-2p57-rm9w-gvfp, CVE-2024-29415) | last release Feb 2024; fix PRs open since 2025 | **BUILD.** Successors (ip-address, ipaddr.js) aren't API-compatible. MIT. |
+| 3 | decompress | 3.7M | 2× CRITICAL + 2× MODERATE zip-slip / symlink / hardlink (2026) | last release 2020 | **Maybe.** Maintained fork `@xhmikosr/decompress` (8.6M/wk) exists, but is ESM/newer-Node; a CJS drop-in has value for stuck users. Check whether the successor is itself fixed first. |
+| 4 | is_js | 876k | ReDoS | 2016 | Tier A-style surgical candidate. |
+| 5 | oauth2-server | 611k | code injection + open redirect | 2020; successor `@node-oauth/oauth2-server` exists | Likely EXCLUDE (successor). |
+
+Data: `data/targets-verified.json` (June snapshot kept as `targets-verified.2026-06.json`).

@@ -1,0 +1,17 @@
+{
+  "cves": ["CVE-2026-56876", "CVE-2026-19693"],
+  "ghsas": ["GHSA-jmr9-qjv8-65gv", "GHSA-7pqw-9j4j-h8q3"],
+  "severity": "High",
+  "cwe": "CWE-59 Link Following / CWE-22 Path Traversal",
+  "title": "Arbitrary file write outside the extraction directory via symlink entries in extract-zip",
+  "affectedVersion": "2.0.1",
+  "affectedRange": "<= 2.0.1 (all published versions)",
+  "date": "2026-11-07",
+  "testScript": "node --test test/security.test.js",
+  "testFile": "test/security.test.js",
+  "shortFix": "Patches CVE-2026-56876 and CVE-2026-19693 (symlink path traversal / arbitrary file write): symlinks may only point inside the target directory, and files are never written through a symlink.",
+  "longFix": "Symlink entries are resolved the way the operating system will resolve them — from the real directory containing the link, following symlinks that already exist — and rejected unless they land inside the extraction directory. Absolute link targets, and targets with a `..` after a normal segment (which can escape through a symlinked segment), are rejected outright. Before writing a file or creating a link, any symlink already sitting at that path is removed rather than followed.",
+  "summary": "extract-zip validated only the parent directory of each archive entry. A malicious zip could (1) create a symlink pointing anywhere on disk (CVE-2026-56876), and (2) follow it with a regular file of the same name, which extract-zip then wrote through the symlink — an arbitrary file write outside the extraction directory (CVE-2026-19693). Any service that extracts user-supplied zips (uploads, plugin/theme installers, CI artefacts, Electron updaters) is exposed.",
+  "poc": "// zip entries: 'evil' (symlink -> ../../../../home/user/.bashrc), then 'evil' (file: attacker content)\nawait require('extract-zip')('evil.zip', { dir: '/srv/uploads/x' })\n// extract-zip 2.0.1 overwrites /home/user/.bashrc",
+  "fixExplanation": "Three checks, each covered by a regression test that fails on 2.0.1: (1) every symlink target is resolved against the real filesystem and must land inside the target directory; absolute targets and `x/../y`-style targets are refused, closing bypasses of a purely textual check (e.g. a link through an earlier `d -> .` symlink); (2) an existing symlink at a destination path is removed before writing, never written through; (3) the existing parent-directory check is kept and also guards against cross-drive paths on Windows. Normal archives — files, nested folders, file modes, `__MACOSX` skipping, and relative symlinks that stay inside (as in macOS .app/framework bundles) — extract exactly as before."
+}
