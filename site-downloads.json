@@ -1,13 +1,14 @@
 {
- "101": 34804,
- "apidoc-core": 49899,
- "csvjson": 50050,
- "deep-defaults": 14302,
- "defaults-deep": 36061,
- "expr-eval": 505077,
- "html-minifier": 3322664,
- "parse-git-config": 1053903,
- "url-regex": 415842,
- "utils-extend": 72170,
- "xlsx": 10557539
+ "101": 39411,
+ "apidoc-core": 38711,
+ "csvjson": 58125,
+ "deep-defaults": 16083,
+ "defaults-deep": 29063,
+ "expr-eval": 551440,
+ "extract-zip": 28243530,
+ "html-minifier": 3269522,
+ "parse-git-config": 1054265,
+ "url-regex": 375781,
+ "utils-extend": 55064,
+ "xlsx": 15870089
 }

@@ -29,7 +29,7 @@ const BRAND = {
 const TEST_COUNTS = {
   "101": 9, "apidoc-core": 5, csvjson: 6, "deep-defaults": 4, "defaults-deep": 4,
   "expr-eval": 8, "parse-git-config": 21, "utils-extend": 5, xlsx: 6,
-  "url-regex": 5, "html-minifier": 7,
+  "url-regex": 5, "html-minifier": 7, "extract-zip": 13,
 };
 const downloads = JSON.parse(readFileSync(join(TARGETS, "..", "site-downloads.json"), "utf8"));
 
