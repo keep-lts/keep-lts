@@ -34,7 +34,7 @@ const TEST_COUNTS = {
 const downloads = JSON.parse(readFileSync(join(TARGETS, "..", "site-downloads.json"), "utf8"));
 
 // Packages not yet live on npm (so the site only advertises installable fixes).
-const NOT_PUBLISHED = new Set(["101", "ip"]);
+const NOT_PUBLISHED = new Set(["101"]);
 
 // ---- gather package data ----
 const pkgs = [];
