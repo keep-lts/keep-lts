@@ -142,7 +142,7 @@ function indexPage() {
   const jsonld = { "@context": "https://schema.org", "@type": "WebSite", name: `${BRAND.name} LTS`, url: `https://${BRAND.domain}/`, description: desc };
   const firstCve = (FLAG.meta.cves || [])[0] || "CVE";
 
-  const catalogCards = pkgs.map((p) => `<a class="pkg" href="/packages/${esc(p.orig)}.html">
+  const catalogCards = pkgs.map((p) => `<a class="pkg" href="/packages/${esc(p.orig)}">
 <div class="pkg-top"><span class="pkg-name">${esc(p.orig)}</span><span class="badge">maintained</span></div>
 <div class="pkg-meta">
 <div class="row"><span>weekly downloads</span><b>${fmt(p.dl)}</b></div>
@@ -286,7 +286,7 @@ function packagePage(p) {
     `Could you run the free check on the rest of my audit? Here is my npm audit output:\n\n` +
     `[paste your npm audit / Snyk / Dependabot output here]\n\nThanks,`);
   const auditMailto = `mailto:hello@${BRAND.domain}?subject=${auditSubject}&body=${auditBody}`;
-  return head(title, desc, `/packages/${p.orig}.html`, jsonld) + `
+  return head(title, desc, `/packages/${p.orig}`, jsonld) + `
 <main class="article">
 <nav class="crumbs"><a href="/#catalog">Catalog</a> / <span>${esc(p.orig)}</span></nav>
 <span class="sev ${sevClass(p.meta.severity)}">${esc(p.meta.severity)}</span>
@@ -427,7 +427,9 @@ writeFileSync(join(OUT, "pro-thanks.html"), proThanksPage());
 for (const p of pkgs) writeFileSync(join(OUT, "packages", `${p.orig}.html`), packagePage(p));
 
 // sitemap + robots (SEO) — homepage + per-package pages
-const urls = ["/", ...pkgs.map((p) => `/packages/${p.orig}.html`)];
+// Extensionless URLs: Netlify serves packages/<name>.html at /packages/<name>, and
+// that is the form Google chose, so canonical, links and sitemap all use it.
+const urls = ["/", ...pkgs.map((p) => `/packages/${p.orig}`)];
 writeFileSync(join(OUT, "sitemap.xml"),
   `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n` +
   urls.map((u) => `  <url><loc>https://${BRAND.domain}${u}</loc></url>`).join("\n") + `\n</urlset>\n`);
