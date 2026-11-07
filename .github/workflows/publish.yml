@@ -45,6 +45,7 @@ jobs:
         working-directory: publish
         env:
           KEEPLTS_PROVENANCE: ${{ inputs.provenance }}
+          KEEPLTS_OIDC: "true"   # trusted publishing: skip token-only `npm access` step
         run: |
           chmod +x publish-all.sh
           if [ "${{ inputs.dry_run }}" = "false" ]; then

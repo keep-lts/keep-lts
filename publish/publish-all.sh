@@ -90,9 +90,11 @@ done
 # Ensure every package is PUBLIC. npm can publish scoped packages as restricted
 # (private) — especially for a new org — so flip them all to public. Idempotent,
 # and it also fixes any packages published privately on a previous run.
-# `npm access` can't use OIDC, so under trusted publishing (CI, no token) skip it:
-# the packages are already public and `npm publish --access public` keeps them so.
-if [ $DRY -eq 0 ] && [ $IN_CI -eq 1 ] && [ -z "${NODE_AUTH_TOKEN:-}" ]; then
+# `npm access` can't use OIDC, so under trusted publishing (the workflow sets
+# KEEPLTS_OIDC=true) skip it: the packages are already public and
+# `npm publish --access public` keeps them so. (Don't test NODE_AUTH_TOKEN:
+# setup-node fills it with a placeholder even when no token is configured.)
+if [ $DRY -eq 0 ] && [ "${KEEPLTS_OIDC:-}" = "true" ]; then
   echo "== public access: skipped (trusted publishing; packages already public) =="
   echo
 elif [ $DRY -eq 0 ]; then
