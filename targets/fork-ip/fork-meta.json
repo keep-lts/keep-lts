@@ -1,0 +1,17 @@
+{
+  "cves": ["CVE-2024-29415"],
+  "ghsas": ["GHSA-2p57-rm9w-gvfp"],
+  "severity": "High",
+  "cwe": "CWE-918 Server-Side Request Forgery (SSRF)",
+  "title": "SSRF: ip.isPublic() misclassifies alternative spellings of private and loopback addresses",
+  "affectedVersion": "2.0.1",
+  "affectedRange": "<= 2.0.1 (all published versions)",
+  "date": "2026-11-07",
+  "testScript": "node --test test/security.test.js",
+  "testFile": "test/security.test.js",
+  "shortFix": "Patches CVE-2024-29415 (SSRF): isPublic/isPrivate/isLoopback now classify the parsed address bytes, so 127.1, 0177.0.0.1, ::ffff:7f00:1, ::ffff:a9fe:a9fe and other spellings of private addresses are no longer reported as public.",
+  "longFix": "isPrivate, isPublic and isLoopback parse the input to its 4 or 16 bytes (accepting every IPv4 spelling the OS resolver accepts: short forms, octal, hex, a single 32-bit number; and IPv6 with any case, leading zeros, :: compression, zone IDs and IPv4-mapped or IPv4-compatible forms) and classify the bytes. Inputs the parser rejects fall back to the original 2.0.1 logic, so invalid input behaves exactly as before.",
+  "summary": "Apps use ip.isPublic() to stop users from making the server fetch internal URLs (SSRF protection). In ip 2.0.1 it pattern-matched the text of the address, so other spellings of the same internal address passed as public: 127.1 and 017700000001 (localhost), 0.0.0.0 (localhost on most systems), ::fFFf:127.0.0.1 and ::ffff:7f00:1 (IPv4-mapped localhost), and ::ffff:a9fe:a9fe — the cloud metadata service 169.254.169.254, the classic target for stealing cloud credentials. CVE-2024-29415 is the incomplete fix of CVE-2023-42282; the package has had no release since February 2024.",
+  "poc": "const ip = require('ip');\nip.isPublic('127.1');             // true on 2.0.1 (localhost!)\nip.isPublic('::ffff:a9fe:a9fe');  // true on 2.0.1 (169.254.169.254, cloud metadata)\nip.isPublic('0.0.0.0');           // true on 2.0.1",
+  "fixExplanation": "Classification now works on bytes, not text. Regression tests cover 37 alternative spellings that must not be public (the six from the CVE included) and 14 spellings of 127.0.0.1 that must be loopback; both fail on 2.0.1. Behaviour is otherwise unchanged: 20,000 canonical IPv4 addresses and their ::ffff: forms, plus canonical IPv6, classify identically to 2.0.1; invalid input returns or throws exactly as before; and the rest of the API (toBuffer, mask, cidr, subnet, toLong, address, ...) is untouched. Two deliberate hardening changes, both towards 'not public': 0.0.0.0/8 is now private (it reaches localhost), and all of fe80::/10 is link-local (2.0.1 only matched fe80:)."
+}

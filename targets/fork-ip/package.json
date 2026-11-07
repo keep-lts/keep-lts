@@ -1,0 +1,43 @@
+{
+  "name": "@keep-lts/ip",
+  "version": "2.0.2",
+  "author": "Fedor Indutny <fedor@indutny.com>",
+  "homepage": "https://github.com/keep-lts/ip",
+  "repository": "keep-lts/ip",
+  "files": [
+    "lib",
+    "README.md",
+    "CHANGELOG.md",
+    "SECURITY.md"
+  ],
+  "main": "lib/ip",
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "mocha": "^10.0.0"
+  },
+  "scripts": {
+    "lint": "eslint lib/*.js test/*.js",
+    "test": "node --test test/security.test.js",
+    "fix": "npm run lint -- --fix"
+  },
+  "license": "MIT",
+  "description": "Security-maintained drop-in fork of ip. Patches CVE-2024-29415 (SSRF): isPublic/isPrivate/isLoopback now classify the parsed address bytes, so 127.1, 0177.0.0.1, ::ffff:7f00:1, ::ffff:a9fe:a9fe and other spellings of private addresses are no longer reported as public. Original API unchanged.",
+  "contributors": [
+    "Keep LTS (security maintenance fork)"
+  ],
+  "bugs": {
+    "url": "https://github.com/keep-lts/ip/issues"
+  },
+  "keywords": [
+    "cve-2024-29415",
+    "security",
+    "patch",
+    "lts",
+    "fork",
+    "cwe-918-server-side-request-forgery-(ssrf)"
+  ],
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  }
+}
