@@ -1,6 +1,8 @@
 name: Publish to npm
 
-# Manual, deliberate publishing with signed npm provenance attestations.
+# Manual, deliberate publishing via npm trusted publishing (OIDC): no stored npm
+# token. Each @keep-lts package on npmjs.com trusts this repo + this workflow file
+# (publish.yml), so renaming this file breaks publishing until npm is updated.
 # Trigger from the GitHub UI: Actions → "Publish to npm" → Run workflow.
 # Leave "dry run" checked first to see exactly what would publish.
 
@@ -18,7 +20,7 @@ on:
 
 permissions:
   contents: read
-  id-token: write        # OIDC token — REQUIRED for npm provenance
+  id-token: write        # OIDC token: REQUIRED for npm trusted publishing
 
 concurrency:
   group: npm-publish
@@ -32,13 +34,16 @@ jobs:
 
       - uses: actions/setup-node@v4
         with:
-          node-version: 22                       # ships npm 10+ (provenance support)
+          node-version: 24
           registry-url: https://registry.npmjs.org
+
+      # Trusted publishing needs npm >= 11.5.1; Node's bundled npm may be older.
+      - name: Upgrade npm
+        run: npm install -g npm@11 && npm --version
 
       - name: Publish forks
         working-directory: publish
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}   # npm automation/granular token with publish rights
           KEEPLTS_PROVENANCE: ${{ inputs.provenance }}
         run: |
           chmod +x publish-all.sh

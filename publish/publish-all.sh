@@ -9,7 +9,8 @@
 #
 # Prerequisites (one-time, principal-only — an agent cannot do these):
 #   1. npm account with your scope (default @keep-lts) registered.
-#   2. Auth: `npm login` locally, OR an NPM_TOKEN secret for the CI workflow.
+#   2. Auth: `npm login` locally, OR in CI npm trusted publishing (OIDC) — each
+#      package trusts keep-lts/keep-lts + publish.yml on npmjs.com. No token.
 #
 # Usage:
 #   ./publish-all.sh            # dry-run: shows what would publish, runs every test gate
@@ -89,7 +90,12 @@ done
 # Ensure every package is PUBLIC. npm can publish scoped packages as restricted
 # (private) — especially for a new org — so flip them all to public. Idempotent,
 # and it also fixes any packages published privately on a previous run.
-if [ $DRY -eq 0 ]; then
+# `npm access` can't use OIDC, so under trusted publishing (CI, no token) skip it:
+# the packages are already public and `npm publish --access public` keeps them so.
+if [ $DRY -eq 0 ] && [ $IN_CI -eq 1 ] && [ -z "${NODE_AUTH_TOKEN:-}" ]; then
+  echo "== public access: skipped (trusted publishing; packages already public) =="
+  echo
+elif [ $DRY -eq 0 ]; then
   echo "== ensuring public access =="
   for dir in "$TARGETS"/fork-*/; do
     [ -f "$dir/package.json" ] || continue

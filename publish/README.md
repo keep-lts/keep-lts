@@ -25,8 +25,10 @@ provenance attestations from a supported CI with an OIDC token — a local publi
 
 1. Push the `lts/` directory as a GitHub repo (it's self-contained — has its own README, `.gitignore`,
    workflow, everything). The publish workflow lives at `lts/.github/workflows/publish.yml`.
-2. Create an npm **automation (or granular) token** with publish rights and add it as a repo secret
-   named `NPM_TOKEN` (Settings → Secrets and variables → Actions).
+2. On npmjs.com, add a **trusted publisher** to each package (package → Settings → Trusted
+   Publisher → GitHub Actions: org `keep-lts`, repo `keep-lts`, workflow `publish.yml`, allow
+   `npm publish`), or run `npm trust github @keep-lts/<pkg> --file publish.yml --repo keep-lts/keep-lts --allow-publish`.
+   No token or secret is needed, so nothing expires. (Provenance is only generated once the repo is public.)
 3. GitHub → **Actions → "Publish to npm" → Run workflow**. Leave **dry run** checked the first time to
    see exactly what would publish; then run again unchecked to publish for real.
 
