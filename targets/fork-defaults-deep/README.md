@@ -14,6 +14,10 @@
 > See [SECURITY.md](./SECURITY.md) and [CHANGELOG.md](./CHANGELOG.md). Original functionality
 > and attribution preserved under the MIT license.
 
+> **Running this in production for an audited team?** [Keep LTS Pro](https://keep-lts.com/#pro)
+> adds an SLA on future CVEs, SBOM/VEX for your auditor, and fixes for the other dead dependencies in
+> your tree. Async, no sales calls. Questions: hello@keep-lts.com
+
 ---
 
 # defaults-deep [![NPM version](https://badge.fury.io/js/defaults-deep.svg)](http://badge.fury.io/js/defaults-deep)  [![Build Status](https://travis-ci.org/jonschlinkert/defaults-deep.svg)](https://travis-ci.org/jonschlinkert/defaults-deep)

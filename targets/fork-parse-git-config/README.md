@@ -2,6 +2,10 @@
 
 > Security-maintained, drop-in fork of [`parse-git-config`](https://www.npmjs.com/package/parse-git-config). Parse `.git/config` into a JavaScript object. sync or async.
 
+> **Running this in production for an audited team?** [Keep LTS Pro](https://keep-lts.com/#pro)
+> adds an SLA on future CVEs, SBOM/VEX for your auditor, and fixes for the other dead dependencies in
+> your tree. Async, no sales calls. Questions: hello@keep-lts.com
+
 ---
 
 > [!IMPORTANT]

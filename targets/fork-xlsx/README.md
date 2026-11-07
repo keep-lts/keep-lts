@@ -20,6 +20,10 @@
 > (Apache-2.0; original © SheetJS LLC). **For ongoing support and the latest versions, use
 > SheetJS directly: https://sheetjs.com/**
 
+> **Running this in production for an audited team?** [Keep LTS Pro](https://keep-lts.com/#pro)
+> adds an SLA on future CVEs, SBOM/VEX for your auditor, and fixes for the other dead dependencies in
+> your tree. Async, no sales calls. Questions: hello@keep-lts.com
+
 ---
 
 # [SheetJS](https://sheetjs.com)

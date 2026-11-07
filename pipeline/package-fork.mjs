@@ -139,6 +139,20 @@ if (!existing.includes("security-maintenance fork")) {
   writeFileSync(rmPath, banner + existing);
 }
 
+// --- Pro note (idempotent; also added to forks packaged before it existed) ---
+// The only place an installer of a free fork learns there's a paid tier, since
+// npm doesn't tell us who installs. Short and factual, after the banner.
+{
+  const current = readFileSync(rmPath, "utf8");
+  if (!current.includes("keep-lts.com/#pro") && current.includes("security-maintenance fork")) {
+    const pro = `\n\n> **Running this in production for an audited team?** [Keep LTS Pro](https://keep-lts.com/#pro)
+> adds an SLA on future CVEs, SBOM/VEX for your auditor, and fixes for the other dead dependencies in
+> your tree. Async, no sales calls. Questions: hello@keep-lts.com`;
+    const at = current.indexOf("\n\n---\n");
+    if (at !== -1) writeFileSync(rmPath, current.slice(0, at) + pro + current.slice(at));
+  }
+}
+
 // --- CI workflow ---
 const wfDir = join(dir, ".github", "workflows");
 mkdirSync(wfDir, { recursive: true });
